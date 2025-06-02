@@ -1,8 +1,6 @@
-using System;
 using _00._Work._02._Scripts.Marge.SO;
 using UnityEngine;
 using UnityEngine.EventSystems;
-using UnityEngine.Serialization;
 using UnityEngine.UI;
 
 namespace _00._Work._02._Scripts.Marge.DragDrop
@@ -27,9 +25,11 @@ namespace _00._Work._02._Scripts.Marge.DragDrop
         
         [SerializeField] private Image currentImage;
 
+        const string MainPanel = "MainPanel";
+        
         private void OnEnable()
         {
-            onDragParent = GameObject.FindGameObjectWithTag("MainPanel").transform;
+            onDragParent = GameObject.FindGameObjectWithTag(MainPanel).transform;
             currentImage = gameObject.GetComponent<Image>();
             currentImage.sprite = currentEchoData.echoSprite;
         }
