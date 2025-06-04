@@ -6,7 +6,8 @@ namespace _00._Work._02._Scripts.Character.Skills
     public class SkillDataSo : ScriptableObject
     {
         public string skillName;
-        [TextArea] public string description;
-        public Sprite icon;
+        [TextArea] public string skillDescription;
+        public Sprite skillIcon;
+        
     }
 }

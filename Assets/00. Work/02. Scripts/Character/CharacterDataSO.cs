@@ -14,8 +14,8 @@ namespace _00._Work._02._Scripts.Character
         public string characterID;
         //캐릭터 이름
         public string characterName;
-        //캐릭터 속성
-        public string element;
+        //캐릭터 속성 이미지
+        public Sprite element;
         
         //캐릭터 설명
         [Header("Character Description")]
@@ -23,8 +23,8 @@ namespace _00._Work._02._Scripts.Character
         
         //캐릭터 스킬
         [Header("Character Skill")]
-        public SkillDataSo activeSkill;
-        public SkillDataSo passiveSkill;
+        public SkillDataSo skillData;
+        public PassiveDataSo passiveData;
         
         //캐릭터가 해금되었나?
         public bool isUnlocked;

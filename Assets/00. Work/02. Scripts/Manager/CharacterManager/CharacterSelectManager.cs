@@ -1,16 +1,22 @@
 using _00._Work._02._Scripts.Character;
-using UnityEditor.U2D.Animation;
 using UnityEngine;
 
 namespace _00._Work._02._Scripts.Manager.CharacterManager
 {
-    public class CharacterSelectManager : MonoSingleton<CharacterSelectManager>
+    public class CharacterSelectManager : MonoBehaviour
     {
-        [SerializeField] private CharacterDataSo currentCharacterData;
+        public static CharacterSelectManager Instance { get; private set; }
+        
+        [SerializeField] private CharacterDisplayPanel characterDisplayPanel; //캐릭터 패널 
 
-        public void SelectCharacter(CharacterDataSo characterData)
+        private void Start()
         {
-            currentCharacterData = characterData;
+            Instance = this;
+        }
+
+        public void SelectCharacter(CharacterDataSo characterData) //캐릭터 선택시 호출
+        {
+            characterDisplayPanel.Display(characterData);
         }
     }
 }
