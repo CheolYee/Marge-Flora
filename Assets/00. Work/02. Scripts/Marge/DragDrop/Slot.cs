@@ -1,3 +1,4 @@
+using System;
 using _00._Work._02._Scripts.Marge.SO;
 using UnityEngine;
 using UnityEngine.EventSystems;
@@ -6,6 +7,7 @@ namespace _00._Work._02._Scripts.Marge.DragDrop
 {
     public class Slot : MonoBehaviour, IDropHandler
     {
+
         //슬롯에 아이템(자식 오브젝트)가 있으면 자식 1개를 리턴
         //슬롯에 아이템(자식 오브젝트)가 없으면 null 리턴
         private GameObject EchoCoreCounter()

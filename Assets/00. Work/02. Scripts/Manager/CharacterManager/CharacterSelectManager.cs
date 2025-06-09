@@ -1,3 +1,4 @@
+using _00._Work._02._Scripts.Manager.GameManager;
 using _00._Work._02._Scripts.Character;
 using UnityEngine;
 

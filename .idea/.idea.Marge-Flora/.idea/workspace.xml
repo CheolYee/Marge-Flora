@@ -5,10 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="06042e0a-cc9c-4473-bc4d-e88141e2975c" name="변경" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/00. Work/02. Scripts/Save/MergeSaveDataContainer.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/00. Work/02. Scripts/Save/MergeSaveDataContainer.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Marge-Flora/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Marge-Flora/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/00. Work/02. Scripts/Manager/Save.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/00. Work/00.Scenes/Main.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/00. Work/00.Scenes/Main.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/00. Work/02. Scripts/Character/CharacterSelectBtn.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/00. Work/02. Scripts/Character/CharacterSelectBtn.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/00. Work/02. Scripts/Character/Skills/ToolTipTrigger.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/00. Work/02. Scripts/Character/Skills/ToolTipTrigger.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/00. Work/02. Scripts/Manager/CharacterManager/CharacterSelectManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/00. Work/02. Scripts/Manager/CharacterManager/CharacterSelectManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/00. Work/02. Scripts/Manager/SaveManager/SaveManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/00. Work/02. Scripts/Manager/SaveManager/SaveManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/00. Work/02. Scripts/Marge/DragDrop/Slot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/00. Work/02. Scripts/Marge/DragDrop/Slot.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/00. Work/07. Font/goungiChunNun_Bold SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/00. Work/07. Font/goungiChunNun_Bold SDF.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,13 +24,16 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/00. Work/02. Scripts/Button/MargeUIBtn.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/00. Work/02. Scripts/Character/CharacterDataSO.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/00. Work/02. Scripts/Manager/GameManager/GameManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/00. Work/02. Scripts/Manager/MonoSingleton.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/00. Work/02. Scripts/Manager/Pooling/IPoolable.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/00. Work/02. Scripts/Manager/SlotManager/SlotManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/00. Work/02. Scripts/Marge/BuyEchoCore.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/00. Work/02. Scripts/Marge/DragDrop/EchoCore.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/00. Work/02. Scripts/Marge/DragDrop/MainWeaponSlot.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/00. Work/02. Scripts/Marge/MargeBoard.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/00. Work/02. Scripts/Marge/SO/EchoCoreSO.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/00. Work/02. Scripts/Marge/SO/PoolItem.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/00. Work/02. Scripts/Marge/SO/PoolingListSO.cs" root0="FORCE_HIGHLIGHTING" />
@@ -42,19 +50,19 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "main",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;Base&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected="Unity 에디터에 연결.Unity 에디터에 연결">
     <configuration name="유닛 테스트(배치 모드)" type="RunUnityExe" factoryName="Unity Executable">
       <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\6000.0.48f1\Editor\Unity.exe" />
@@ -109,7 +117,9 @@
       <updated>1748575238746</updated>
       <workItem from="1748575240322" duration="3288000" />
       <workItem from="1748835293731" duration="20746000" />
-      <workItem from="1749095311023" duration="934000" />
+      <workItem from="1749095311023" duration="2798000" />
+      <workItem from="1749322763262" duration="82000" />
+      <workItem from="1749438116802" duration="9320000" />
     </task>
     <servers />
   </component>

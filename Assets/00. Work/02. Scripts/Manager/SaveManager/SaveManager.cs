@@ -1,5 +1,6 @@
 using System.IO;
 using _00._Work._02._Scripts.Save;
+using _00._Work._08._Utility;
 using UnityEngine;
 
 namespace _00._Work._02._Scripts.Manager.SaveManager
@@ -19,6 +20,7 @@ namespace _00._Work._02._Scripts.Manager.SaveManager
 
             string json = JsonUtility.ToJson(container, true);
             File.WriteAllText(SavePath, json);
+            Logging.Log($"Saved {SavePath}");
         }
         
         public MergeBoardSaveData LoadMergeDataForCharacter(string characterID) //캐릭터의 데이터를 불러오기

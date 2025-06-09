@@ -41,7 +41,6 @@ namespace _00._Work._02._Scripts.Character.Skills
             {
                 case SkillType.Skill:
                     ToolTipManager.Instance.ShowToolTip(_skillData);
-                    Debug.Log(_skillData);
                     break;
                 case SkillType.PassiveSkill:
                     ToolTipManager.Instance.ShowToolTip(_passiveSkillData);
