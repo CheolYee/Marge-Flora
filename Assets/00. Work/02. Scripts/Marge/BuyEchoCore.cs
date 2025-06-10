@@ -1,6 +1,8 @@
+using _00._Work._02._Scripts.Manager.GameManager;
 using _00._Work._02._Scripts.Manager.SlotManager;
 using _00._Work._02._Scripts.Marge.DragDrop;
 using _00._Work._02._Scripts.Marge.SO;
+using _00._Work._08._Utility;
 using UnityEngine;
 
 namespace _00._Work._02._Scripts.Marge
@@ -13,6 +15,12 @@ namespace _00._Work._02._Scripts.Marge
         [SerializeField] private GameObject echoCorePrefab;
         //처음 소환 단계의 So 가져오기
         [SerializeField] private EchoCoreSo firstStageSo;
+
+        private void OnEnable()
+        {
+            Logging.Log("데이터 가져오기");
+            firstStageSo = GameManager.Instance.selectedCharacterData.firstEchoData;
+        }
 
         //에코 생성 버튼 누를 시 실행
         public void SpawnNewEcho()

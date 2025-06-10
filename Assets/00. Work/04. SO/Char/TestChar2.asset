@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6a322a12911b9345845629b2864e52e, type: 3}
+  m_Name: TestChar2
+  m_EditorClassIdentifier: 
+  characterSprite: {fileID: -8080321461122597763, guid: e5a0fd118f4af9c4bb964f2e776cd196, type: 3}
+  characterID: 2
+  characterName: "\uB9AC\uB8E8\uC544"
+  element: {fileID: 10915, guid: 0000000000000000f000000000000000, type: 0}
+  characterDescription: "\uC5B4\uB518\uAC00 \uCC28\uAC11\uACE0 \uB3C4\uB3C4\uD55C
+    \uD50C\uB85C\uB77C\uC774\uB2E4.\n\uB9C8\uBB3C\uC5D0\uAC8C\uC11C \uC704\uD611\uBC1B\uACE0
+    \uC788\uB358 \uC911 \uD50C\uB808\uC774\uC5B4\uC5D0\uAC8C \uAD6C\uCD9C\uB418\uC5C8\uB2E4."
+  skillData: {fileID: 11400000, guid: f81b4cd830f865a40861ff89d1dbbe9a, type: 2}
+  passiveData: {fileID: 11400000, guid: 66d20376140847f4499cf10ad3d32a37, type: 2}
+  firstEchoData: {fileID: 11400000, guid: 173389604593bcf49bebfb37ace27420, type: 2}
+  isUnlocked: 1

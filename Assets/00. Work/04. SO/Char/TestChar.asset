@@ -22,4 +22,5 @@ MonoBehaviour:
     \uB418\uC5C8\uB2E4."
   skillData: {fileID: 11400000, guid: bcee1486e5f542745a04872ba098a22b, type: 2}
   passiveData: {fileID: 11400000, guid: a8f0bccc7bd2228499b90bc002885d4d, type: 2}
+  firstEchoData: {fileID: 11400000, guid: fa220c7420954424d830ad32e04520f0, type: 2}
   isUnlocked: 1

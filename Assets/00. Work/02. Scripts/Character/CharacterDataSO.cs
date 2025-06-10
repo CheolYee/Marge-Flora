@@ -1,4 +1,5 @@
 using _00._Work._02._Scripts.Character.Skills;
+using _00._Work._02._Scripts.Marge.SO;
 using UnityEngine;
 
 namespace _00._Work._02._Scripts.Character
@@ -26,7 +27,7 @@ namespace _00._Work._02._Scripts.Character
         public SkillDataSo skillData;
         public PassiveDataSo passiveData;
         
-        //캐릭터가 해금되었나?
-        public bool isUnlocked;
+        [Header("Character First Echo")]
+        public EchoCoreSo firstEchoData;
     }
 }

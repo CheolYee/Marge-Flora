@@ -10,7 +10,6 @@ namespace _00._Work._02._Scripts.Marge.SO
         
         [Header("EchoCore Values")]
         public string coreName;
-        public int coreID;
         public int growthCount;
         
         [Header("NextEcho")]

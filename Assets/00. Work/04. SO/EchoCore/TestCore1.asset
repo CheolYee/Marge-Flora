@@ -13,7 +13,6 @@ MonoBehaviour:
   m_Name: TestCore1
   m_EditorClassIdentifier: 
   echoSprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
-  coreName: "\uD14C\uC2A4\uD2B8 \uCF54\uC5B4"
-  coreID: 1
+  coreName: "\uD14C\uC2A4\uD2B8 \uCF54\uC5B41"
   growthCount: 1
   nextEchoData: {fileID: 11400000, guid: 173389604593bcf49bebfb37ace27420, type: 2}
