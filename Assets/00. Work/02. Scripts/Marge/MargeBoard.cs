@@ -6,6 +6,7 @@ using _00._Work._02._Scripts.Marge.DragDrop;
 using _00._Work._02._Scripts.Marge.SO;
 using _00._Work._02._Scripts.Save;
 using _00._Work._08._Utility;
+using Unity.VisualScripting;
 using UnityEngine;
 
 namespace _00._Work._02._Scripts.Marge
@@ -13,6 +14,7 @@ namespace _00._Work._02._Scripts.Marge
     public class MargeBoard : MonoBehaviour
     {
         public GameObject parent;
+        public GameObject equipEchoCore;
         public List<Transform> slotList;
         public GameObject echoPrefab;
 
@@ -25,6 +27,8 @@ namespace _00._Work._02._Scripts.Marge
                 slotList.Add(child);
             }
         }
+
+        
 
         public void SaveBoardState() // 보드의 상태를 저장해요
         {
@@ -62,6 +66,27 @@ namespace _00._Work._02._Scripts.Marge
                 
                 saveData.slotDataList.Add(slotData); // 저장된 슬롯 데이터를 리스트에 추가
             }
+
+            var equippedSlot = equipEchoCore.transform; //장착 슬롯의 위치 가져오기
+            if (equippedSlot.childCount > 0) //만약 가져온 슬롯에 에코코어가 장착중이라면
+            {
+                var child = equippedSlot.GetChild(0); //자식의 위치 저장
+                var echo = child.GetComponent<EchoCore>(); //자식의 에코 데이터 가져오기
+                EchoCoreSo echoData = echo.GetCurrentData(); //에코 데이터 안에 있는 실질적 데이터인 SO 가져오기
+
+                saveData.equipmentCoreData = new SlotSaveData() //저장할 새 공간 만들기
+                {
+                    slotIndex = -1, // 장착중인 에코 코어는 -1로 표기
+                    itemName = echoData.coreName, // 이름 설정
+                    sprite = echoData.echoSprite, // 스프라이트 설정
+                    growthLevel = echoData.growthCount // 성장 단계 설정
+                };
+
+            }
+            else // 장착중인 에코 코어가 존재하지 않다면
+            {
+                saveData.equipmentCoreData = null; //데이터를 널값으로
+            }
             
             SaveManager.Instance.SaveCharacterMergeData(saveData); //모든 슬롯을 저장했다면 전체를 보내 json으로 저장
         }
@@ -75,6 +100,25 @@ namespace _00._Work._02._Scripts.Marge
             {
                 Logging.Log($"[MargeBoard] 저장된 데이터가 없습니다. 캐릭터 ID: {characterID}"); // 로그를 출력하고
                 return; //종료시킨다
+            }
+            
+            if (saveData.equipmentCoreData != null && !string.IsNullOrEmpty(saveData.equipmentCoreData.itemName))
+            {
+                if (equipEchoCore.transform.childCount > 0)
+                {
+                    Destroy(equipEchoCore.transform.GetChild(0).gameObject);
+                }
+                
+                var so = EchoCoreDatabase.Instance.GetEchoCoreSo(saveData.equipmentCoreData.itemName);
+                if (so != null)
+                {
+                    var echoObj = Instantiate(echoPrefab, equipEchoCore.transform);
+
+                    EchoCore echo = echoObj.GetComponent<EchoCore>(); // 생성시킨 에코 코어를 원래 있었던 데이터로 덮어씌우기 위해 컴포넌트를 가져온다
+                    echo.SetEchoData(so); // 에코 데이터를 원래 있던 것으로 설정시킨다.
+                    
+                    GameManager.Instance.selectedWeaponEchoData = so;
+                }
             }
 
             foreach (var slotData in saveData.slotDataList) // 세이브 데이터의 슬롯 리스트를 하나씩 검사한다
@@ -109,6 +153,8 @@ namespace _00._Work._02._Scripts.Marge
                     
                     echo.SetEchoData(coreData); // 에코 데이터를 원래 있던 것으로 설정시킨다.
                 }
+                
+                
             }
         }
 

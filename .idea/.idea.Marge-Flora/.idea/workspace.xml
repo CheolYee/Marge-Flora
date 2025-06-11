@@ -7,16 +7,12 @@
     <list default="true" id="06042e0a-cc9c-4473-bc4d-e88141e2975c" name="변경" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Marge-Flora/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Marge-Flora/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/00. Work/00.Scenes/Main.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/00. Work/00.Scenes/Main.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/00. Work/02. Scripts/Character/CharacterDataSO.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/00. Work/02. Scripts/Character/CharacterDataSO.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/00. Work/02. Scripts/Manager/SaveManager/SaveManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/00. Work/02. Scripts/Manager/SaveManager/SaveManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/00. Work/02. Scripts/Marge/BuyEchoCore.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/00. Work/02. Scripts/Marge/BuyEchoCore.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/00. Work/02. Scripts/Button/CharacterUIBtn.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/00. Work/02. Scripts/Button/CharacterUIBtn.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/00. Work/02. Scripts/Button/MargeUIBtn.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/00. Work/02. Scripts/Button/MargeUIBtn.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/00. Work/02. Scripts/Marge/MargeBoard.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/00. Work/02. Scripts/Marge/MargeBoard.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/00. Work/02. Scripts/Marge/SO/EchoCoreSO.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/00. Work/02. Scripts/Marge/SO/EchoCoreSO.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/00. Work/02. Scripts/Save/SlotSaveData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/00. Work/02. Scripts/Save/SlotSaveData.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/00. Work/04. SO/Char/TestChar.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/00. Work/04. SO/Char/TestChar.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/00. Work/04. SO/EchoCore/TestCore1.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/00. Work/04. SO/EchoCore/TestCore1.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/00. Work/04. SO/EchoCore/TestCore2.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/00. Work/04. SO/EchoCore/TestCore2.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/00. Work/02. Scripts/Save/MergeBoardSaveData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/00. Work/02. Scripts/Save/MergeBoardSaveData.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/00. Work/07. Font/goungiChunNun_Bold SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/00. Work/07. Font/goungiChunNun_Bold SDF.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/00. Work/07. Font/goungiChunNun_Light SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/00. Work/07. Font/goungiChunNun_Light SDF.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,8 +23,10 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/00. Work/02. Scripts/Button/ButtonContainer.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/00. Work/02. Scripts/Button/MargeUIBtn.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/00. Work/02. Scripts/Character/CharacterDataSO.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/00. Work/02. Scripts/Manager/DungeonDataManager/DungeonDataManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/00. Work/02. Scripts/Manager/GameManager/GameManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/00. Work/02. Scripts/Manager/MonoSingleton.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/00. Work/02. Scripts/Manager/Pooling/IPoolable.cs" root0="FORCE_HIGHLIGHTING" />
@@ -38,10 +36,12 @@
     <setting file="file://$PROJECT_DIR$/Assets/00. Work/02. Scripts/Marge/DragDrop/MainWeaponSlot.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/00. Work/02. Scripts/Marge/EchoCoreDatabase.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/00. Work/02. Scripts/Marge/MargeBoard.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/00. Work/02. Scripts/Marge/SO/DungeonDataSo.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/00. Work/02. Scripts/Marge/SO/EchoCoreSO.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/00. Work/02. Scripts/Marge/SO/PoolItem.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/00. Work/02. Scripts/Marge/SO/PoolingListSO.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/00. Work/02. Scripts/Save/MergeBoardSaveData.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@4027c60e8806/Runtime/UGUI/UI/Core/GraphicRaycaster.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="ProblemsViewState">
     <option name="selectedTabId" value="CurrentFile" />
@@ -124,7 +124,8 @@
       <workItem from="1749095311023" duration="2798000" />
       <workItem from="1749322763262" duration="82000" />
       <workItem from="1749438116802" duration="9320000" />
-      <workItem from="1749512528876" duration="10252000" />
+      <workItem from="1749512528876" duration="15732000" />
+      <workItem from="1749635591801" duration="5326000" />
     </task>
     <servers />
   </component>

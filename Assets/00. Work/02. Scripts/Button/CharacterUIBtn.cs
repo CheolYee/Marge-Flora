@@ -6,23 +6,18 @@ namespace _00._Work._02._Scripts.Button
 {
     public class CharacterUIBtn : MonoBehaviour
     {
-        [SerializeField] private MargeBoard margeBoard;
-        
-        [SerializeField] private GameObject characterUI;
-        
         public void OnClickCharUIBtn()
         {
-            if (margeBoard.gameObject.activeSelf)
+            if (UIContainer.Instance.margeBoardUI.activeSelf)
             {
+                MargeBoard margeBoard = UIContainer.Instance.margeBoardUI.GetComponent<MargeBoard>();
+
                 margeBoard.SaveBoardState();
-                characterUI.SetActive(true);
-                margeBoard.gameObject.SetActive(false);
             }
-            else
-            {
-                characterUI.SetActive(true);
-                Logging.Log("현재 조합 창이 아니어서 저장을 할 수 없습니다.");
-            }
+
+            UIContainer.Instance.characterUI.SetActive(true);
+            UIContainer.Instance.dungeonUI.SetActive(false);
+            UIContainer.Instance.margeBoardUI.SetActive(false);
         }
     }
 }

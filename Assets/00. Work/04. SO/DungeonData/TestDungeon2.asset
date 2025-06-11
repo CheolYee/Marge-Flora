@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee82eb1f46b59be45925bc9de854b29c, type: 3}
+  m_Name: TestDungeon2
+  m_EditorClassIdentifier: 
+  dungeonName: "\uC2AC\uB77C\uC784 \uC2B5\uC9C0"
+  dungeonIcon: {fileID: 10911, guid: 0000000000000000f000000000000000, type: 0}
+  dungeonElementIcon: {fileID: 10901, guid: 0000000000000000f000000000000000, type: 0}
+  rewordGold: 2000
+  clearRecommendText: 3
+  dungeonId: 2
+  enemyPrefab: {fileID: 0}
+  enemySpawnPos: {x: 0, y: 0, z: 0}
+  timeLimit: 60
