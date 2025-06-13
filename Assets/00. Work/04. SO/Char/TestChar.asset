@@ -15,7 +15,9 @@ MonoBehaviour:
   characterSprite: {fileID: -8080321461122597763, guid: e5a0fd118f4af9c4bb964f2e776cd196, type: 3}
   characterID: 1
   characterName: "\uB8E8\uC5D4"
+  characterElementType: LIGHT
   element: {fileID: 10915, guid: 0000000000000000f000000000000000, type: 0}
+  characterProfile: {fileID: -8080321461122597763, guid: e5a0fd118f4af9c4bb964f2e776cd196, type: 3}
   characterDescription: "\uD56D\uC0C1 \uBC1D\uACE0, \uBA85\uB7C9\uD558\uBA70 \uB9E4\uC0AC\uC5D0
     \uAE0D\uC815\uC801\uC778 \uD50C\uB85C\uB77C\uB2E4.\n\uC5EC\uD589\uC744 \uD558\uB7EC
     \uB098\uC654\uB2E4\uAC00 \uAE38\uC744 \uC783\uC5B4 \uC774\uACF3\uC5D0 \uD569\uB958\uD558\uAC8C
@@ -23,4 +25,3 @@ MonoBehaviour:
   skillData: {fileID: 11400000, guid: bcee1486e5f542745a04872ba098a22b, type: 2}
   passiveData: {fileID: 11400000, guid: a8f0bccc7bd2228499b90bc002885d4d, type: 2}
   firstEchoData: {fileID: 11400000, guid: fa220c7420954424d830ad32e04520f0, type: 2}
-  isUnlocked: 1

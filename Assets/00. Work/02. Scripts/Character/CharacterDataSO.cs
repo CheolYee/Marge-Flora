@@ -15,8 +15,12 @@ namespace _00._Work._02._Scripts.Character
         public string characterID;
         //캐릭터 이름
         public string characterName;
+        //캐릭터 속성 타입
+        public string characterElementType;
         //캐릭터 속성 이미지
         public Sprite element;
+        //캐릭터 선택 프로필에 들어갈 이미지
+        public Sprite characterProfile;
         
         //캐릭터 설명
         [Header("Character Description")]

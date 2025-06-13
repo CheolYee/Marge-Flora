@@ -1,4 +1,3 @@
-using System;
 using System.Collections.Generic;
 using _00._Work._02._Scripts.Manager.GameManager;
 using _00._Work._02._Scripts.Manager.SaveManager;
@@ -6,7 +5,6 @@ using _00._Work._02._Scripts.Marge.DragDrop;
 using _00._Work._02._Scripts.Marge.SO;
 using _00._Work._02._Scripts.Save;
 using _00._Work._08._Utility;
-using Unity.VisualScripting;
 using UnityEngine;
 
 namespace _00._Work._02._Scripts.Marge
@@ -28,7 +26,6 @@ namespace _00._Work._02._Scripts.Marge
             }
         }
 
-        
 
         public void SaveBoardState() // 보드의 상태를 저장해요
         {
@@ -85,14 +82,23 @@ namespace _00._Work._02._Scripts.Marge
             }
             else // 장착중인 에코 코어가 존재하지 않다면
             {
-                saveData.equipmentCoreData = null; //데이터를 널값으로
+                saveData.equipmentCoreData = new SlotSaveData() //저장할 새 공간 만들기
+                {
+                    slotIndex = -1, // 장착중인 에코 코어는 -1로 표기
+                    itemName = string.Empty, // 이름 설정
+                    sprite = null, // 스프라이트 설정
+                    growthLevel = 0 // 성장 단계 설정
+                };
             }
-            
             SaveManager.Instance.SaveCharacterMergeData(saveData); //모든 슬롯을 저장했다면 전체를 보내 json으로 저장
+            
+            LoadBoardState(); //저장한 데이터 바로 불러오기
         }
 
         public void LoadBoardState() // 보드의 저장 값을 바탕으로 보드의 모든 칸의 데이터를 불러온다
         {
+            if (parent.activeSelf == false) return;
+            
             string characterID = GameManager.Instance.selectedCharacterData.characterID; // 캐릭터의 ID 값을 가져온다 (아이디 값으로 머지 데이터 현황을 가져올 것이기 때문)
             MergeBoardSaveData saveData = SaveManager.Instance.LoadMergeDataForCharacter(characterID); //세이브 데이터를 캐릭터 ID를 통해 가져온다
 
@@ -116,8 +122,10 @@ namespace _00._Work._02._Scripts.Marge
 
                     EchoCore echo = echoObj.GetComponent<EchoCore>(); // 생성시킨 에코 코어를 원래 있었던 데이터로 덮어씌우기 위해 컴포넌트를 가져온다
                     echo.SetEchoData(so); // 에코 데이터를 원래 있던 것으로 설정시킨다.
-                    
-                    GameManager.Instance.selectedWeaponEchoData = so;
+                    if (so != null)
+                        GameManager.Instance.selectedWeaponEchoData = so;
+                    else
+                        GameManager.Instance.selectedWeaponEchoData = null;
                 }
             }
 
@@ -153,15 +161,26 @@ namespace _00._Work._02._Scripts.Marge
                     
                     echo.SetEchoData(coreData); // 에코 데이터를 원래 있던 것으로 설정시킨다.
                 }
-                
-                
             }
         }
 
-        private void OnEnable()
+        public void LoadWeaponData()
         {
-            LoadBoardState(); // 켜졌을 때 (머지로 가기 눌렀을 때) 로드를 시킨다.
-            Logging.Log("로드중"); // 로드됨이라고 말해준다
+            string characterID = GameManager.Instance.selectedCharacterData.characterID; // 캐릭터의 ID 값을 가져온다 (아이디 값으로 머지 데이터 현황을 가져올 것이기 때문)
+            MergeBoardSaveData saveData = SaveManager.Instance.LoadMergeDataForCharacter(characterID);
+
+            if (saveData.equipmentCoreData != null && !string.IsNullOrEmpty(saveData.equipmentCoreData.itemName))
+            {
+                var so = EchoCoreDatabase.Instance.GetEchoCoreSo(saveData.equipmentCoreData.itemName);
+                if (so != null)
+                {
+                    GameManager.Instance.selectedWeaponEchoData = so;
+                }
+            }
+            else
+            {
+                GameManager.Instance.selectedWeaponEchoData = null;
+            }
         }
     }
 }

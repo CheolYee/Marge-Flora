@@ -16,3 +16,10 @@ MonoBehaviour:
   skillDescription: "\uC804\uBC29\uC5D0 \uBC14\uB78C\uC744 \uC77C\uC73C\uCF1C \uC801\uC5D0\uAC8C
     \uCD1D 3\uD68C\uC758 \uD53C\uD574\uB97C \uAC00\uD569\uB2C8\uB2E4"
   skillIcon: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
+  normalAttackPrefab: {fileID: 405950720624530866, guid: 435dd664990e91747bf4137cf701e1c9, type: 3}
+  normalAttackCooldown: 1
+  normalAttackDamage: 10
+  projectileSpeed: 3
+  skillPrefab: {fileID: 0}
+  skillCooldown: 10
+  skillDamage: 100

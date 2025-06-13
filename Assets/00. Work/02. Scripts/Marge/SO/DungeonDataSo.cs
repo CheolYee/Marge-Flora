@@ -14,6 +14,7 @@ namespace _00._Work._02._Scripts.Marge.SO
         
         [Header("CombatData")]
         public string dungeonId; //던전 아이디
+        public string weaknessElement; //던전 약점 속성
         public GameObject enemyPrefab; //던전 적 프리팹
         public Vector3 enemySpawnPos; //던전 적 생성 위치
         public float timeLimit; //시간 제한

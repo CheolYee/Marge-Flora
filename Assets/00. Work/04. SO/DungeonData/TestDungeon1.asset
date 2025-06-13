@@ -18,6 +18,7 @@ MonoBehaviour:
   rewordGold: 1000
   clearRecommendText: 1
   dungeonId: 1
-  enemyPrefab: {fileID: 0}
-  enemySpawnPos: {x: 0, y: 0, z: 0}
+  weaknessElement: LIGHT
+  enemyPrefab: {fileID: 2183154504223713318, guid: ef05e6be096b4ef4f868d86345780291, type: 3}
+  enemySpawnPos: {x: 2.2, y: -1.2, z: 0}
   timeLimit: 60

@@ -5,14 +5,31 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="06042e0a-cc9c-4473-bc4d-e88141e2975c" name="변경" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/00. Work/02. Scripts/Combat/NormalAttack.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/00. Work/02. Scripts/Combat/NormalAttack/Projectile.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/00. Work/02. Scripts/Combat/NormalAttack/Projectile.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Marge-Flora/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Marge-Flora/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/00. Work/00.Scenes/Combat.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/00. Work/00.Scenes/Combat.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/00. Work/00.Scenes/Main.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/00. Work/00.Scenes/Main.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/00. Work/02. Scripts/Button/CharacterUIBtn.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/00. Work/02. Scripts/Button/CharacterUIBtn.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/00. Work/02. Scripts/Button/MargeUIBtn.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/00. Work/02. Scripts/Button/MargeUIBtn.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/00. Work/02. Scripts/Button/DunGeonUIBtn.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/00. Work/02. Scripts/Button/DunGeonUIBtn.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/00. Work/02. Scripts/Button/UIContainer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/00. Work/02. Scripts/Button/UIContainer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/00. Work/02. Scripts/Character/CharacterDataSO.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/00. Work/02. Scripts/Character/CharacterDataSO.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/00. Work/02. Scripts/Character/CharacterDatabase.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/00. Work/02. Scripts/Character/CharacterDatabase.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/00. Work/02. Scripts/Character/Skills/SkillDataSo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/00. Work/02. Scripts/Character/Skills/SkillDataSo.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/00. Work/02. Scripts/Manager/GameManager/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/00. Work/02. Scripts/Manager/GameManager/GameManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/00. Work/02. Scripts/Manager/SaveManager/SaveManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/00. Work/02. Scripts/Manager/SaveManager/SaveManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/00. Work/02. Scripts/Marge/DragDrop/Slot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/00. Work/02. Scripts/Marge/DragDrop/Slot.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/00. Work/02. Scripts/Marge/MargeBoard.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/00. Work/02. Scripts/Marge/MargeBoard.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/00. Work/02. Scripts/Save/MergeBoardSaveData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/00. Work/02. Scripts/Save/MergeBoardSaveData.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/00. Work/02. Scripts/Marge/SO/DungeonDataSo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/00. Work/02. Scripts/Marge/SO/DungeonDataSo.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/00. Work/04. SO/Char/Skills/TestSkill.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/00. Work/04. SO/Char/Skills/TestSkill.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/00. Work/04. SO/Char/TestChar.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/00. Work/04. SO/Char/TestChar.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/00. Work/04. SO/DungeonData/TestDungeon1.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/00. Work/04. SO/DungeonData/TestDungeon1.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/00. Work/07. Font/goungiChunNun_Bold SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/00. Work/07. Font/goungiChunNun_Bold SDF.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/00. Work/07. Font/goungiChunNun_Light SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/00. Work/07. Font/goungiChunNun_Light SDF.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/URPProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/URPProjectSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,14 +40,20 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/Assets/00. Work/02. Scripts/Button/ButtonContainer.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/00. Work/02. Scripts/Agent/AgentHealth.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/00. Work/02. Scripts/Boss/Boss.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/00. Work/02. Scripts/Button/MargeUIBtn.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/00. Work/02. Scripts/Character/CharacterDataSO.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/00. Work/02. Scripts/Combat/CombatInitializer.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/00. Work/02. Scripts/Combat/Effect/EffectPlayer.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/00. Work/02. Scripts/Combat/PlayerCombatController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/00. Work/02. Scripts/Manager/CombatManager/CombatManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/00. Work/02. Scripts/Manager/DungeonDataManager/DungeonDataManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/00. Work/02. Scripts/Manager/GameManager/GameManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/00. Work/02. Scripts/Manager/MonoSingleton.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/00. Work/02. Scripts/Manager/Pooling/IPoolable.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/00. Work/02. Scripts/Manager/SlotManager/SlotManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/00. Work/02. Scripts/Manager/TimerManager/TimerManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/00. Work/02. Scripts/Marge/BuyEchoCore.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/00. Work/02. Scripts/Marge/DragDrop/EchoCore.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/00. Work/02. Scripts/Marge/DragDrop/MainWeaponSlot.cs" root0="FORCE_HIGHLIGHTING" />
@@ -50,6 +73,9 @@
   &quot;associatedIndex&quot;: 1
 }</component>
   <component name="ProjectId" id="2xnYK3vrK6g8f3tbCouTGV16OU9" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -126,6 +152,8 @@
       <workItem from="1749438116802" duration="9320000" />
       <workItem from="1749512528876" duration="15732000" />
       <workItem from="1749635591801" duration="5326000" />
+      <workItem from="1749700609638" duration="13619000" />
+      <workItem from="1749788942583" duration="14422000" />
     </task>
     <servers />
   </component>

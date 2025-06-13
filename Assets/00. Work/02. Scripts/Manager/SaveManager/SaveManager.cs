@@ -53,43 +53,44 @@ namespace _00._Work._02._Scripts.Manager.SaveManager
             return File.ReadAllText(CharacterSavePath); // 파일이 있다면 모든 텍스트를 읽고 반환한다
         }
         
-        private string UnlockSavePath => Application.persistentDataPath + "/characterUnlockData.json";
-        public CharacterUnlockSaveData unlockData;
+        private string UnlockSavePath => Application.persistentDataPath + "/characterUnlockData.json"; // 캐릭터의 해금 유무를 저장할 경로
+        private CharacterUnlockSaveData _unlockData; // 캐릭터 해금 유무를 가져오기 위해 불러올 세이브 데이터 컨테이너
 
-        public void SaveUnlockData()
+        private void SaveUnlockData() // 캐릭터 해금 유무 저장
         {
-            string json = JsonUtility.ToJson(unlockData, true);
-            File.WriteAllText(UnlockSavePath, json);
+            string json = JsonUtility.ToJson(_unlockData, true); //언락 데이터의 리스트를 JSON 파일로 뽑기
+            File.WriteAllText(UnlockSavePath, json); // 모든 텍스트를 읽은 후 덮어쓰기
         }
 
-        public void LoadUnlockData()
+        public void LoadUnlockData() // 캐릭터 해금 유무 로드
         {
-            if (File.Exists(UnlockSavePath))
+            if (File.Exists(UnlockSavePath)) //만약 캐릭터 해금 파일이 존재하면
             {
-                string json = File.ReadAllText(UnlockSavePath);
-                unlockData = JsonUtility.FromJson<CharacterUnlockSaveData>(json);
+                string json = File.ReadAllText(UnlockSavePath); // 현재 저장된 데이터 파일의 경로로 찾아가 모든 파일 데이터를 읽고
+                _unlockData = JsonUtility.FromJson<CharacterUnlockSaveData>(json); //데이터를 덮어씌운다
             }
             else
             {
-                unlockData = new CharacterUnlockSaveData();
-                unlockData.unlockList.Add(new CharacterUnlockData { characterID = "1", isUnlocked = true });
-                SaveUnlockData();
+                _unlockData = new CharacterUnlockSaveData(); //새 캐릭터 해금 데이터 컨테이너를 생성하고
+                _unlockData.unlockList.Add(new CharacterUnlockData { characterID = "1", isUnlocked = true }); // 기본 캐릭터를 해금시켜준다
+                SaveUnlockData(); // 새로 만든 데이터 컨테이너를 저장한다
             }
         }
 
-        public bool IsCharacterUnlocked(string characterID)
+        public bool IsCharacterUnlocked(string characterID) //캐릭터가 해금되어있는지 확인
         {
-            var data = unlockData.unlockList.Find(c => c.characterID == characterID);
-            return data != null && data.isUnlocked;
+            //확인할 캐릭터의 아이디와 저장되어있는 캐릭터의 아이디 값을 비교하여 저장
+            var data = _unlockData.unlockList.Find(c => c.characterID == characterID);
+            return data != null && data.isUnlocked; //만약 찾은 데이터가 없지 않고, 캐릭터가 열려있다면 true, 아니면 false를 반환한다.
         }
 
-        public void UnlockCharacter(string characterID)
+        public void UnlockCharacter(string characterID) // 캐릭터의 언락 데이터 가져오기
         {
-            var data = unlockData.unlockList.Find(c => c.characterID == characterID);
+            var data = _unlockData.unlockList.Find(c => c.characterID == characterID);
             if (data != null)
                 data.isUnlocked = true;
             else
-                unlockData.unlockList.Add(new CharacterUnlockData { characterID = characterID, isUnlocked = true });
+                _unlockData.unlockList.Add(new CharacterUnlockData { characterID = characterID, isUnlocked = true });
 
             SaveUnlockData();
         }

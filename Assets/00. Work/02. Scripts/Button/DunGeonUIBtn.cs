@@ -10,9 +10,10 @@ namespace _00._Work._02._Scripts.Button
         {
             if (UIContainer.Instance.margeBoardUI.activeSelf)
             {
-                MargeBoard board = UIContainer.Instance.margeBoardUI.gameObject.GetComponent<MargeBoard>();
+                MargeBoard board = UIContainer.Instance.margeBoardScript;
                 
                 board.SaveBoardState();
+                board.LoadWeaponData();
             }
             UIContainer.Instance.dungeonUI.SetActive(true);
             UIContainer.Instance.characterUI.SetActive(false);

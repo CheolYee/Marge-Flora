@@ -8,5 +8,11 @@ namespace _00._Work._02._Scripts.Manager.GameManager
         public CharacterDataSo selectedCharacterData;
         public EchoCoreSo selectedWeaponEchoData;
         public DungeonDataSo selectedDungeonData;
+
+        protected override void Awake()
+        {
+            base.Awake();
+            DontDestroyOnLoad(gameObject);
+        }
     }
 }
