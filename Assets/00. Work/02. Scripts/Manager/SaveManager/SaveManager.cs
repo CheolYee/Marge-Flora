@@ -7,6 +7,12 @@ namespace _00._Work._02._Scripts.Manager.SaveManager
 {
     public class SaveManager : MonoSingleton<SaveManager>
     {
+        public void Start()
+        {
+            if (Instance == this)
+                DontDestroyOnLoad(this);
+        }
+
         private string SavePath => Application.persistentDataPath + "/margeSaveData.json"; // 각 캐릭의 합치기 데이터가 저장될 파일 이름
 
         public void SaveCharacterMergeData(MergeBoardSaveData newData) //캐릭터의 합치기 데이터를 저장한다

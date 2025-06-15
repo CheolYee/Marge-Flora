@@ -10,9 +10,8 @@ namespace _00._Work._02._Scripts.Manager.CombatManager
         public Slider bossHpSlider;
         public TextMeshProUGUI healthText;
         public TextMeshProUGUI bossName;
-        public float combatTimer;
 
         [Header("Enemy")] 
-        public GameObject boss;
+        public bool bossIsDead;
     }
 }

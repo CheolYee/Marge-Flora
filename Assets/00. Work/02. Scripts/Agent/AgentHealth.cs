@@ -29,9 +29,13 @@ namespace _00._Work._02._Scripts.Agent
         public void TakeDamage(float amount)
         {
             CurrentHealth -= amount;
+            CurrentHealth = Mathf.Clamp(CurrentHealth, 0, MaxHealth);
             onHitEvent?.Invoke();
+            if (CurrentHealth <= 0)
+            {
+                onDeadEvent?.Invoke();
+            }
         }
-        
         
     }
 }

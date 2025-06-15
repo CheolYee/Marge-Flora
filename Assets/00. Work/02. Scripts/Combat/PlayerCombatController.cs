@@ -2,6 +2,7 @@ using System.Collections;
 using _00._Work._02._Scripts.Character.Skills;
 using _00._Work._02._Scripts.Combat.NormalAttack;
 using _00._Work._02._Scripts.Manager.GameManager;
+using _00._Work._02._Scripts.Manager.TimerManager;
 using UnityEngine;
 
 namespace _00._Work._02._Scripts.Combat
@@ -19,10 +20,12 @@ namespace _00._Work._02._Scripts.Combat
             skillData = GameManager.Instance.selectedCharacterData.skillData;
             _normalAttackCooldown = new WaitForSeconds(skillData.normalAttackCooldown);
             StartAutoAttack();
+            TimerManager.Instance.OnTimerFinished += StopAutoAttack;
         }
 
         private void OnDisable()
         {
+            TimerManager.Instance.OnTimerFinished -= StopAutoAttack;
             StopAutoAttack();
         }
 

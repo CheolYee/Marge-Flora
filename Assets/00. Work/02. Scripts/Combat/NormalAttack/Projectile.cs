@@ -1,7 +1,7 @@
-using System.Globalization;
 using _00._Work._02._Scripts.Agent;
 using _00._Work._02._Scripts.Character.Skills;
 using _00._Work._02._Scripts.Combat.Effect;
+using _00._Work._02._Scripts.Combat.Passive;
 using _00._Work._02._Scripts.Manager.GameManager;
 using _00._Work._08._Utility;
 using UnityEngine;
@@ -37,7 +37,8 @@ namespace _00._Work._02._Scripts.Combat.NormalAttack
             
             if (collision.TryGetComponent(out AgentHealth targetHealth))
             {
-                targetHealth.TakeDamage(DamageCalculate());
+                targetHealth.TakeDamage(DamageCalculate(damage, GameManager.Instance.selectedCharacterData.skillData.normalAttackDamage, 
+                    GameManager.Instance.selectedCharacterData.characterElementType));
                 if (hitEffectPrefab != null)
                 {
                     EffectPlayer effect = Instantiate(hitEffectPrefab).GetComponent<EffectPlayer>();
@@ -48,15 +49,16 @@ namespace _00._Work._02._Scripts.Combat.NormalAttack
             Destroy(gameObject);
         }
 
-        private float DamageCalculate()
+        private float DamageCalculate(float dealDamage, float weaponDealDamage, string elementType)
         {
-            float baseDamage = damage;
-            float weaponDamage = GameManager.Instance.selectedWeaponEchoData.growthCount * 0.3f * baseDamage;
+            float baseDamage = dealDamage;
+            float weaponDamage = weaponDealDamage * 0.1f * baseDamage;
             float isWeakness = GameManager.Instance.selectedDungeonData.weaknessElement ==
-                GameManager.Instance.selectedCharacterData.characterElementType ? 2f : 1f;
+                elementType ? 2f : 1f;
+            float buff = PassiveController.Instance.multiplier;
             
-            Logging.Log($"{baseDamage}, {weaponDamage}, {isWeakness} = {(baseDamage + weaponDamage) * isWeakness}");
-            return (baseDamage + weaponDamage) * isWeakness;
+            Logging.Log($"{baseDamage}, {weaponDamage}, {isWeakness}, {buff} = {(baseDamage + weaponDamage) * isWeakness * buff}");
+            return (baseDamage + weaponDamage) * isWeakness * buff;
         }
     }
 }

@@ -1,5 +1,6 @@
 using System;
 using System.Collections;
+using _00._Work._08._Utility;
 using TMPro;
 using UnityEngine;
 
@@ -7,6 +8,12 @@ namespace _00._Work._02._Scripts.Manager.TimerManager
 {
     public class TimerManager : MonoSingleton<TimerManager>
     {
+        private void Start()
+        {
+            if (Instance == this)
+                DontDestroyOnLoad(this);
+        }
+
         public TextMeshProUGUI timerText; //시간을 표시할 TMP
         
         private float _remainingSeconds; //현재 타이머의 시간을 초로 저장
@@ -57,6 +64,7 @@ namespace _00._Work._02._Scripts.Manager.TimerManager
         {
             _remainingSeconds = setTime;
             UpdateTimerUI();
+            
         }
         
         //타이머 동작
@@ -86,9 +94,10 @@ namespace _00._Work._02._Scripts.Manager.TimerManager
             //타이머가 끝났을 시
             _remainingSeconds = 0; //혹시 음수가 되지 않도록 0으로 설정
             UpdateTimerUI(); //마지막 시간 업데이트 (00:00 보여주기)
-            _isRunning = false; //타이머 작동 중지
+            StopTimer();
             
             OnTimerFinished?.Invoke(); //등록된 이벤트 함수가 있다면 종료 이벤트 실행
+            Logging.LogWarning("타이머 종료");
         }
     }
 }

@@ -24,6 +24,7 @@ namespace _00._Work._02._Scripts.Marge
             {
                 slotList.Add(child);
             }
+            
         }
 
 

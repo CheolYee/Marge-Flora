@@ -1,4 +1,4 @@
-using System;
+using _00._Work._02._Scripts.Manager;
 using _00._Work._02._Scripts.Manager.GameManager;
 using _00._Work._02._Scripts.Manager.TimerManager;
 using TMPro;
@@ -7,7 +7,7 @@ using UnityEngine.UI;
 
 namespace _00._Work._02._Scripts.Combat
 {
-    public class CombatInitializer : MonoBehaviour
+    public class CombatInitializer : MonoSingleton<CombatInitializer>
     {
         [Header("UI")]
         public Image characterIcon;
@@ -18,10 +18,11 @@ namespace _00._Work._02._Scripts.Combat
         [Header("Boss")]
         public GameObject bossPrefab;
 
+        public GameObject spawnBoss;
+
         private void Start()
         {
             var character = GameManager.Instance.selectedCharacterData;
-            var weaponEcho = GameManager.Instance.selectedWeaponEchoData;
             var dungeonData = GameManager.Instance.selectedDungeonData;
 
             characterIcon.sprite = character.characterProfile;
@@ -32,9 +33,10 @@ namespace _00._Work._02._Scripts.Combat
 
             bossPrefab = GameManager.Instance.selectedDungeonData.enemyPrefab;
             
-            GameObject boss = Instantiate(bossPrefab, dungeonData.enemySpawnPos, Quaternion.identity);
+            spawnBoss = Instantiate(bossPrefab, dungeonData.enemySpawnPos.position, Quaternion.identity);
             
             TimerManager.Instance.StartTimer(dungeonData.timeLimit);
+            
         }
     }
 }

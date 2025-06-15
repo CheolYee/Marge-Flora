@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 71e40a3cb8b84f7418d9073d2fa9d891, type: 3}
+  m_Name: Ruen_Skill
+  m_EditorClassIdentifier: 
+  skillName: "\uBE5B\uC73C\uB85C!"
+  skillDescription: "\uC801 \uC704\uCE58\uC5D0 \uAC15\uB825\uD55C \uBE5B\uC758 \uAD11\uC120\uC744
+    \uC18C\uD658\uD558\uC5EC \uC801\uC5D0\uAC8C 3\uD68C\uC758 \uD53C\uD574\uB97C
+    \uAC00\uD569\uB2C8\uB2E4. (10\uCD08)"
+  skillIcon: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
+  normalAttackPrefab: {fileID: 405950720624530866, guid: 435dd664990e91747bf4137cf701e1c9, type: 3}
+  normalAttackCooldown: 1
+  normalAttackDamage: 5
+  projectileSpeed: 3
+  skillPrefab: {fileID: 2217996614563910728, guid: 727bda36b32430847bd9d0544e3bc251, type: 3}
+  skillCooldown: 10
+  skillDamage: 20

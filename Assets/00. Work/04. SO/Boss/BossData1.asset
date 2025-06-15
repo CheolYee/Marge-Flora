@@ -13,6 +13,5 @@ MonoBehaviour:
   m_Name: BossData1
   m_EditorClassIdentifier: 
   bossName: "\uC6E8\uC5B4\uC6B8\uD504"
-  bossHp: 500
+  bossHp: 1000
   bossSprite: {fileID: -8080321461122597763, guid: e5a0fd118f4af9c4bb964f2e776cd196, type: 3}
-  weaknessElement: "\uBE5B"

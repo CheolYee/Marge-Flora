@@ -1,5 +1,5 @@
 using System.Collections.Generic;
-using _00._Work._02._Scripts.Button;
+using _00._Work._02._Scripts.Buttons;
 using _00._Work._02._Scripts.Manager.GameManager;
 using _00._Work._02._Scripts.Manager.SaveManager;
 using _00._Work._02._Scripts.Marge;
