@@ -56,7 +56,6 @@ namespace _00._Work._02._Scripts.Combat.Finisher
         
         public void OnFailReturnToMain()
         {
-            Time.timeScale = 1f;
             SceneManager.LoadScene(GameManager.Instance.selectedDungeonData.hasStory ? 3 : 1); // 만약 스토리가 없다면 다시 메인 씬으로
         }
     }

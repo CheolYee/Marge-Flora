@@ -97,8 +97,26 @@ namespace _00._Work._02._Scripts.Manager.SaveManager
                 data.isUnlocked = true;
             else
                 _unlockData.unlockList.Add(new CharacterUnlockData { characterID = characterID, isUnlocked = true });
-
             SaveUnlockData();
+        }
+        private static string GameDataSavePath => Application.persistentDataPath + "/gameSaveData.json";
+
+        public static void SaveGameData(GameData data) //게임 데이터 저장
+        {
+            string json = JsonUtility.ToJson(data, true); //트루는 중간에 보기 좋게 들여쓰기
+            File.WriteAllText(GameDataSavePath, json);
+        }
+
+        public static GameData LoadGameData() //게임 데이터 로드
+        {
+            if (!File.Exists(GameDataSavePath))
+            {
+                Logging.Log($"세이브 데이터를 찾을 수 없어 새로 생성합니다");
+                return new GameData();
+            }
+            
+            string json = File.ReadAllText(GameDataSavePath);
+            return JsonUtility.FromJson<GameData>(json);
         }
     }
 }

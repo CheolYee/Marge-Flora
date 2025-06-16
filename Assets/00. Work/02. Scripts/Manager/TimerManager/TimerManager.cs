@@ -6,12 +6,22 @@ using UnityEngine;
 
 namespace _00._Work._02._Scripts.Manager.TimerManager
 {
-    public class TimerManager : MonoSingleton<TimerManager>
+    public class TimerManager : MonoBehaviour
     {
-        private void Start()
+        public static TimerManager Instance { get; private set; }
+        private void Awake()
         {
-            if (Instance == this)
-                DontDestroyOnLoad(this);
+            //만약 이미 인스턴스가 있다면 없애기
+            if (Instance != null && Instance != this)
+            {
+                Destroy(this.gameObject);
+                return;
+            }
+        
+            //인스턴스가 없을 때 이걸로 지정
+            Instance = this;
+            //씬이 바뀌어도 사라지지 않게하기
+            DontDestroyOnLoad(this.gameObject);
         }
 
         public TextMeshProUGUI timerText; //시간을 표시할 TMP

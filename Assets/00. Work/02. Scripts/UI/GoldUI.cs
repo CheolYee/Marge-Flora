@@ -1,3 +1,4 @@
+using _00._Work._02._Scripts.Manager.GameManager;
 using _00._Work._02._Scripts.Manager.MoneyManager;
 using TMPro;
 using UnityEngine;
@@ -15,9 +16,9 @@ namespace _00._Work._02._Scripts.UI
             MoneyManager.Instance.OnMoneyChanged += UpdateUI;
         }
 
-        private void UpdateUI(int money)
+        private void UpdateUI()
         {
-            moneyText.text = ($"{money}G");
+            moneyText.text = ($"{GameManager.Instance.SelectedGameData.money}G");
         }
     
         private void OnDestroy()

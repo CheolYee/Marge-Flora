@@ -59,7 +59,7 @@ namespace _00._Work._02._Scripts.Combat
             Projectile projectile = projectileObj.GetComponent<Projectile>();
             if (projectile != null)
             {
-                projectile.Initialize(Vector3.right);
+                projectile.Initialize(Vector3.right, GameManager.Instance.selectedCharacterData.skillData);
             }
         }
     }

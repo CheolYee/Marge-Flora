@@ -11,6 +11,7 @@ namespace _00._Work._02._Scripts.Marge.SO
         [Header("EchoCore Values")]
         public string coreName;
         public int growthCount;
+        public int damage;
         
         [Header("NextEcho")]
         public EchoCoreSo nextEchoData;

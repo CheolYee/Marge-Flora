@@ -16,11 +16,9 @@ namespace _00._Work._02._Scripts.Combat.NormalAttack
         public Rigidbody2D rbCompo;
         public GameObject hitEffectPrefab;
         
-        public SkillDataSo skillData;
-        
         private Vector3 _direction;
         
-        public void Initialize(Vector3 direction)
+        public void Initialize(Vector3 direction, SkillDataSo skillData)
         {
             _direction = direction;
             damage = skillData.normalAttackDamage;
@@ -37,7 +35,7 @@ namespace _00._Work._02._Scripts.Combat.NormalAttack
             
             if (collision.TryGetComponent(out AgentHealth targetHealth))
             {
-                targetHealth.TakeDamage(DamageCalculate(damage, GameManager.Instance.selectedCharacterData.skillData.normalAttackDamage, 
+                targetHealth.TakeDamage(DamageCalculate(damage, GameManager.Instance.selectedWeaponEchoData.damage, 
                     GameManager.Instance.selectedCharacterData.characterElementType));
                 if (hitEffectPrefab != null)
                 {
@@ -52,7 +50,7 @@ namespace _00._Work._02._Scripts.Combat.NormalAttack
         private float DamageCalculate(float dealDamage, float weaponDealDamage, string elementType)
         {
             float baseDamage = dealDamage;
-            float weaponDamage = weaponDealDamage * 0.1f * baseDamage;
+            float weaponDamage = weaponDealDamage;
             float isWeakness = GameManager.Instance.selectedDungeonData.weaknessElement ==
                 elementType ? 2f : 1f;
             float buff = PassiveController.Instance.multiplier;
