@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f6a322a12911b9345845629b2864e52e, type: 3}
-  m_Name: TestChar
+  m_Name: Ruen
   m_EditorClassIdentifier: 
-  characterSprite: {fileID: -8080321461122597763, guid: e5a0fd118f4af9c4bb964f2e776cd196, type: 3}
+  characterSprite: {fileID: 4463084189097983335, guid: e8d0fe8db22ea4343bd176672588bac5, type: 3}
   characterID: 1
   characterName: "\uB8E8\uC5D4"
   characterElementType: LIGHT

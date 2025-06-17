@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 8124107816468377785}
   - component: {fileID: 8269964031612108830}
   m_Layer: 0
-  m_Name: NormalAttackEffect1
+  m_Name: Ruena_AttackEffect 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1538,14 +1538,18 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
     speedRange: {x: 0, y: 1}
-    tilesX: 10
-    tilesY: 1
+    tilesX: 4
+    tilesY: 3
     animationType: 0
     rowIndex: 0
     cycles: 1
     uvChannelMask: -1
     rowMode: 1
     sprites:
+    - sprite: {fileID: -1825504553961044312, guid: 2aae87d2503a92f42bf7be71591e5c56, type: 3}
+    - sprite: {fileID: -537694533615464277, guid: 2aae87d2503a92f42bf7be71591e5c56, type: 3}
+    - sprite: {fileID: -814530567831046455, guid: 494eb29b874842e4ca5106d074b3aaa7, type: 3}
+    - sprite: {fileID: 0}
     - sprite: {fileID: 0}
     flipU: 0
     flipV: 0
@@ -4839,7 +4843,7 @@ ParticleSystemRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 4368e17f416d53943ba19a2520f485f8, type: 2}
+  - {fileID: 2100000, guid: 08f3c30bc5aa78144bf8abb9a27d1013, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

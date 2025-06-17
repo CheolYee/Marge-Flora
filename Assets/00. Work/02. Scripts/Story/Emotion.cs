@@ -8,6 +8,6 @@ namespace _00._Work._02._Scripts.Story
         Happy,
         Sad,
         Angry,
-        Surprised
+        Blush
     }
 }

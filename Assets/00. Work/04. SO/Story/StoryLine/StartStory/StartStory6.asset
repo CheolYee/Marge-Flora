@@ -12,10 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5048cf7ac05f44c9991eed2cbd8cb6c0, type: 3}
   m_Name: StartStory6
   m_EditorClassIdentifier: 
-  speakerName: 
-  emotion: 0
-  speakerPosition: 0
+  speakerName: "\uB8E8\uC5D4"
+  emotion: 1
+  speakerPosition: 2
   audioSfxType: 0
-  characterSprite: {fileID: 0}
-  dialogue: 
-  enterEffectType: 0
+  enterEffectType: 2
+  dialogue: "\uC544\uBB34\uD2BC \uADF8\uB798\uC11C \uC800 \uB3C4\uC640\uC8FC\uC2E4\uAEBC\uC8E0?"
+  hasChoices: 0
+  choices: []
+  isEndOfReply: 0

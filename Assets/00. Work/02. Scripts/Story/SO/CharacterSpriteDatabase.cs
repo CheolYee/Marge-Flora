@@ -14,6 +14,7 @@ namespace _00._Work._02._Scripts.Story.SO
             public Sprite happy;
             public Sprite sad;
             public Sprite angry;
+            public Sprite blush;
         }
         
         public List<CharacterEmotionSet> characterSprites;
@@ -29,6 +30,7 @@ namespace _00._Work._02._Scripts.Story.SO
                 Emotion.Happy => set.happy,
                 Emotion.Sad => set.sad,
                 Emotion.Angry => set.angry,
+                Emotion.Blush => set.blush,
                 _ => null
             };
         }

@@ -13,9 +13,10 @@ MonoBehaviour:
   m_Name: StartStory2
   m_EditorClassIdentifier: 
   speakerName: "\uB8E8\uC5D4"
-  emotion: 0
-  speakerPosition: 0
+  emotion: 2
+  speakerPosition: 1
   audioSfxType: 0
-  characterSpriteDatabase: {fileID: 11400000, guid: 0b723cd6bfe3aef4ea9d0c9b2900cdd6, type: 2}
-  dialogue: "\uC815\uB9D0\uB85C \uC544\uBB34\uB3C4 \uC5C6\uC73C\uC2E0\uAC00\uC694..?"
   enterEffectType: 0
+  dialogue: "\uC815\uB9D0\uB85C \uC544\uBB34\uB3C4 \uC5C6\uC73C\uC2E0\uAC00\uC694..?\uC815\uB9D0\uB85C
+    \uC544\uBB34\uB3C4 \uC5C6\uC73C\uC2E0\uAC00\uC694..?\uC815\uB9D0\uB85C \uC544\uBB34\uB3C4
+    \uC5C6\uC73C\uC2E0\uAC00\uC694..?\uC815\uB9D0\uB85C \uC544\uBB34\uB3C4 \uC5C6\uC73C\uC2E0\uAC00\uC694..?"

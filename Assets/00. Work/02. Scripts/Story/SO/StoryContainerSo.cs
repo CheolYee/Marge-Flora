@@ -8,5 +8,6 @@ namespace _00._Work._02._Scripts.Story.SO
     {
         public string storyId;
         public List<StoryLineSo> storyLines;
+        public List<StoryLineSo> choiceLines;
     }
 }

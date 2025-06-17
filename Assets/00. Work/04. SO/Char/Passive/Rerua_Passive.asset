@@ -10,9 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3973bcc77fe14c64c9bcbb3c96f84410, type: 3}
-  m_Name: TestPassive2
+  m_Name: Rerua_Passive
   m_EditorClassIdentifier: 
-  passiveSkillName: "\uD76C\uB9DD\uC758 \uBD88\uBE5B"
-  passiveDescription: "\uACF5\uACA9 \uC2DC \uC801\uC758 \uACF5\uACA9 \uC18D\uB3C4\uB97C
-    2% \uAC10\uC18C\uC2DC\uD0B5\uB2C8\uB2E4 (\uCD5C\uB300 5\uC911\uCCA9)"
+  passiveSkillName: "\uBC14\uB78C\uC758 \uD798\uC73C\uB85C"
+  passiveDescription: "10\uCD08\uB9C8\uB2E4 \uACF5\uACA9 \uC18D\uB3C4\uAC00 5%\uC529
+    \uC99D\uAC00\uD569\uB2C8\uB2E4."
   passiveIcon: {fileID: 10915, guid: 0000000000000000f000000000000000, type: 0}
+  buffPassive: 0
+  cooldown: 0
+  buffDuration: 0
+  attackMultiplier: 0
+  buffEffectPrefab: {fileID: 0}

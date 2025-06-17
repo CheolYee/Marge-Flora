@@ -1,4 +1,3 @@
-using System;
 using _00._Work._02._Scripts.Character;
 using _00._Work._02._Scripts.Marge.SO;
 using _00._Work._02._Scripts.Save;
@@ -11,7 +10,8 @@ namespace _00._Work._02._Scripts.Manager.GameManager
         public CharacterDataSo selectedCharacterData;
         public EchoCoreSo selectedWeaponEchoData;
         public DungeonDataSo selectedDungeonData;
-        [field:SerializeField] public GameData SelectedGameData { get; private set; }
+        [field: SerializeField] public GameData SelectedGameData { get; private set; }
+        [field: SerializeField] public StorySaveData SaveStoryData { get; private set; }
 
         protected override void Awake()
         {
@@ -23,6 +23,7 @@ namespace _00._Work._02._Scripts.Manager.GameManager
         private void Start()
         {
             MoneyManager.MoneyManager.Instance.OnMoneyChanged += SaveGameData;
+            LoadStoryData();
         }
 
         public void LoadGameData()
@@ -30,7 +31,16 @@ namespace _00._Work._02._Scripts.Manager.GameManager
             SelectedGameData = SaveManager.SaveManager.LoadGameData();
         }
 
-        public void SaveGameData()
+        private void LoadStoryData()
+        {
+            SaveStoryData = SaveManager.SaveManager.LoadStoryData();
+            if (SaveStoryData.isFirstStory)
+            {
+                FadeManager.FadeManager.Instance.FadeToScene(3);
+            }
+        }
+
+    public void SaveGameData()
         {
             SaveManager.SaveManager.SaveGameData(SelectedGameData);
         }

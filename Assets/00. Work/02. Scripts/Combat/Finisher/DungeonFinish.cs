@@ -1,4 +1,5 @@
 using _00._Work._02._Scripts.Manager.CombatManager;
+using _00._Work._02._Scripts.Manager.FadeManager;
 using _00._Work._02._Scripts.Manager.GameManager;
 using _00._Work._02._Scripts.Manager.MoneyManager;
 using _00._Work._02._Scripts.Manager.SaveManager;
@@ -51,12 +52,12 @@ namespace _00._Work._02._Scripts.Combat.Finisher
             if (GameManager.Instance.selectedDungeonData.hasUnlock) 
                 SaveManager.Instance.UnlockCharacter(GameManager.Instance.selectedDungeonData.unlockId);
 
-            SceneManager.LoadScene(GameManager.Instance.selectedDungeonData.hasStory ? 3 : 1); // 만약 스토리가 없다면 다시 메인 씬으로
+            FadeManager.Instance.FadeToScene(GameManager.Instance.selectedDungeonData.hasStory ? 3 : 1); // 만약 스토리가 없다면 다시 메인 씬으로
         }
         
         public void OnFailReturnToMain()
         {
-            SceneManager.LoadScene(GameManager.Instance.selectedDungeonData.hasStory ? 3 : 1); // 만약 스토리가 없다면 다시 메인 씬으로
+            FadeManager.Instance.FadeToScene(GameManager.Instance.selectedDungeonData.hasStory ? 3 : 1); // 만약 스토리가 없다면 다시 메인 씬으로
         }
     }
 }

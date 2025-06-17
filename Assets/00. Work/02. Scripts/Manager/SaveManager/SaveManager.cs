@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using System.IO;
 using _00._Work._02._Scripts.Save;
 using _00._Work._08._Utility;
@@ -117,6 +118,46 @@ namespace _00._Work._02._Scripts.Manager.SaveManager
             
             string json = File.ReadAllText(GameDataSavePath);
             return JsonUtility.FromJson<GameData>(json);
+        }
+        
+        private static string StoryDataSavePath => Application.persistentDataPath + "/storyData.json";
+
+        public static void SaveStoryData(StorySaveData data, bool isFirstStroy) //게임 데이터 저장
+        {
+            data.isFirstStory = isFirstStroy;
+            
+            string json = JsonUtility.ToJson(data, true); //트루는 중간에 보기 좋게 들여쓰기
+            File.WriteAllText(StoryDataSavePath, json);
+        }
+
+        public static void SaveStoryID(StorySaveData data, string storyID)
+        {
+            data.isFirstStory = false;
+
+            if (!data.saveStoryIds.Contains(storyID))
+                data.saveStoryIds.Add(storyID);
+            
+            string json = JsonUtility.ToJson(data, true);
+            File.WriteAllText(StoryDataSavePath, json);
+        }
+
+        public static StorySaveData LoadStoryData() //스토리 데이터 로드
+        {
+            if (!File.Exists(StoryDataSavePath))
+            {
+                Logging.Log($"스토리 세이브 데이터를 찾을 수 없어 새로 생성합니다");
+                
+                StorySaveData newStorySave = new StorySaveData
+                {
+                    isFirstStory = true, //처음 게임 접속했다는 뜻 (시작 스토리)
+                    saveStoryIds = new List<string>() //새로운 컨테이너 하나 만들기
+                };
+                
+                return newStorySave;
+            }
+            
+            string json = File.ReadAllText(StoryDataSavePath);
+            return JsonUtility.FromJson<StorySaveData>(json);
         }
     }
 }

@@ -1,3 +1,4 @@
+using _00._Work._02._Scripts.Manager.FadeManager;
 using _00._Work._02._Scripts.Manager.GameManager;
 using _00._Work._02._Scripts.Marge.SO;
 using TMPro;
@@ -29,7 +30,7 @@ namespace _00._Work._02._Scripts.Buttons
         {
             GameManager.Instance.selectedDungeonData = dungeonData; // 선택한 던전 데이터를 메니저에 등록
             
-            SceneManager.LoadScene(2); //전투 씬으로 이동
+            FadeManager.Instance.FadeToScene(2); //전투 씬으로 이동
         }
     }
 }

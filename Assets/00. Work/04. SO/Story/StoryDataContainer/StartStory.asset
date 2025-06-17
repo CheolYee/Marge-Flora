@@ -16,3 +16,8 @@ MonoBehaviour:
   storyLines:
   - {fileID: 11400000, guid: 4e1fa7e3c58ca234b88cec7dfb69dc95, type: 2}
   - {fileID: 11400000, guid: 77e5b733ab78fe84f9efeeea69e1d138, type: 2}
+  - {fileID: 11400000, guid: 7cada791b8d0d664fad19a95aebfd00d, type: 2}
+  - {fileID: 11400000, guid: 38d19c1636d1529488f1be4c8bc01541, type: 2}
+  choiceLines:
+  - {fileID: 11400000, guid: f51f378a62b6693499e062890894fa36, type: 2}
+  - {fileID: 11400000, guid: 6764a6e74d4b83a49bb2538841d9b74b, type: 2}
