@@ -9,8 +9,11 @@ namespace _00._Work._02._Scripts.Buttons
         public static UIContainer Instance { get; private set; }
 
         [SerializeField] public GameObject characterUI;
+        [SerializeField] public GameObject characterImg;
+        [SerializeField] public GameObject storyUI;
         [SerializeField] public GameObject dungeonUI;
         [SerializeField] public GameObject margeBoardUI;
+        [SerializeField] public RectTransform effectParent;
 
         [SerializeField] public MargeBoard margeBoardScript;
         [SerializeField] public CharacterDisplayPanel characterDisplayPanel;

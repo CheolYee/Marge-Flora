@@ -4,6 +4,8 @@ using _00._Work._02._Scripts.Manager.GameManager;
 using _00._Work._02._Scripts.Manager.MoneyManager;
 using _00._Work._02._Scripts.Manager.SaveManager;
 using _00._Work._02._Scripts.Manager.TimerManager;
+using _00._Work._02._Scripts.Save;
+using _00._Work._02._Scripts.Story.SO;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -52,7 +54,29 @@ namespace _00._Work._02._Scripts.Combat.Finisher
             if (GameManager.Instance.selectedDungeonData.hasUnlock) 
                 SaveManager.Instance.UnlockCharacter(GameManager.Instance.selectedDungeonData.unlockId);
 
-            FadeManager.Instance.FadeToScene(GameManager.Instance.selectedDungeonData.hasStory ? 3 : 1); // 만약 스토리가 없다면 다시 메인 씬으로
+
+            WhatIsCurrentStory(GameManager.Instance.selectedDungeonData.story);
+            
+            if (GameManager.Instance.selectedDungeonData.hasStory)
+            {
+                StorySaveData saveData = SaveManager.LoadStoryData();
+                foreach (var currentStoryID in saveData.saveStoryIds)
+                {
+                    if (currentStoryID == GameManager.Instance.selectedStoryData.storyId) // 만약 본 스토리 리스트에 있으면
+                    {
+                        FadeManager.Instance.FadeToScene(1); // 스토리 스킵하고 메뉴
+                        return;
+                    }
+                }
+            }
+            
+            FadeManager.Instance.FadeToScene(
+                GameManager.Instance.selectedDungeonData.hasStory ? 3 : 1); //스토리가 있는 씬이면 이동
+        }
+
+        private void WhatIsCurrentStory(StoryContainerSo storyContainerData)
+        {
+            GameManager.Instance.selectedStoryData = storyContainerData;
         }
         
         public void OnFailReturnToMain()

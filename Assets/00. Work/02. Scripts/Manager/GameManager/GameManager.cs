@@ -1,6 +1,7 @@
 using _00._Work._02._Scripts.Character;
 using _00._Work._02._Scripts.Marge.SO;
 using _00._Work._02._Scripts.Save;
+using _00._Work._02._Scripts.Story.SO;
 using UnityEngine;
 
 namespace _00._Work._02._Scripts.Manager.GameManager
@@ -10,6 +11,7 @@ namespace _00._Work._02._Scripts.Manager.GameManager
         public CharacterDataSo selectedCharacterData;
         public EchoCoreSo selectedWeaponEchoData;
         public DungeonDataSo selectedDungeonData;
+        public StoryContainerSo selectedStoryData;
         [field: SerializeField] public GameData SelectedGameData { get; private set; }
         [field: SerializeField] public StorySaveData SaveStoryData { get; private set; }
 

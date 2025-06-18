@@ -12,12 +12,6 @@ namespace _00._Work._02._Scripts.Combat.Skill.Skills
         
         private int _currentHitCount;
 
-
-        protected override IEnumerator DealDamageRoutine()
-        {
-            yield break;
-        }
-
         public void DealDamageByAnimationEvent()
         {
             if (_currentHitCount >= hitCount) return;

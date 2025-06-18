@@ -12,12 +12,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3973bcc77fe14c64c9bcbb3c96f84410, type: 3}
   m_Name: Rerua_Passive
   m_EditorClassIdentifier: 
-  passiveSkillName: "\uBC14\uB78C\uC758 \uD798\uC73C\uB85C"
-  passiveDescription: "10\uCD08\uB9C8\uB2E4 \uACF5\uACA9 \uC18D\uB3C4\uAC00 5%\uC529
-    \uC99D\uAC00\uD569\uB2C8\uB2E4."
+  passiveSkillName: "\uBC14\uB78C \uC815\uB839\uC758 \uB3C4\uC6C0"
+  passiveDescription: "10\uCD08\uB9C8\uB2E4 \uACF5\uACA9 \uC18D\uB3C4\uAC00 0.1\uCD08\uC529
+    \uAC10\uC18C\uD569\uB2C8\uB2E4. "
   passiveIcon: {fileID: 10915, guid: 0000000000000000f000000000000000, type: 0}
   buffPassive: 0
-  cooldown: 0
+  cooldown: 10
   buffDuration: 0
-  attackMultiplier: 0
-  buffEffectPrefab: {fileID: 0}
+  attackMultiplier: 1
+  attackSpeedBuffPassive: 1
+  attackSpeedBuffCooldown: 10
+  attackSpeed: 0.1
+  buffEffectPrefab: {fileID: 5757581999344503185, guid: 7ea615d8d80c6894c9434b21228b607e, type: 3}

@@ -1,3 +1,4 @@
+using _00._Work._02._Scripts.Story.SO;
 using UnityEngine;
 
 namespace _00._Work._02._Scripts.Marge.SO
@@ -21,6 +22,7 @@ namespace _00._Work._02._Scripts.Marge.SO
 
         [Header("Story")] 
         public bool hasStory;
+        public StoryContainerSo story;
         
         [Header("Unlock")]
         public bool hasUnlock;

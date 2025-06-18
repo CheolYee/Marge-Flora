@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee82eb1f46b59be45925bc9de854b29c, type: 3}
   m_Name: Dungeon1
   m_EditorClassIdentifier: 
-  dungeonName: "\uC815\uB839\uB098\uBB34 \uC740\uAC70\uC9C0"
+  dungeonName: "\uC815\uB839\uB098\uBB34\uC758 \uC232"
   dungeonIcon: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
   dungeonElementIcon: {fileID: 10901, guid: 0000000000000000f000000000000000, type: 0}
   rewordGold: 1000
@@ -23,5 +23,6 @@ MonoBehaviour:
   enemySpawnPos: {fileID: 3176027094303100542, guid: ef05e6be096b4ef4f868d86345780291, type: 3}
   timeLimit: 60
   hasStory: 0
-  hasUnlock: 1
-  unlockId: 2
+  story: {fileID: 0}
+  hasUnlock: 0
+  unlockId: 0

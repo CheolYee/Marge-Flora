@@ -39,7 +39,13 @@ namespace _00._Work._02._Scripts.Manager.StoryManager
         [Header("Choice UI")]
         public GameObject choicePanel;
         public List<Button> choiceButtons;
-        
+
+        protected override void Awake()
+        {
+            base.Awake();
+            currentStory = GameManager.GameManager.Instance.selectedStoryData;
+        }
+
         private void Start()
         {
             _currentIndex = 0;
@@ -93,6 +99,7 @@ namespace _00._Work._02._Scripts.Manager.StoryManager
                 speakerName.text = line.speakerName;
                 ShowDialogue(line.dialogue);
                 ShowCharacter(line.speakerName, line.speakerPosition, line.emotion);
+                PlaySoundEffect(line.audioSfxType);
                 PlayEnterEffect(line.enterEffectType);
                 return;
             }
@@ -131,6 +138,7 @@ namespace _00._Work._02._Scripts.Manager.StoryManager
             speakerName.text = line.speakerName;
             ShowDialogue(line.dialogue);
             ShowCharacter(line.speakerName, line.speakerPosition, line.emotion);
+            PlaySoundEffect(line.audioSfxType);
             PlayEnterEffect(line.enterEffectType);
         }
         
@@ -248,6 +256,30 @@ namespace _00._Work._02._Scripts.Manager.StoryManager
                     leftCharacterImage.sprite = characterSprite;
                     _targetImage = leftCharacterImage;
                     leftCharacterImage.gameObject.SetActive(true);
+                    break;
+            }
+        }
+
+        private void PlaySoundEffect(AudioSfxType audioSfxType)
+        {
+            switch (audioSfxType)
+            {
+                case AudioSfxType.Default:
+                    break;
+                case AudioSfxType.Angry:
+                    SoundManager.SoundManager.Instance.PlaySfx("AngryEmotion");
+                    break;
+                case AudioSfxType.Happy:
+                    SoundManager.SoundManager.Instance.PlaySfx("HappyEmotion");
+                    break;
+                case AudioSfxType.Sad:
+                    SoundManager.SoundManager.Instance.PlaySfx("SadEmotion");
+                    break;
+                case AudioSfxType.Curious:
+                    SoundManager.SoundManager.Instance.PlaySfx("CuriousEmotion");
+                    break;
+                case AudioSfxType.Surprised:
+                    SoundManager.SoundManager.Instance.PlaySfx("SurprisedEmotion");
                     break;
             }
         }

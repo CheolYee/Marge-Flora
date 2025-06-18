@@ -15,7 +15,7 @@ MonoBehaviour:
   speakerName: "\uB8E8\uC5D4"
   emotion: 1
   speakerPosition: 2
-  audioSfxType: 0
+  audioSfxType: 1
   enterEffectType: 0
   dialogue: "\uB8E8\uC5D4\uC740 \uC9D1 \uAC00\uACE0 \uC2F6\uC5B4\uC694"
   hasChoices: 1
@@ -24,4 +24,3 @@ MonoBehaviour:
     choiceLineIndex: 0
   - choiceText: "\uB204\uAD6C\uC138\uC694?"
     choiceLineIndex: 1
-  isEndOfReply: 0

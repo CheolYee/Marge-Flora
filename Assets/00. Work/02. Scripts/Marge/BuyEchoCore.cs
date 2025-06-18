@@ -1,4 +1,5 @@
 using _00._Work._02._Scripts.Manager.GameManager;
+using _00._Work._02._Scripts.Manager.MoneyManager;
 using _00._Work._02._Scripts.Manager.SlotManager;
 using _00._Work._02._Scripts.Marge.DragDrop;
 using _00._Work._02._Scripts.Marge.SO;
@@ -16,28 +17,35 @@ namespace _00._Work._02._Scripts.Marge
         //처음 소환 단계의 So 가져오기
         [SerializeField] private EchoCoreSo firstStageSo;
 
+        private int _buyMoney;
+
         private void OnEnable()
         {
             Logging.Log("데이터 가져오기");
             firstStageSo = GameManager.Instance.selectedCharacterData.firstEchoData;
+            _buyMoney = GameManager.Instance.selectedCharacterData.buyMoney;
         }
 
         //에코 생성 버튼 누를 시 실행
         public void SpawnNewEcho()
         {
-            Slot emptySlot = slotManager.GetEmptySlot();
-
-            if (emptySlot == null)
+            if (MoneyManager.Instance.Money >= _buyMoney)
             {
-                Debug.LogWarning("빈 슬롯이 없습니다!");
-                return;
+                MoneyManager.Instance.SpendMoney(_buyMoney);
+                Slot emptySlot = slotManager.GetEmptySlot();
+
+                if (emptySlot == null)
+                {
+                    Debug.LogWarning("빈 슬롯이 없습니다!");
+                    return;
+                }
+
+                GameObject newItem = Instantiate(echoCorePrefab, emptySlot.transform);
+                newItem.transform.localPosition = Vector3.zero;
+
+                EchoCore core = newItem.GetComponent<EchoCore>();
+                core.SetEchoData(firstStageSo);
             }
-
-            GameObject newItem = Instantiate(echoCorePrefab, emptySlot.transform);
-            newItem.transform.localPosition = Vector3.zero;
-
-            EchoCore core = newItem.GetComponent<EchoCore>();
-            core.SetEchoData(firstStageSo);
         }
     }
 }

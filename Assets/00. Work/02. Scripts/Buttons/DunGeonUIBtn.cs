@@ -14,6 +14,9 @@ namespace _00._Work._02._Scripts.Buttons
                 board.SaveBoardState();
                 board.LoadWeaponData();
             }
+            
+            UIContainer.Instance.storyUI.SetActive(false);
+            UIContainer.Instance.characterImg.SetActive(false);
             UIContainer.Instance.dungeonUI.SetActive(true);
             UIContainer.Instance.characterUI.SetActive(false);
             UIContainer.Instance.margeBoardUI.SetActive(false);

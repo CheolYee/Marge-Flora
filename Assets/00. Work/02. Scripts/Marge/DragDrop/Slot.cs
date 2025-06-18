@@ -1,4 +1,10 @@
+using _00._Work._02._Scripts.Buttons;
+using _00._Work._02._Scripts.Combat.Effect;
+using _00._Work._02._Scripts.Manager.SoundManager;
 using _00._Work._02._Scripts.Marge.SO;
+using _00._Work._08._Utility;
+using Coffee.UIExtensions;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
@@ -6,7 +12,7 @@ namespace _00._Work._02._Scripts.Marge.DragDrop
 {
     public class Slot : MonoBehaviour, IDropHandler
     {
-
+        [SerializeField] private GameObject effectPrefab;
         //슬롯에 아이템(자식 오브젝트)가 있으면 자식 1개를 리턴
         //슬롯에 아이템(자식 오브젝트)가 없으면 null 리턴
         private GameObject EchoCoreCounter()
@@ -41,6 +47,11 @@ namespace _00._Work._02._Scripts.Marge.DragDrop
                 // 다음 성장 단계 존재 확인
                 if (draggingData.nextEchoData != null)
                 {
+                    if (effectPrefab != null)
+                    {
+                        SoundManager.Instance.PlaySfx("Marge");
+                        Effect();
+                    }
                     // 기존 아이템에 nextItem 적용
                     existingCore.SetEchoData(draggingData.nextEchoData);
                     
@@ -50,7 +61,7 @@ namespace _00._Work._02._Scripts.Marge.DragDrop
                 }
                 else
                 {
-                    Debug.Log("더 이상 성장할 수 없습니다.");
+                    Logging.Log("더 이상 성장할 수 없습니다.");
                     EmptyEchoCore(); // 그냥 돌려보냄
                 }
             }
@@ -59,6 +70,19 @@ namespace _00._Work._02._Scripts.Marge.DragDrop
                 Debug.Log("등급이 같지 않습니다.");
                 EmptyEchoCore(); // 등급이 다르면 그냥 복귀
             }
+        }
+
+        private void Effect()
+        {
+            UIParticle effect = Instantiate(effectPrefab, transform).GetComponent<UIParticle>();
+            Vector3 screenPos = RectTransformUtility.WorldToScreenPoint(Camera.main, transform.position);
+            RectTransformUtility.ScreenPointToLocalPointInRectangle(
+                UIContainer.Instance.effectParent, screenPos, Camera.main, out Vector2 localPos);
+            effect.GetComponent<RectTransform>().anchoredPosition = localPos;
+            effect.transform.SetParent(UIContainer.Instance.effectParent, false);
+            effect.transform.localScale = Vector3.one;
+            effect.Play();
+            Destroy(effect, 1);
         }
 
         //자식 오브젝트가 있나 없나 검사 후 있으면 자식 리턴, 없으면 null 리턴

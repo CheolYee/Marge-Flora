@@ -14,6 +14,7 @@ namespace _00._Work._02._Scripts.Combat.Passive
         [SerializeField] private GameObject buffEffect;
         
         public float multiplier = 1f;
+        public float attackSpeed = 0;
         
         private bool _isFinished;
 
@@ -40,6 +41,19 @@ namespace _00._Work._02._Scripts.Combat.Passive
                     StartCoroutine(ApplyAttackBuff());
                 }
             }
+            
+            if (passiveData.attackSpeedBuffPassive)
+            {
+                StartCoroutine(ApplyAttackSpeedBuff());
+                
+                while (!_isFinished)
+                {
+                    yield return new WaitForSeconds(passiveData.attackSpeedBuffCooldown);
+                    
+                    if (_isFinished) break;
+                    StartCoroutine(ApplyAttackSpeedBuff());
+                }
+            }
         }
 
         private IEnumerator ApplyAttackBuff()
@@ -55,6 +69,19 @@ namespace _00._Work._02._Scripts.Combat.Passive
             multiplier = 1;
             Destroy(currentBuffEffect);
             Logging.Log("공버프 종료");
+        }
+        
+        private IEnumerator ApplyAttackSpeedBuff()
+        {
+            Logging.Log("공감버프 실행");
+                
+            GameObject currentBuffEffect = Instantiate(buffEffect, buffEffect.transform.position, buffEffect.transform.rotation);
+            
+            attackSpeed += passiveData.attackSpeed;
+            Logging.LogWarning($"{attackSpeed}");
+            Destroy(currentBuffEffect, 1);
+            
+            yield return new WaitForSeconds(passiveData.attackSpeedBuffCooldown);
         }
     }
 }

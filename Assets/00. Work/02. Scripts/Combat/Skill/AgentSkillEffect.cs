@@ -1,4 +1,3 @@
-using System.Collections;
 using _00._Work._02._Scripts.Combat.Passive;
 using _00._Work._02._Scripts.Manager.GameManager;
 using _00._Work._08._Utility;
@@ -22,8 +21,6 @@ namespace _00._Work._02._Scripts.Combat.Skill
             transform.position = currentTrm;
         }
 
-        protected abstract IEnumerator DealDamageRoutine();
-        
         protected float DamageCalculate(float dealDamage, float weaponDealDamage, string elementType)
         {
             float baseDamage = dealDamage;

@@ -15,9 +15,8 @@ MonoBehaviour:
   speakerName: "\uB8E8\uC5D4"
   emotion: 3
   speakerPosition: 2
-  audioSfxType: 0
+  audioSfxType: 3
   enterEffectType: 0
   dialogue: "\uBB50\uC5D0\uC694!!"
   hasChoices: 0
   choices: []
-  isEndOfReply: 1

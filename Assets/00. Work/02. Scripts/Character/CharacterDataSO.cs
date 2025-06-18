@@ -33,5 +33,6 @@ namespace _00._Work._02._Scripts.Character
         
         [Header("Character First Echo")]
         public EchoCoreSo firstEchoData;
+        public int buyMoney;
     }
 }

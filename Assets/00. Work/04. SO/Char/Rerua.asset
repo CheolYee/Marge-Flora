@@ -24,3 +24,4 @@ MonoBehaviour:
   skillData: {fileID: 11400000, guid: f81b4cd830f865a40861ff89d1dbbe9a, type: 2}
   passiveData: {fileID: 11400000, guid: 66d20376140847f4499cf10ad3d32a37, type: 2}
   firstEchoData: {fileID: 11400000, guid: dc9b3190eb4541443bc0a21b296ff74e, type: 2}
+  buyMoney: 200

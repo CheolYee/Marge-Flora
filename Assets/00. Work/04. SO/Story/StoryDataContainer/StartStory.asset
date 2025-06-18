@@ -13,6 +13,9 @@ MonoBehaviour:
   m_Name: StartStory
   m_EditorClassIdentifier: 
   storyId: Start
+  storyNumber: 1
+  storyName: "\uD50C\uB85C\uB77C\uC640\uC758 \uCCAB \uB9CC\uB0A8"
+  storyIcon: {fileID: -4148118228399580888, guid: 85bdce936e5aff14bb300c5caa251eb9, type: 3}
   storyLines:
   - {fileID: 11400000, guid: 4e1fa7e3c58ca234b88cec7dfb69dc95, type: 2}
   - {fileID: 11400000, guid: 77e5b733ab78fe84f9efeeea69e1d138, type: 2}

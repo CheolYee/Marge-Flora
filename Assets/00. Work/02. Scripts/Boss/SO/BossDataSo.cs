@@ -7,6 +7,5 @@ namespace _00._Work._02._Scripts.Boss.SO
     {
         public string bossName;
         public int bossHp;
-        public Sprite bossSprite;
     }
 }

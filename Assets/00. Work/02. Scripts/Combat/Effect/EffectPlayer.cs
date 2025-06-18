@@ -30,6 +30,13 @@ namespace _00._Work._02._Scripts.Combat.Effect
             _particleSystem.Play(true); //true는 안써줘도 된다. 설명을 위해서 썼다.
             StartCoroutine(DelayAndGotoPool());
         }
+        
+        public void EffectPlay()
+        {
+            ResetItem();
+            _particleSystem.Play(true); //true는 안써줘도 된다. 설명을 위해서 썼다.
+            StartCoroutine(DelayAndGotoPool());
+        }
 
         private IEnumerator DelayAndGotoPool()
         {

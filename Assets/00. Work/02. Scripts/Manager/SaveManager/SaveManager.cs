@@ -122,14 +122,6 @@ namespace _00._Work._02._Scripts.Manager.SaveManager
         
         private static string StoryDataSavePath => Application.persistentDataPath + "/storyData.json";
 
-        public static void SaveStoryData(StorySaveData data, bool isFirstStroy) //게임 데이터 저장
-        {
-            data.isFirstStory = isFirstStroy;
-            
-            string json = JsonUtility.ToJson(data, true); //트루는 중간에 보기 좋게 들여쓰기
-            File.WriteAllText(StoryDataSavePath, json);
-        }
-
         public static void SaveStoryID(StorySaveData data, string storyID)
         {
             data.isFirstStory = false;
@@ -145,7 +137,6 @@ namespace _00._Work._02._Scripts.Manager.SaveManager
         {
             if (!File.Exists(StoryDataSavePath))
             {
-                Logging.Log($"스토리 세이브 데이터를 찾을 수 없어 새로 생성합니다");
                 
                 StorySaveData newStorySave = new StorySaveData
                 {

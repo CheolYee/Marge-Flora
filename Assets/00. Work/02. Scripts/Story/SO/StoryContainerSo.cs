@@ -7,6 +7,9 @@ namespace _00._Work._02._Scripts.Story.SO
     public class StoryContainerSo : ScriptableObject
     {
         public string storyId;
+        public string storyNumber;
+        public string storyName;
+        public Sprite storyIcon;
         public List<StoryLineSo> storyLines;
         public List<StoryLineSo> choiceLines;
     }
