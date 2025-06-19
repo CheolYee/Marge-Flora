@@ -20,6 +20,7 @@ namespace _00._Work._02._Scripts.Character.Skills
         
         public float skillCooldown; //스킬 쿨타임
         public float skillDamage; //스킬 데미지
+        public string skillSfxName;
         
     }
 }

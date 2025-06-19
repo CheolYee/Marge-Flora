@@ -15,9 +15,10 @@ MonoBehaviour:
   dungeonName: "\uC815\uB839\uB098\uBB34\uC758 \uC232"
   dungeonIcon: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
   dungeonElementIcon: {fileID: 10901, guid: 0000000000000000f000000000000000, type: 0}
-  rewordGold: 1000
+  rewordGold: 700
   clearRecommendText: 1
   dungeonId: 1
+  nextDungeonId: 2
   weaknessElement: LIGHT
   enemyPrefab: {fileID: 2183154504223713318, guid: ef05e6be096b4ef4f868d86345780291, type: 3}
   enemySpawnPos: {fileID: 3176027094303100542, guid: ef05e6be096b4ef4f868d86345780291, type: 3}
@@ -25,4 +26,4 @@ MonoBehaviour:
   hasStory: 0
   story: {fileID: 0}
   hasUnlock: 0
-  unlockId: 0
+  unlockId: 

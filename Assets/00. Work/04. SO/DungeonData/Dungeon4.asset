@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee82eb1f46b59be45925bc9de854b29c, type: 3}
+  m_Name: Dungeon4
+  m_EditorClassIdentifier: 
+  dungeonName: "\uB9C8\uBC95 \uB3D9\uAD74"
+  dungeonIcon: {fileID: 10911, guid: 0000000000000000f000000000000000, type: 0}
+  dungeonElementIcon: {fileID: 10901, guid: 0000000000000000f000000000000000, type: 0}
+  rewordGold: 4000
+  clearRecommendText: 7
+  dungeonId: 4
+  nextDungeonId: 5
+  weaknessElement: WIND
+  enemyPrefab: {fileID: 2183154504223713318, guid: cdcdfa6bcb0117f48be7b0c768ee8ea4, type: 3}
+  enemySpawnPos: {fileID: 3176027094303100542, guid: cdcdfa6bcb0117f48be7b0c768ee8ea4, type: 3}
+  timeLimit: 60
+  hasStory: 0
+  story: {fileID: 0}
+  hasUnlock: 0
+  unlockId: 

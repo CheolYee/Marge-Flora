@@ -27,6 +27,11 @@ namespace _00._Work._02._Scripts.Character
                     UIContainer.Instance.characterDisplayPanel.Display(found); // 캐릭터 디스플레이 창에 띄우기
                 }
             }
+            else
+            {
+                UIContainer.Instance.characterDisplayPanel.Display(
+                    GameManager.Instance.selectedCharacterData); // 기본 캐릭터 디스플레이 창에 띄우기
+            }
         }
 
         private CharacterDataSo GetCharacterByID(string id)

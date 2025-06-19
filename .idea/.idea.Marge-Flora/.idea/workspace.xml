@@ -5,71 +5,75 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="06042e0a-cc9c-4473-bc4d-e88141e2975c" name="변경" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/00. Work/02. Scripts/Buttons/MenuUIBtn.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/00. Work/02. Scripts/Buttons/MenuUIBtn.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/00. Work/02. Scripts/Buttons/SoundSettiongUI.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/00. Work/02. Scripts/Buttons/SoundSettiongUI.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/00. Work/02. Scripts/Buttons/StoryEnter.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/00. Work/02. Scripts/Buttons/StoryEnter.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/00. Work/02. Scripts/Buttons/StoryUIBtn.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/00. Work/02. Scripts/Buttons/StoryUIBtn.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/00. Work/02. Scripts/Manager/SoundManager/SoundManager.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/00. Work/02. Scripts/Manager/SoundManager/SoundManager.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/00. Work/02. Scripts/Save/SoundSetting.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/00. Work/02. Scripts/Save/SoundSetting.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/00. Work/02. Scripts/Buttons/StartBtn.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/00. Work/02. Scripts/Buttons/StartBtn.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/00. Work/02. Scripts/Save/DungeonClearData.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/00. Work/02. Scripts/Save/DungeonClearData.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/00. Work/02. Scripts/Save/PlayerNameData.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/00. Work/02. Scripts/Save/PlayerNameData.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/00. Work/02. Scripts/Story/NameInputHandler.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/00. Work/02. Scripts/Story/NameInputHandler.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/00. Work/02. Scripts/UI/PlayerNameSetUI.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/00. Work/02. Scripts/UI/PlayerNameSetUI.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/00. Work/02. Scripts/UI/StartLogoUI.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/00. Work/02. Scripts/UI/StartLogoUI.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Marge-Flora/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Marge-Flora/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/00. Work/00.Scenes/Combat.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/00. Work/00.Scenes/Combat.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/00. Work/00.Scenes/Main.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/00. Work/00.Scenes/Main.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/00. Work/00.Scenes/Start.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/00. Work/00.Scenes/Start.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/00. Work/00.Scenes/Story.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/00. Work/00.Scenes/Story.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/00. Work/01. Animation/AirTree/AirTree.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/00. Work/01. Animation/AirTree/AirTree.controller" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/00. Work/01. Animation/SkillMotion/tonaido.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/00. Work/01. Animation/SkillMotion/tonaido.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/00. Work/02. Scripts/Boss/SO/BossDataSo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/00. Work/02. Scripts/Boss/SO/BossDataSo.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/00. Work/02. Scripts/Buttons/CharacterUIBtn.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/00. Work/02. Scripts/Buttons/CharacterUIBtn.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/00. Work/02. Scripts/Buttons/DunGeonUIBtn.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/00. Work/02. Scripts/Buttons/DunGeonUIBtn.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/00. Work/02. Scripts/Buttons/MargeUIBtn.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/00. Work/02. Scripts/Buttons/MargeUIBtn.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/00. Work/02. Scripts/Buttons/DungeonEnter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/00. Work/02. Scripts/Buttons/DungeonEnter.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/00. Work/02. Scripts/Buttons/UIContainer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/00. Work/02. Scripts/Buttons/UIContainer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/00. Work/02. Scripts/Character/CharacterDataSO.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/00. Work/02. Scripts/Character/CharacterDataSO.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/00. Work/02. Scripts/Character/Skills/PassiveDataSo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/00. Work/02. Scripts/Character/Skills/PassiveDataSo.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/00. Work/02. Scripts/Combat/Effect/EffectPlayer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/00. Work/02. Scripts/Combat/Effect/EffectPlayer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/00. Work/02. Scripts/Character/CharacterDatabase.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/00. Work/02. Scripts/Character/CharacterDatabase.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/00. Work/02. Scripts/Character/Skills/SkillDataSo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/00. Work/02. Scripts/Character/Skills/SkillDataSo.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/00. Work/02. Scripts/Combat/Finisher/DungeonFinish.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/00. Work/02. Scripts/Combat/Finisher/DungeonFinish.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/00. Work/02. Scripts/Combat/NormalAttack/Projectile.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/00. Work/02. Scripts/Combat/NormalAttack/Projectile.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/00. Work/02. Scripts/Combat/Passive/PassiveController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/00. Work/02. Scripts/Combat/Passive/PassiveController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/00. Work/02. Scripts/Combat/PlayerCombatController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/00. Work/02. Scripts/Combat/PlayerCombatController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/00. Work/02. Scripts/Combat/Skill/AgentSkillEffect.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/00. Work/02. Scripts/Combat/Skill/AgentSkillEffect.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/00. Work/02. Scripts/Combat/Skill/SkillButton.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/00. Work/02. Scripts/Combat/Skill/SkillButton.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/00. Work/02. Scripts/Combat/Skill/Skills/Skill1.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/00. Work/02. Scripts/Combat/Skill/Skills/Skill1.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/00. Work/02. Scripts/Combat/Skill/Skills/Skill2.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/00. Work/02. Scripts/Combat/Skill/Skills/Skill2.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/00. Work/02. Scripts/Manager/GameManager/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/00. Work/02. Scripts/Manager/GameManager/GameManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/00. Work/02. Scripts/Manager/SaveManager/SaveManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/00. Work/02. Scripts/Manager/SaveManager/SaveManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/00. Work/02. Scripts/Manager/StoryManager/StoryManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/00. Work/02. Scripts/Manager/StoryManager/StoryManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/00. Work/02. Scripts/Marge/BuyEchoCore.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/00. Work/02. Scripts/Marge/BuyEchoCore.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/00. Work/02. Scripts/Marge/DragDrop/EchoCore.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/00. Work/02. Scripts/Marge/DragDrop/EchoCore.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/00. Work/02. Scripts/Marge/DragDrop/MainWeaponSlot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/00. Work/02. Scripts/Marge/DragDrop/MainWeaponSlot.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/00. Work/02. Scripts/Marge/DragDrop/Slot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/00. Work/02. Scripts/Marge/DragDrop/Slot.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/00. Work/02. Scripts/Marge/SO/DungeonDataSo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/00. Work/02. Scripts/Marge/SO/DungeonDataSo.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/00. Work/02. Scripts/Story/AudioSfxType.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/00. Work/02. Scripts/Story/AudioSfxType.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/00. Work/02. Scripts/Story/SO/StoryContainerSo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/00. Work/02. Scripts/Story/SO/StoryContainerSo.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/00. Work/04. SO/Char/Passive/Rerua_Passive.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/00. Work/04. SO/Char/Passive/Rerua_Passive.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/00. Work/04. SO/Char/Rerua.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/00. Work/04. SO/Char/Rerua.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/00. Work/04. SO/Char/Ruen.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/00. Work/04. SO/Char/Ruen.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/00. Work/02. Scripts/UI/GoldUI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/00. Work/02. Scripts/UI/GoldUI.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/00. Work/03. Sprites/UI/Story1Back.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/00. Work/03. Sprites/UI/Story1Back.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/00. Work/04. SO/Boss/BossData1.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/00. Work/04. SO/Boss/BossData1.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/00. Work/04. SO/Boss/BossData2.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/00. Work/04. SO/Boss/BossData2.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/00. Work/04. SO/Char/Skills/Rerua_Skill.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/00. Work/04. SO/Char/Skills/Rerua_Skill.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/00. Work/04. SO/Char/Skills/Ruen_Skill.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/00. Work/04. SO/Char/Skills/Ruen_Skill.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/00. Work/04. SO/DungeonData/Dungeon1.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/00. Work/04. SO/DungeonData/Dungeon1.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/00. Work/04. SO/DungeonData/TestDungeon2.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/00. Work/04. SO/DungeonData/TestDungeon2.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/00. Work/04. SO/Story/StoryDataContainer/StartStory.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/00. Work/04. SO/Story/StoryDataContainer/StartStory.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/00. Work/04. SO/Story/StoryLine/StartStory/StartStory1.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/00. Work/04. SO/Story/StoryLine/StartStory/StartStory1.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/00. Work/04. SO/Story/StoryLine/StartStory/StartStory3.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/00. Work/04. SO/Story/StoryLine/StartStory/StartStory3.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/00. Work/04. SO/Story/StoryLine/StartStory/StartStory5.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/00. Work/04. SO/Story/StoryLine/StartStory/StartStory5.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/00. Work/05. Prefabs/Boss/BossPrefab2.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/00. Work/05. Prefabs/Boss/BossPrefab2.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/00. Work/05. Prefabs/Slot.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/00. Work/05. Prefabs/Slot.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/00. Work/04. SO/DungeonData/Dungeon2.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/00. Work/04. SO/DungeonData/Dungeon2.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/00. Work/04. SO/EchoCore/Rerua/Rerua_Core2.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/00. Work/04. SO/EchoCore/Rerua/Rerua_Core2.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/00. Work/04. SO/EchoCore/Rerua/Rerua_Core3.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/00. Work/04. SO/EchoCore/Rerua/Rerua_Core3.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/00. Work/04. SO/EchoCore/Ruen/Ruen_Core1.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/00. Work/04. SO/EchoCore/Ruen/Ruen_Core1.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/00. Work/04. SO/EchoCore/Ruen/Ruen_Core2.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/00. Work/04. SO/EchoCore/Ruen/Ruen_Core2.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/00. Work/04. SO/EchoCore/Ruen/Ruen_Core3.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/00. Work/04. SO/EchoCore/Ruen/Ruen_Core3.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/00. Work/05. Prefabs/Boss/BossPrefab3.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/00. Work/05. Prefabs/Boss/BossPrefab3.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/00. Work/05. Prefabs/DunJeon.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/00. Work/05. Prefabs/DunJeon.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/00. Work/05. Prefabs/FadeImg.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/00. Work/05. Prefabs/FadeImg.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/00. Work/05. Prefabs/MenuUI.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/00. Work/05. Prefabs/MenuUI.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/00. Work/05. Prefabs/MoneyUI.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/00. Work/05. Prefabs/MoneyUI.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/00. Work/06. Sounds/SFX/Skills/RenuaSkill.ogg" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/00. Work/06. Sounds/SFX/Skills/RenuaSkill.ogg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/00. Work/06. Sounds/SFX/Skills/RenuaSkill.ogg.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/00. Work/06. Sounds/SFX/Skills/RenuaSkill.ogg.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/00. Work/06. Sounds/SFX/Skills/RuenSkill.ogg" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/00. Work/06. Sounds/SFX/Skills/RuenSkill.ogg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/00. Work/06. Sounds/SFX/Skills/RuenSkill.ogg.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/00. Work/06. Sounds/SFX/Skills/RuenSkill.ogg.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/00. Work/07. Font/goungiChunNun_Bold SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/00. Work/07. Font/goungiChunNun_Bold SDF.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/00. Work/07. Font/goungiChunNun_Bold SDF_OutLine.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/00. Work/07. Font/goungiChunNun_Bold SDF_OutLine.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/00. Work/10. Shader/AgentShader.shadergraph" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/00. Work/10. Shader/AgentShader.shadergraph" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Pixel FX - Air/Animations/Air_Buff.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Pixel FX - Air/Animations/Air_Buff.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Pixel FX - Holy/Animations/Holy_Resurrection.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Pixel FX - Holy/Animations/Holy_Resurrection.anim" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DpaMonitoringSettings">
+    <option name="firstShow" value="false" />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -111,6 +115,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/00. Work/02. Scripts/Story/Emotion.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/00. Work/02. Scripts/Story/SO/StoryLineSo.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.coffee.ui-particle@4dfcb9075e16/Runtime/UIParticle.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.shadergraph@243c7b20d665/Editor/Data/Graphs/SerializableTexture.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@4027c60e8806/Editor/UGUI/UI/HorizontalOrVerticalLayoutGroupEditor.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@4027c60e8806/Runtime/UGUI/UI/Core/GraphicRaycaster.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
@@ -128,20 +133,21 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;Base&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "Unity 에디터에 연결.Unity 에디터에 연결.executor": "Debug",
+    "git-widget-placeholder": "Base",
+    "ignore.virus.scanning.warn.message": "true",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RunManager" selected="Unity 에디터에 연결.Unity 에디터에 연결">
     <configuration name="유닛 테스트(배치 모드)" type="RunUnityExe" factoryName="Unity Executable">
       <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\6000.0.48f1\Editor\Unity.exe" />
@@ -159,13 +165,15 @@
       <option name="USE_EXTERNAL_CONSOLE" value="0" />
       <method v="2" />
     </configuration>
-    <configuration name="Unity 에디터에 연결" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+    <configuration name="Unity 에디터에 연결" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="13548">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" />
+      <option name="pid" value="13548" />
       <option name="projectPathOnTarget" />
       <option name="runtimes">
-        <list />
+        <list>
+          <MonoRuntime />
+        </list>
       </option>
       <option name="selectedOptions">
         <list />
@@ -208,6 +216,7 @@
       <workItem from="1750043409432" duration="9748000" />
       <workItem from="1750117033158" duration="28123000" />
       <workItem from="1750204388749" duration="30579000" />
+      <workItem from="1750290900953" duration="28231000" />
     </task>
     <servers />
   </component>

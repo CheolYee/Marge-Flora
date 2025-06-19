@@ -19,7 +19,7 @@ namespace _00._Work._02._Scripts.Combat
         private void OnEnable()
         {
             skillData = GameManager.Instance.selectedCharacterData.skillData;
-            float normalAttackCool = skillData.normalAttackCooldown - PassiveController.Instance.attackSpeed;
+            float normalAttackCool = skillData.normalAttackCooldown;
             _normalAttackCooldown = new WaitForSeconds(normalAttackCool);
             StartAutoAttack();
             TimerManager.Instance.OnTimerFinished += StopAutoAttack;
@@ -51,6 +51,8 @@ namespace _00._Work._02._Scripts.Combat
             while (true)
             {
                 FireNormalAttack();
+                float normalAttackCool = skillData.normalAttackCooldown - PassiveController.Instance.attackSpeed;
+                _normalAttackCooldown = new WaitForSeconds(normalAttackCool);
                 yield return _normalAttackCooldown;
             }
         }

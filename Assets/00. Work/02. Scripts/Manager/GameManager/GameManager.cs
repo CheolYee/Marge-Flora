@@ -1,4 +1,5 @@
 using _00._Work._02._Scripts.Character;
+using _00._Work._02._Scripts.Marge;
 using _00._Work._02._Scripts.Marge.SO;
 using _00._Work._02._Scripts.Save;
 using _00._Work._02._Scripts.Story.SO;
@@ -25,7 +26,18 @@ namespace _00._Work._02._Scripts.Manager.GameManager
         private void Start()
         {
             MoneyManager.MoneyManager.Instance.OnMoneyChanged += SaveGameData;
+            LoadWeaopnData();
             LoadStoryData();
+        }
+
+        private void LoadWeaopnData()
+        {
+            MergeBoardSaveData saveData = SaveManager.SaveManager.Instance.LoadMergeDataForCharacter(selectedCharacterData.characterID);
+            if (saveData != null)
+            {
+                EchoCoreSo savedEcho = EchoCoreDatabase.Instance.GetEchoCoreSo(saveData.equipmentCoreData.itemName);
+                selectedWeaponEchoData = savedEcho;
+            }
         }
 
         public void LoadGameData()

@@ -12,6 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9e8166c56e37ec14680dfe796d0b4ed8, type: 3}
   m_Name: BossData1
   m_EditorClassIdentifier: 
-  bossName: "\uC6E8\uC5B4\uC6B8\uD504"
-  bossHp: 1000
-  bossSprite: {fileID: -8080321461122597763, guid: e5a0fd118f4af9c4bb964f2e776cd196, type: 3}
+  bossName: "\uD3EC\uC790 \uB098\uBB34"
+  bossHp: 2000

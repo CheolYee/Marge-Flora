@@ -15,5 +15,5 @@ MonoBehaviour:
   echoSprite: {fileID: 7117638979082166590, guid: 2aae87d2503a92f42bf7be71591e5c56, type: 3}
   coreName: "\uC791\uC740 \uBC14\uB78C\uC758 \uAE30\uC6B4"
   growthCount: 2
-  damage: 10
+  damage: 15
   nextEchoData: {fileID: 11400000, guid: b2c1d375e2060e345ac9a47d305e6221, type: 2}

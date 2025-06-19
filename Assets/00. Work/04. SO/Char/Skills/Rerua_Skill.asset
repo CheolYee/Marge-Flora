@@ -23,3 +23,4 @@ MonoBehaviour:
   skillPrefab: {fileID: 2217996614563910728, guid: 8f788b47041f7c3458395963f33a71e7, type: 3}
   skillCooldown: 15
   skillDamage: 20
+  skillSfxName: RenuaSkill

@@ -24,3 +24,4 @@ MonoBehaviour:
   skillPrefab: {fileID: 2217996614563910728, guid: 727bda36b32430847bd9d0544e3bc251, type: 3}
   skillCooldown: 10
   skillDamage: 20
+  skillSfxName: RuenSkill

@@ -101,23 +101,23 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: StoryBack
+      name: Story1Back_0
       rect:
         serializedVersion: 2
-        x: 0
+        x: 4
         y: 0
-        width: 1088
+        width: 1080
         height: 1920
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: f1e8cc1199b7f0550800000000000000
-      internalID: 6129253515233365535
+      spriteID: d64f4d9493188b44684aa8698a0c059a
+      internalID: 1803851734
       vertices: []
       indices: 
       edges: []
@@ -136,7 +136,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      StoryBack: 6129253515233365535
+      Story1Back_0: 1803851734
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

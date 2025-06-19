@@ -61,7 +61,7 @@ namespace _00._Work._02._Scripts.Combat.Skill
             GameObject skill = Instantiate(_skillData.skillPrefab, _bossTrm.position, Quaternion.identity);
             if (skill.TryGetComponent(out AgentSkillEffect skillComponent))
             {
-                skillComponent.Initialize(_bossTrm, _skillData.skillDamage);
+                skillComponent.Initialize(_bossTrm, _skillData.skillDamage, _skillData.skillSfxName);
             }
             else Logging.LogWarning("스킬 프리팹에 스킬 이펙트 상속 스크립트가 없음");
             

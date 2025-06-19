@@ -3,6 +3,7 @@ using _00._Work._02._Scripts.Character.Skills;
 using _00._Work._02._Scripts.Combat.Effect;
 using _00._Work._02._Scripts.Combat.Passive;
 using _00._Work._02._Scripts.Manager.GameManager;
+using _00._Work._02._Scripts.Manager.SoundManager;
 using _00._Work._08._Utility;
 using UnityEngine;
 
@@ -35,6 +36,7 @@ namespace _00._Work._02._Scripts.Combat.NormalAttack
             
             if (collision.TryGetComponent(out AgentHealth targetHealth))
             {
+                SoundManager.Instance.PlaySfx("Hit");
                 targetHealth.TakeDamage(DamageCalculate(damage, GameManager.Instance.selectedWeaponEchoData.damage, 
                     GameManager.Instance.selectedCharacterData.characterElementType));
                 if (hitEffectPrefab != null)

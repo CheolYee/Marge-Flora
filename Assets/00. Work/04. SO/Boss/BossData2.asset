@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9e8166c56e37ec14680dfe796d0b4ed8, type: 3}
   m_Name: BossData2
   m_EditorClassIdentifier: 
-  bossName: "\uC57C\uC0DD\uC758 \uBB34\uC2DC\uB8F8"
-  bossHp: 2000
+  bossName: "\uBFD4\uB09C \uBC84\uC12F"
+  bossHp: 3500

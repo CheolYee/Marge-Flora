@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Ruen_Core3
   m_EditorClassIdentifier: 
   echoSprite: {fileID: 10901, guid: 0000000000000000f000000000000000, type: 0}
-  coreName: "\uD14C\uC2A4\uD2B8 \uCF54\uC5B43"
+  coreName: "\uC791\uC740 \uBE5B\uC758 \uB9C8\uC74C"
   growthCount: 3
-  damage: 10
-  nextEchoData: {fileID: 0}
+  damage: 20
+  nextEchoData: {fileID: 11400000, guid: 53691bb06596e1c44ad004f37414c347, type: 2}

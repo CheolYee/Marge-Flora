@@ -1,5 +1,6 @@
 using _00._Work._02._Scripts.Combat.Passive;
 using _00._Work._02._Scripts.Manager.GameManager;
+using _00._Work._02._Scripts.Manager.SoundManager;
 using _00._Work._08._Utility;
 using UnityEngine;
 
@@ -11,7 +12,9 @@ namespace _00._Work._02._Scripts.Combat.Skill
         
         protected float Damage = 10f;
 
-        public void Initialize(Transform bossTrm, float damageAmount)
+        protected string SfxNames;
+
+        public void Initialize(Transform bossTrm, float damageAmount, string sfxName)
         {
             Target = bossTrm;
             Damage = damageAmount;
@@ -19,6 +22,12 @@ namespace _00._Work._02._Scripts.Combat.Skill
             var currentTrm = transform.position;
             currentTrm.x = Target.position.x;
             transform.position = currentTrm;
+            SfxNames = sfxName;
+        }
+
+        public void SoundStart()
+        {
+            SoundManager.Instance.PlaySfx(SfxNames);
         }
 
         protected float DamageCalculate(float dealDamage, float weaponDealDamage, string elementType)

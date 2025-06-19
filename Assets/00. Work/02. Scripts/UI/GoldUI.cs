@@ -11,14 +11,14 @@ namespace _00._Work._02._Scripts.UI
 
         private void Start()
         {
-            moneyText.text = ($"{MoneyManager.Instance.Money}G");
+            moneyText.text = ($"{MoneyManager.Instance.Money}");
 
             MoneyManager.Instance.OnMoneyChanged += UpdateUI;
         }
 
         private void UpdateUI()
         {
-            moneyText.text = ($"{GameManager.Instance.SelectedGameData.money}G");
+            moneyText.text = ($"{GameManager.Instance.SelectedGameData.money}");
         }
     
         private void OnDestroy()

@@ -88,7 +88,7 @@ namespace _00._Work._02._Scripts.Manager.SaveManager
         {
             //확인할 캐릭터의 아이디와 저장되어있는 캐릭터의 아이디 값을 비교하여 저장
             var data = _unlockData.unlockList.Find(c => c.characterID == characterID);
-            return data != null && data.isUnlocked; //만약 찾은 데이터가 없지 않고, 캐릭터가 열려있다면 true, 아니면 false를 반환한다.
+            return data is { isUnlocked: true }; //만약 찾은 데이터가 없지 않고, 캐릭터가 열려있다면 true, 아니면 false를 반환한다.
         }
 
         public void UnlockCharacter(string characterID) // 캐릭터의 언락 데이터 가져오기
@@ -113,7 +113,10 @@ namespace _00._Work._02._Scripts.Manager.SaveManager
             if (!File.Exists(GameDataSavePath))
             {
                 Logging.Log($"세이브 데이터를 찾을 수 없어 새로 생성합니다");
-                return new GameData();
+                return new GameData()
+                {
+                    money = 200
+                };
             }
             
             string json = File.ReadAllText(GameDataSavePath);
@@ -149,6 +152,65 @@ namespace _00._Work._02._Scripts.Manager.SaveManager
             
             string json = File.ReadAllText(StoryDataSavePath);
             return JsonUtility.FromJson<StorySaveData>(json);
+        }
+        
+        private static string PlayerNameDataSavePath => Application.persistentDataPath + "/playerNameData.json";
+
+        public static void SavePlayerNameData(PlayerNameData data)
+        {
+            string json = JsonUtility.ToJson(data, true);
+            File.WriteAllText(PlayerNameDataSavePath, json);
+        }
+
+        public static PlayerNameData LoadPlayerNameData()
+        {
+            if (!File.Exists(PlayerNameDataSavePath))
+            {
+                return null;
+            }
+            
+            string json = File.ReadAllText(PlayerNameDataSavePath);
+            return JsonUtility.FromJson<PlayerNameData>(json);
+        }
+        
+        public static bool ExistPlayerName() => File.Exists(PlayerNameDataSavePath);
+        
+        private static string DungeonClearFilePath => Application.persistentDataPath + "/dungeonClear.json";
+
+        private static DungeonClearData LoadDungeonSaveData()
+        {
+            if (!File.Exists(DungeonClearFilePath))
+            {
+                DungeonClearData newClearData = new DungeonClearData();
+                newClearData.clearedDungeonIds.Add("1");
+                SaveDungeonSaveData(newClearData);
+                return newClearData;
+            }
+
+            string json = File.ReadAllText(DungeonClearFilePath);
+            return JsonUtility.FromJson<DungeonClearData>(json);
+        }
+
+        private static void SaveDungeonSaveData(DungeonClearData data)
+        {
+            string json = JsonUtility.ToJson(data, true);
+            File.WriteAllText(DungeonClearFilePath, json);
+        }
+
+        public static void MarkDungeonCleared(string dungeonId)
+        {
+            var data = LoadDungeonSaveData();
+            if (!data.clearedDungeonIds.Contains(dungeonId))
+            {
+                data.clearedDungeonIds.Add(dungeonId);
+                SaveDungeonSaveData(data);
+            }
+        }
+
+        public static bool IsDungeonCleared(string dungeonId)
+        {
+            Logging.Log(dungeonId);
+            return LoadDungeonSaveData().clearedDungeonIds.Contains(dungeonId);
         }
     }
 }

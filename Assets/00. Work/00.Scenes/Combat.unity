@@ -932,8 +932,8 @@ RectTransform:
   - {fileID: 435020791}
   - {fileID: 1196774861}
   - {fileID: 779467782}
-  - {fileID: 237536261}
   - {fileID: 973594153}
+  - {fileID: 237536261}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -2126,23 +2126,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2734094731516929881, guid: 28bf26928843981418dc881d0d016636, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0.4929493
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2734094731516929881, guid: 28bf26928843981418dc881d0d016636, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2734094731516929881, guid: 28bf26928843981418dc881d0d016636, type: 3}
       propertyPath: m_AnchorMin.x
-      value: 0.4929493
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4874548203247695780, guid: 28bf26928843981418dc881d0d016636, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0.4929493
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4874548203247695780, guid: 28bf26928843981418dc881d0d016636, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5573387315957081490, guid: 28bf26928843981418dc881d0d016636, type: 3}
       propertyPath: m_Name
@@ -2150,27 +2150,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5573387315957081490, guid: 28bf26928843981418dc881d0d016636, type: 3}
       propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6913693330665305133, guid: 28bf26928843981418dc881d0d016636, type: 3}
+      propertyPath: m_AnchorMax.x
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6913693330665305133, guid: 28bf26928843981418dc881d0d016636, type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 0.4929493
-      objectReference: {fileID: 0}
-    - target: {fileID: 6913693330665305133, guid: 28bf26928843981418dc881d0d016636, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6913693330665305133, guid: 28bf26928843981418dc881d0d016636, type: 3}
       propertyPath: m_AnchorMin.x
-      value: 0.4929493
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6971471129687873106, guid: 28bf26928843981418dc881d0d016636, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0.4929493
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6971471129687873106, guid: 28bf26928843981418dc881d0d016636, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

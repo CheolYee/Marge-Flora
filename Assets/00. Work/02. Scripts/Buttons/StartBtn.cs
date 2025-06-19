@@ -1,0 +1,27 @@
+using _00._Work._02._Scripts.Manager.FadeManager;
+using _00._Work._02._Scripts.Manager.SaveManager;
+using _00._Work._08._Utility;
+using UnityEngine;
+using UnityEngine.UI;
+
+namespace _00._Work._02._Scripts.Buttons
+{
+    public class StartBtn : MonoBehaviour
+    {
+        [SerializeField] private Button startButton;
+        [SerializeField] private GameObject namePanel;
+
+        public void ActiveName()
+        {
+            if (SaveManager.ExistPlayerName())
+            {
+                FadeManager.Instance.FadeToScene(1);
+            }
+            else
+            {
+                namePanel.SetActive(true);
+            }
+            
+        }
+    }
+}

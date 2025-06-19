@@ -606,7 +606,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 6129253515233365535, guid: 94a6983d6f4a2ab47b52c1fa50305d4b, type: 3}
+  m_Sprite: {fileID: 1803851734, guid: 94a6983d6f4a2ab47b52c1fa50305d4b, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1985,7 +1985,6 @@ RectTransform:
   - {fileID: 480114361}
   - {fileID: 1498671901}
   - {fileID: 379649609}
-  - {fileID: 1568705916}
   m_Father: {fileID: 1965665741}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -2212,6 +2211,7 @@ RectTransform:
   - {fileID: 1649614281}
   - {fileID: 192260069}
   - {fileID: 878999301}
+  - {fileID: 1568705916}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -2436,7 +2436,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 1649614281}
+    m_TransformParent: {fileID: 1965665741}
     m_Modifications:
     - target: {fileID: 1411966013074097355, guid: 8598cdec64e45ab40914df19776d45f4, type: 3}
       propertyPath: m_Pivot.x

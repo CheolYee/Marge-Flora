@@ -50,6 +50,7 @@ namespace _00._Work._02._Scripts.Combat.Finisher
         public void OnSuccessReturnToMain()
         {
             MoneyManager.Instance.AddMoney(GameManager.Instance.selectedDungeonData.rewordGold);
+            SaveManager.MarkDungeonCleared(GameManager.Instance.selectedDungeonData.nextDungeonId);
             
             if (GameManager.Instance.selectedDungeonData.hasUnlock) 
                 SaveManager.Instance.UnlockCharacter(GameManager.Instance.selectedDungeonData.unlockId);

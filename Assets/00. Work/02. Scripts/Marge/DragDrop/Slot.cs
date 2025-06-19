@@ -29,8 +29,8 @@ namespace _00._Work._02._Scripts.Marge.DragDrop
             //슬롯이 차있다면 종료
             if (EmptyEchoCore()) return;
 
-            EchoCoreSo draggingData = EchoCore.EchoCoreData;
-            EchoCore draggingCore = EchoCore.DraggingObject?.GetComponent<EchoCore>();
+            EchoCoreSo draggingData = EchoCore.echoCoreData;
+            EchoCore draggingCore = EchoCore.draggingObject?.GetComponent<EchoCore>();
             EchoCore existingCore = existingItem.GetComponent<EchoCore>();
 
             if (draggingData == null || draggingCore == null || existingCore == null)
@@ -56,8 +56,8 @@ namespace _00._Work._02._Scripts.Marge.DragDrop
                     existingCore.SetEchoData(draggingData.nextEchoData);
                     
                     // 드래그된 아이템 제거 (혹은 풀로 반환)
-                    Destroy(EchoCore.DraggingObject);
-                    EchoCore.DraggingObject = null;
+                    Destroy(EchoCore.draggingObject);
+                    EchoCore.draggingObject = null;
                 }
                 else
                 {
@@ -91,8 +91,8 @@ namespace _00._Work._02._Scripts.Marge.DragDrop
         {
             if (EchoCoreCounter() == null)
             {
-                EchoCore.DraggingObject.transform.SetParent(transform);
-                EchoCore.DraggingObject.transform.position = transform.position;
+                EchoCore.draggingObject.transform.SetParent(transform);
+                EchoCore.draggingObject.transform.position = transform.position;
                 return true;
             }
             

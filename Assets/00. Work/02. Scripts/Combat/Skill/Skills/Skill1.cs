@@ -2,6 +2,7 @@
 using System.Collections;
 using _00._Work._02._Scripts.Agent;
 using _00._Work._02._Scripts.Manager.GameManager;
+using _00._Work._02._Scripts.Manager.SoundManager;
 using UnityEngine;
 
 namespace _00._Work._02._Scripts.Combat.Skill.Skills
@@ -16,6 +17,7 @@ namespace _00._Work._02._Scripts.Combat.Skill.Skills
         {
             if (_currentHitCount >= hitCount) return;
 
+            SoundManager.Instance.PlaySfx("Hit");
             float calculatedDamage = DamageCalculate(Damage,
                 GameManager.Instance.selectedCharacterData.skillData.skillDamage,
                 GameManager.Instance.selectedCharacterData.characterElementType);

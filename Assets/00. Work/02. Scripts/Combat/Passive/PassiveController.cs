@@ -2,6 +2,7 @@ using System.Collections;
 using _00._Work._02._Scripts.Character.Skills;
 using _00._Work._02._Scripts.Manager;
 using _00._Work._02._Scripts.Manager.GameManager;
+using _00._Work._02._Scripts.Manager.SoundManager;
 using _00._Work._02._Scripts.Manager.TimerManager;
 using _00._Work._08._Utility;
 using UnityEngine;
@@ -58,6 +59,7 @@ namespace _00._Work._02._Scripts.Combat.Passive
 
         private IEnumerator ApplyAttackBuff()
         {
+            SoundManager.Instance.PlaySfx("RuenPassive");
             Logging.Log("공버프 실행");
                 
             GameObject currentBuffEffect = Instantiate(buffEffect, buffEffect.transform.position, buffEffect.transform.rotation);
@@ -73,12 +75,12 @@ namespace _00._Work._02._Scripts.Combat.Passive
         
         private IEnumerator ApplyAttackSpeedBuff()
         {
+            SoundManager.Instance.PlaySfx("RenuaPassive");
             Logging.Log("공감버프 실행");
                 
             GameObject currentBuffEffect = Instantiate(buffEffect, buffEffect.transform.position, buffEffect.transform.rotation);
             
             attackSpeed += passiveData.attackSpeed;
-            Logging.LogWarning($"{attackSpeed}");
             Destroy(currentBuffEffect, 1);
             
             yield return new WaitForSeconds(passiveData.attackSpeedBuffCooldown);
