@@ -100,23 +100,23 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: MoneyUI-001 (5)_0
+      name: MoneyUI_0
       rect:
         serializedVersion: 2
-        x: 8
-        y: 7
-        width: 1486
-        height: 477
+        x: 0
+        y: 0
+        width: 1500
+        height: 500
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 12a07403c24b4d5e0800000000000000
-      internalID: -1885684242079872479
+      spriteID: bfa8d86b1c4b1ef46966ee799628e40c
+      internalID: -928761383
       vertices: []
       indices: 
       edges: []
@@ -125,7 +125,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 7ea31acbad8032046885b57a1ed7dc9e
     internalID: 0
     vertices: []
     indices: 
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      MoneyUI-001 (5)_0: -1885684242079872479
+      MoneyUI_0: -928761383
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

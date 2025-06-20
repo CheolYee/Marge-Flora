@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using _00._Work._02._Scripts.Agent;
 using _00._Work._02._Scripts.Boss.SO;
@@ -70,8 +71,8 @@ namespace _00._Work._02._Scripts.Boss
 
         public void HealthUIUpdate()
         {
-            CombatManager.Instance.bossHpSlider.value = BossHealth.CurrentHealth;
-            CombatManager.Instance.healthText.text = $"{BossHealth.CurrentHealth} / {BossHealth.MaxHealth}";
+            CombatManager.Instance.bossHpSlider.value = Mathf.Round(BossHealth.CurrentHealth);
+            CombatManager.Instance.healthText.text = $"{Mathf.Round(BossHealth.CurrentHealth)} / {BossHealth.MaxHealth}";
         }
     }
 }

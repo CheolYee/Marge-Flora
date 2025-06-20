@@ -16,12 +16,12 @@ MonoBehaviour:
   characterID: 2
   characterName: "\uB9AC\uB8E8\uC544"
   characterElementType: WIND
-  element: {fileID: 10915, guid: 0000000000000000f000000000000000, type: 0}
-  characterProfile: {fileID: 2909571122930732685, guid: 10bd2adaaf8d73445b3a0660fc7eb5c5, type: 3}
+  element: {fileID: 9038185706911738306, guid: c5d2bdcf69da9fc4b9b32312471ba666, type: 3}
+  characterProfile: {fileID: 7177783800161535231, guid: 914d81af7a28e374da7d5185bb9ccc46, type: 3}
   characterDescription: "\uC5B4\uB518\uAC00 \uCC28\uAC11\uACE0 \uB3C4\uB3C4\uD55C
     \uD50C\uB85C\uB77C\uC774\uB2E4.\n\uB9C8\uBB3C\uC5D0\uAC8C\uC11C \uC704\uD611\uBC1B\uACE0
     \uC788\uB358 \uC911 \uD50C\uB808\uC774\uC5B4\uC5D0\uAC8C \uAD6C\uCD9C\uB418\uC5C8\uB2E4."
   skillData: {fileID: 11400000, guid: f81b4cd830f865a40861ff89d1dbbe9a, type: 2}
   passiveData: {fileID: 11400000, guid: 66d20376140847f4499cf10ad3d32a37, type: 2}
   firstEchoData: {fileID: 11400000, guid: dc9b3190eb4541443bc0a21b296ff74e, type: 2}
-  buyMoney: 200
+  buyMoney: 100

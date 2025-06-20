@@ -6,6 +6,7 @@ using _00._Work._02._Scripts.Manager.SaveManager;
 using _00._Work._02._Scripts.Manager.TimerManager;
 using _00._Work._02._Scripts.Save;
 using _00._Work._02._Scripts.Story.SO;
+using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -15,6 +16,7 @@ namespace _00._Work._02._Scripts.Combat.Finisher
     {
         [SerializeField] private GameObject mainPanel;
         [SerializeField] private GameObject successPanel;
+        [SerializeField] private TextMeshProUGUI successText;
         [SerializeField] private GameObject failPanel;
 
         private void Start()
@@ -39,6 +41,7 @@ namespace _00._Work._02._Scripts.Combat.Finisher
         
         private void ShowSuccessUI()
         {
+            successText.text = $"보상: {GameManager.Instance.selectedDungeonData.rewordGold}G";
             successPanel.SetActive(true);
         }
 

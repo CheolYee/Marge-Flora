@@ -1,3 +1,4 @@
+using System;
 using _00._Work._02._Scripts.Manager.CharacterManager;
 using _00._Work._02._Scripts.Manager.GameManager;
 using _00._Work._02._Scripts.Manager.SaveManager;
@@ -8,6 +9,15 @@ namespace _00._Work._02._Scripts.Character
     public class CharacterSelectBtn : MonoBehaviour
     {
         [SerializeField] private CharacterDataSo characterData; //자신의 캐릭터 데이터를 넣을 공간
+        [SerializeField] private GameObject characterLockpanel;
+
+        private void Start()
+        {
+            if (!SaveManager.Instance.IsCharacterUnlocked(characterData.characterID)) //캐릭이 언락 아니라면
+            {
+                characterLockpanel.SetActive(true); //켜주기
+            }
+        }
 
         public void OnClick() //버튼을 클릭하였을 때
         {

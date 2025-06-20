@@ -1,10 +1,9 @@
 using _00._Work._02._Scripts.Manager.FadeManager;
 using _00._Work._02._Scripts.Manager.GameManager;
-using _00._Work._02._Scripts.Marge.SO;
+using _00._Work._02._Scripts.Manager.SaveManager;
 using _00._Work._02._Scripts.Story.SO;
 using TMPro;
 using UnityEngine;
-using UnityEngine.Serialization;
 using UnityEngine.UI;
 
 namespace _00._Work._02._Scripts.Buttons
@@ -14,14 +13,24 @@ namespace _00._Work._02._Scripts.Buttons
         [SerializeField] private Image storyIcon;
         [SerializeField] private TextMeshProUGUI storyName;
         [SerializeField] private TextMeshProUGUI storyDescription;
+        [SerializeField] private GameObject lockPanel;
         
         [SerializeField] private StoryContainerSo storyContainerData;
 
         private void Start()
         {
+            if (SaveManager.LoadStoryData().saveStoryIds.Contains(storyContainerData.storyId))
+            {
+                lockPanel.SetActive(false);
+            }
+            else
+            {
+                lockPanel.SetActive(true);
+            }
+            
             storyIcon.sprite = storyContainerData.storyIcon;
-            storyName.text = storyContainerData.storyNumber;
-            storyDescription.text = $"{storyContainerData.storyName}";
+            storyName.text = storyContainerData.storyName;
+            storyDescription.text = $"{storyContainerData.storyDesc}";
         }
 
         public void EnterStory()

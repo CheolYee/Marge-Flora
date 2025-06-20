@@ -209,7 +209,6 @@ namespace _00._Work._02._Scripts.Manager.SaveManager
 
         public static bool IsDungeonCleared(string dungeonId)
         {
-            Logging.Log(dungeonId);
             return LoadDungeonSaveData().clearedDungeonIds.Contains(dungeonId);
         }
     }

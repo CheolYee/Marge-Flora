@@ -16,8 +16,8 @@ MonoBehaviour:
   characterID: 1
   characterName: "\uB8E8\uC5D4"
   characterElementType: LIGHT
-  element: {fileID: 10915, guid: 0000000000000000f000000000000000, type: 0}
-  characterProfile: {fileID: -8080321461122597763, guid: e5a0fd118f4af9c4bb964f2e776cd196, type: 3}
+  element: {fileID: 1508520214197748299, guid: 88d1536154fd443459412625806b566f, type: 3}
+  characterProfile: {fileID: 3371345817362428704, guid: 48fa9aa3499719846995404d74ea73df, type: 3}
   characterDescription: "\uD56D\uC0C1 \uBC1D\uACE0, \uBA85\uB7C9\uD558\uBA70 \uB9E4\uC0AC\uC5D0
     \uAE0D\uC815\uC801\uC778 \uD50C\uB85C\uB77C\uB2E4.\n\uAC00\uB054 \uBA4D\uCCAD\uD558\uACE0,
     \uC7A5\uB09C\uAE30 \uC788\uC9C0\uB9CC \uB204\uAD6C\uBCF4\uB2E4 \uC815\uC758\uB86D\uB2E4."

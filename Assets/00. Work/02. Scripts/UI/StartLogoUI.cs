@@ -1,3 +1,4 @@
+using System.Collections;
 using DG.Tweening;
 using UnityEngine;
 
@@ -6,8 +7,8 @@ namespace _00._Work._02._Scripts.UI
     public class StartLogoUI : MonoBehaviour
     {
         public RectTransform logo;
-        public Vector2 startPosition = new Vector2(0, 800);   // 시작 위치 (캔버스 밖 위쪽)
-        public Vector2 targetPosition = new Vector2(0, 0);    // 최종 위치 (중앙 등)
+        public Vector2 startPosition = new Vector2(0, 800);   // 시작 위치
+        public Vector2 targetPosition = new Vector2(0, 0);    // 최종 위치
         
         public GameObject startButton;
 
@@ -18,7 +19,13 @@ namespace _00._Work._02._Scripts.UI
         {
             logo.anchoredPosition = startPosition;  // 시작 위치 세팅
             logo.DOAnchorPos(targetPosition, duration)
-                .SetEase(ease).OnComplete(() => startButton.SetActive(true));
+                .SetEase(ease).OnComplete(() => StartCoroutine(ActiveStartBtn()));
+        }
+
+        public IEnumerator ActiveStartBtn()
+        {
+            yield return new WaitForSeconds(0.5f);
+            startButton.SetActive(true);
         }
     }
 }

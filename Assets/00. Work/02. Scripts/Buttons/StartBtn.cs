@@ -15,11 +15,14 @@ namespace _00._Work._02._Scripts.Buttons
         {
             if (SaveManager.ExistPlayerName())
             {
+                startButton.interactable = false;
                 FadeManager.Instance.FadeToScene(1);
             }
             else
             {
+                startButton.interactable = false;
                 namePanel.SetActive(true);
+                Logging.Log("엑티브!");
             }
             
         }

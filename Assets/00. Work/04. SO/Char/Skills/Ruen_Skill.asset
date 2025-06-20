@@ -12,11 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 71e40a3cb8b84f7418d9073d2fa9d891, type: 3}
   m_Name: Ruen_Skill
   m_EditorClassIdentifier: 
-  skillName: "\uBE5B\uC73C\uB85C!"
+  skillName: "\uBE5B\uC758 \uD798\uC73C\uB85C"
   skillDescription: "\uC801 \uC704\uCE58\uC5D0 \uAC15\uB825\uD55C \uBE5B\uC758 \uAD11\uC120\uC744
     \uC18C\uD658\uD558\uC5EC \uC801\uC5D0\uAC8C 3\uD68C\uC758 \uD53C\uD574\uB97C
-    \uAC00\uD569\uB2C8\uB2E4. (10\uCD08)"
-  skillIcon: {fileID: 6974444071142589614, guid: e57f427cc5f8f0d4f972ce0bcec0debb, type: 3}
+    \uAC00\uD569\uB2C8\uB2E4. (\uCFE8\uD0C0\uC784 10\uCD08)"
+  skillIcon: {fileID: -6919108132176420782, guid: df4cb47aab1c9394eab52f31ffc2d50e, type: 3}
   normalAttackPrefab: {fileID: 405950720624530866, guid: 435dd664990e91747bf4137cf701e1c9, type: 3}
   normalAttackCooldown: 1
   normalAttackDamage: 4

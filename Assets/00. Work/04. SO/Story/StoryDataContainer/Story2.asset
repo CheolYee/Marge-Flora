@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 737907ac33a44ab994affee0fe58288e, type: 3}
+  m_Name: Story2
+  m_EditorClassIdentifier: 
+  storyId: Story2
+  storyNumber: "\uB450\uBC88\uC9F8 \uC774\uC57C\uAE30"
+  storyName: "\uBC14\uB78C\uC758 \uD50C\uB85C\uB77C"
+  storyIcon: {fileID: 5483547199998639177, guid: d4466b6561b22474f8ce5680d1ffa203, type: 3}
+  storyLines:
+  - {fileID: 11400000, guid: 4e1fa7e3c58ca234b88cec7dfb69dc95, type: 2}
+  - {fileID: 11400000, guid: 77e5b733ab78fe84f9efeeea69e1d138, type: 2}
+  - {fileID: 11400000, guid: 7cada791b8d0d664fad19a95aebfd00d, type: 2}
+  - {fileID: 11400000, guid: 38d19c1636d1529488f1be4c8bc01541, type: 2}
+  choiceLines:
+  - {fileID: 11400000, guid: f51f378a62b6693499e062890894fa36, type: 2}
+  - {fileID: 11400000, guid: 6764a6e74d4b83a49bb2538841d9b74b, type: 2}

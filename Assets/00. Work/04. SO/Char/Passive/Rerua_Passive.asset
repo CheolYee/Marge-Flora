@@ -15,7 +15,7 @@ MonoBehaviour:
   passiveSkillName: "\uBC14\uB78C \uC815\uB839\uC758 \uB3C4\uC6C0"
   passiveDescription: "10\uCD08\uB9C8\uB2E4 \uACF5\uACA9 \uC18D\uB3C4\uAC00 0.1\uCD08\uC529
     \uAC10\uC18C\uD569\uB2C8\uB2E4. "
-  passiveIcon: {fileID: 10915, guid: 0000000000000000f000000000000000, type: 0}
+  passiveIcon: {fileID: -3239817588540013208, guid: 10bd12596385ca94bbe793747a123cbb, type: 3}
   buffPassive: 0
   cooldown: 10
   buffDuration: 0

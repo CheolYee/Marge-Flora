@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee82eb1f46b59be45925bc9de854b29c, type: 3}
   m_Name: Dungeon1
   m_EditorClassIdentifier: 
-  dungeonName: "\uC815\uB839\uB098\uBB34\uC758 \uC232"
-  dungeonIcon: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
-  dungeonElementIcon: {fileID: 10901, guid: 0000000000000000f000000000000000, type: 0}
+  dungeonName: "\uD3EC\uC790 \uC2B5\uC9C0"
+  dungeonIcon: {fileID: 5483547199998639177, guid: d4466b6561b22474f8ce5680d1ffa203, type: 3}
+  dungeonElementIcon: {fileID: 1508520214197748299, guid: 88d1536154fd443459412625806b566f, type: 3}
   rewordGold: 700
   clearRecommendText: 1
   dungeonId: 1
