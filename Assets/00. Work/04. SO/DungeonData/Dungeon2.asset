@@ -15,7 +15,8 @@ MonoBehaviour:
   dungeonName: "\uBC84\uC12F \uC232"
   dungeonIcon: {fileID: 5483547199998639177, guid: d4466b6561b22474f8ce5680d1ffa203, type: 3}
   dungeonElementIcon: {fileID: 1508520214197748299, guid: 88d1536154fd443459412625806b566f, type: 3}
-  rewordGold: 1400
+  background: {fileID: 2789865014867756581, guid: b3164610cc6dd7d439ee3441c756b34e, type: 3}
+  rewordGold: 800
   clearRecommendText: 3
   dungeonId: 2
   nextDungeonId: 3

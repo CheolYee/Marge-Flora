@@ -1,8 +1,6 @@
 using _00._Work._02._Scripts.Boss.SO;
-using _00._Work._08._Utility;
 using UnityEngine;
 using UnityEngine.Events;
-using UnityEngine.UI;
 
 namespace _00._Work._02._Scripts.Agent
 {

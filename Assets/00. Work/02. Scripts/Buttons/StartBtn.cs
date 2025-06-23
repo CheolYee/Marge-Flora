@@ -1,5 +1,7 @@
+using System;
 using _00._Work._02._Scripts.Manager.FadeManager;
 using _00._Work._02._Scripts.Manager.SaveManager;
+using _00._Work._02._Scripts.Manager.SoundManager;
 using _00._Work._08._Utility;
 using UnityEngine;
 using UnityEngine.UI;
@@ -10,6 +12,11 @@ namespace _00._Work._02._Scripts.Buttons
     {
         [SerializeField] private Button startButton;
         [SerializeField] private GameObject namePanel;
+
+        private void Start()
+        {
+            SoundManager.Instance.PlayBgm("Peaceful");
+        }
 
         public void ActiveName()
         {
@@ -22,7 +29,6 @@ namespace _00._Work._02._Scripts.Buttons
             {
                 startButton.interactable = false;
                 namePanel.SetActive(true);
-                Logging.Log("엑티브!");
             }
             
         }

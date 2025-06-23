@@ -103,10 +103,10 @@ TextureImporter:
       name: Ruen_default_0
       rect:
         serializedVersion: 2
-        x: 88
-        y: 37
-        width: 952
-        height: 1741
+        x: 0
+        y: 0
+        width: 1080
+        height: 1920
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -125,7 +125,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 891eb30badeedf14b91363e8e7ca6b20
     internalID: 0
     vertices: []
     indices: 

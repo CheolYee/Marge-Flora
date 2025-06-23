@@ -1,6 +1,7 @@
 using _00._Work._02._Scripts.Manager.GameManager;
 using _00._Work._02._Scripts.Manager.MoneyManager;
 using _00._Work._02._Scripts.Manager.SlotManager;
+using _00._Work._02._Scripts.Manager.SoundManager;
 using _00._Work._02._Scripts.Marge.DragDrop;
 using _00._Work._02._Scripts.Marge.SO;
 using _00._Work._08._Utility;
@@ -21,7 +22,6 @@ namespace _00._Work._02._Scripts.Marge
 
         private void OnEnable()
         {
-            Logging.Log("데이터 가져오기");
             firstStageSo = GameManager.Instance.selectedCharacterData.firstEchoData;
             _buyMoney = GameManager.Instance.selectedCharacterData.buyMoney;
         }
@@ -36,10 +36,10 @@ namespace _00._Work._02._Scripts.Marge
 
                 if (emptySlot == null)
                 {
-                    Debug.LogWarning("빈 슬롯이 없습니다!");
                     return;
                 }
 
+                SoundManager.Instance.PlaySfx("Buy");
                 GameObject newItem = Instantiate(echoCorePrefab, emptySlot.transform);
                 newItem.transform.localPosition = Vector3.zero;
 

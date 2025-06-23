@@ -4,7 +4,6 @@ using _00._Work._02._Scripts.Manager.SaveManager;
 using _00._Work._02._Scripts.Marge.DragDrop;
 using _00._Work._02._Scripts.Marge.SO;
 using _00._Work._02._Scripts.Save;
-using _00._Work._08._Utility;
 using UnityEngine;
 
 namespace _00._Work._02._Scripts.Marge
@@ -105,7 +104,19 @@ namespace _00._Work._02._Scripts.Marge
 
             if (saveData == null) // 만약 세이브 데이터가 없다면
             {
-                Logging.Log($"[MargeBoard] 저장된 데이터가 없습니다. 캐릭터 ID: {characterID}"); // 로그를 출력하고
+                
+                //보드를 처음 상태로 만든다.
+                if (equipEchoCore.transform.childCount > 0)
+                    Destroy(equipEchoCore.transform.GetChild(0).gameObject);
+
+                foreach (var slot in slotList)
+                {
+                    if (slot.childCount > 0)
+                        Destroy(slot.GetChild(0).gameObject);
+                }
+
+                GameManager.Instance.selectedWeaponEchoData = null;
+
                 return; //종료시킨다
             }
             
@@ -135,7 +146,6 @@ namespace _00._Work._02._Scripts.Marge
                 if (slotData.slotIndex < 0 || slotData.slotIndex >= slotList.Count) // 만약 이 슬롯 데이터의 인덱스값이 0보다 작거나,
                                                                                     // 슬롯 데이터의 인덱스값이 총 들어있어야 하는 데이터의 수보다 많다면
                 {
-                    Logging.LogWarning($"[MargeBoard] 잘못된 슬롯 인덱스: {slotData.slotIndex}"); //오류를 띄우고
                     continue; // 계속한다 (나머지는 로드해야함)
                 }
                 
@@ -153,7 +163,6 @@ namespace _00._Work._02._Scripts.Marge
                     EchoCoreSo coreData = EchoCoreDatabase.Instance.GetEchoCoreSo(slotData.itemName); // 저장된 슬롯 데이터의 자식의 에코 코어 이름과 같은 이름인 SO를 가져옴
                     if (coreData == null) //만약 가져왔는데 널이라면
                     {
-                        Debug.LogWarning($"[MargeBoard] 해당 ID의 에코 데이터 없음: {slotData.itemName}"); //데이터가 없는 것이므로 오류를 띄우고
                         continue; //계속 진행시킨다 (나머지는 불러올 수 있도록)
                     }
                     
@@ -169,8 +178,11 @@ namespace _00._Work._02._Scripts.Marge
         {
             string characterID = GameManager.Instance.selectedCharacterData.characterID; // 캐릭터의 ID 값을 가져온다 (아이디 값으로 머지 데이터 현황을 가져올 것이기 때문)
             MergeBoardSaveData saveData = SaveManager.Instance.LoadMergeDataForCharacter(characterID);
+            
+            if (saveData == null) return;
 
-            if (saveData.equipmentCoreData != null && !string.IsNullOrEmpty(saveData.equipmentCoreData.itemName))
+            if (saveData.equipmentCoreData != null //가져오려는 코어데이터가 널이 아니고
+                &&!string.IsNullOrEmpty(saveData.equipmentCoreData.itemName)) //아이템 이름이 널 또는 빈 칸이 아니라면
             {
                 var so = EchoCoreDatabase.Instance.GetEchoCoreSo(saveData.equipmentCoreData.itemName);
                 if (so != null)

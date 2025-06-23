@@ -10,6 +10,7 @@ namespace _00._Work._02._Scripts.Marge.SO
         public string dungeonName; //던전 이름
         public Sprite dungeonIcon; //던전 아이콘
         public Sprite dungeonElementIcon; //던전 +데미지 속성 아이콘
+        public Sprite background;
         public int rewordGold; //성공 시 획득 골드
         public string clearRecommendText; //권장 무기 레벨
         

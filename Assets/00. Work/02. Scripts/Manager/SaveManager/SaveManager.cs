@@ -27,11 +27,15 @@ namespace _00._Work._02._Scripts.Manager.SaveManager
 
             string json = JsonUtility.ToJson(container, true); // 다 담겨진 기존 데이터를 Json 파일로 저장시킨다
             File.WriteAllText(SavePath, json); // 모든 텍스트를 읽는다
-            Logging.Log($"Saved {SavePath}"); //로그를 띄워 어디 저장되었는지 경로를 알려준다
         }
         
         public MergeBoardSaveData LoadMergeDataForCharacter(string characterID) //각 캐릭터의 데이터를 불러오기
         {
+            if (!File.Exists(SavePath))
+            {
+                return null;
+            }
+            
             MergeSaveDataContainer container = LoadAllMergeData(); // 그 캐릭터의 머지 데이터를 컨테이너에 담는다
             return container.allCharacterBoards.Find(data => data.characterID == characterID); // 캐릭터 아이디를 찾아 그에 맞는 데이터를 보낸다
         }
@@ -112,7 +116,6 @@ namespace _00._Work._02._Scripts.Manager.SaveManager
         {
             if (!File.Exists(GameDataSavePath))
             {
-                Logging.Log($"세이브 데이터를 찾을 수 없어 새로 생성합니다");
                 return new GameData()
                 {
                     money = 200

@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: BossData3
   m_EditorClassIdentifier: 
   bossName: "\uC232\uC758 \uAC10\uC2DC\uC790"
-  bossHp: 6000
+  bossHp: 7000

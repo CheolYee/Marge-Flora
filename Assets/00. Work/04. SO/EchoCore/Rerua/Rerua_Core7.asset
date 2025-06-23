@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 945065a83a6be3748a901f18ce64df48, type: 3}
   m_Name: Rerua_Core7
   m_EditorClassIdentifier: 
-  echoSprite: {fileID: 477453961871412342, guid: 2aae87d2503a92f42bf7be71591e5c56, type: 3}
+  echoSprite: {fileID: -376104560, guid: 659fab3b65a63d7458dd435e293b1972, type: 3}
   coreName: "\uBC14\uB78C\uC758 \uAE30\uC6B4"
   growthCount: 7
   damage: 70

@@ -1,7 +1,6 @@
 using _00._Work._02._Scripts.Combat.Passive;
 using _00._Work._02._Scripts.Manager.GameManager;
 using _00._Work._02._Scripts.Manager.SoundManager;
-using _00._Work._08._Utility;
 using UnityEngine;
 
 namespace _00._Work._02._Scripts.Combat.Skill
@@ -38,7 +37,6 @@ namespace _00._Work._02._Scripts.Combat.Skill
                                elementType ? 2f : 1f;
             float buff = PassiveController.Instance.multiplier;
             
-            Logging.Log($"{baseDamage}, {weaponDamage}, {isWeakness}, {buff} = {(baseDamage + weaponDamage) * isWeakness * buff}");
             return (baseDamage + weaponDamage) * isWeakness * buff;
         }
     }

@@ -28,7 +28,6 @@ namespace _00._Work._02._Scripts.Marge.DragDrop
             if (draggingData == null || draggingCore == null || existingCore == null)
             {
                 EmptyEchoCore();
-                Debug.LogWarning("드래그/슬롯 아이템 중 EchoCore or EchoCoreSo 없음");
             }
         }
 

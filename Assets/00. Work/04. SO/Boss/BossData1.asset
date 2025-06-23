@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: BossData1
   m_EditorClassIdentifier: 
   bossName: "\uD3EC\uC790 \uB098\uBB34"
-  bossHp: 2000
+  bossHp: 2500

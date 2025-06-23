@@ -1,3 +1,4 @@
+using System.Collections;
 using DG.Tweening;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -48,6 +49,18 @@ namespace _00._Work._02._Scripts.Manager.FadeManager
             {
                 SceneManager.LoadScene(sceneIndex);
             });
+        }
+
+
+        public void FadeToSceneDelay(int sceneIndex)
+        {
+            StartCoroutine(DelayAndFadeToScene(sceneIndex));
+        }
+        
+        public IEnumerator DelayAndFadeToScene(int sceneIndex)
+        {
+            yield return null; // 한 프레임 대기: 모든 Awake() 보장
+            FadeManager.Instance.FadeToScene(sceneIndex);
         }
     }
 }

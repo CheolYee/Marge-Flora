@@ -9,10 +9,13 @@ namespace _00._Work._02._Scripts.Story.SO
     public class StoryLineSo : ScriptableObject
     {
         public string speakerName;
+        public BackgroundImgType backgroundImgType;
+        public BgmType bgmType;
         public Emotion emotion; // 감정
         public SpeakerPosition speakerPosition; // 포지션
         public AudioSfxType audioSfxType; // 등장 효과음
         public EnterEffectType enterEffectType; //등장 이펙트
+        public FadeEffectType fadeEffectType; //페이드가 있나 없나
         
         [TextArea(2, 5)] public string dialogue; //대사
         

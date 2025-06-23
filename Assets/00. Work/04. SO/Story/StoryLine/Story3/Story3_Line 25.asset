@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5048cf7ac05f44c9991eed2cbd8cb6c0, type: 3}
+  m_Name: Story3_Line 25
+  m_EditorClassIdentifier: 
+  speakerName: '{player}'
+  backgroundImgType: 0
+  bgmType: 0
+  emotion: 0
+  speakerPosition: 0
+  audioSfxType: 1
+  enterEffectType: 0
+  fadeEffectType: 0
+  dialogue: "\uAE00\uC384... \uADF8\uB0E5 \uB450\uACE0 \uAC08 \uC218\uAC00 \uC5C6\uC5B4\uC11C..
+    \uADF8\uB9AC\uACE0... \uB2F9\uC2E0\uC758 \uBC14\uB78C \uB2E4\uB8E8\uB294 \uC19C\uC528\uB97C
+    \uBCF4\uB2C8, \uD6C8\uB828\uC774 \uC880 \uD544\uC694\uD574 \uBCF4\uC774\uB124.
+    \uC6D0\uD55C\uB2E4\uBA74 \uC870\uC808\uD558\uB294 \uBC95\uB3C4 \uC54C\uB824 \uC904
+    \uC218 \uC788\uB294\uB370"
+  hasChoices: 0
+  choices: []

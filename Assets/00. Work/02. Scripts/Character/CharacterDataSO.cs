@@ -22,6 +22,10 @@ namespace _00._Work._02._Scripts.Character
         //캐릭터 선택 프로필에 들어갈 이미지
         public Sprite characterProfile;
         
+        [Header("Animation Data")]
+        public Sprite animationSprite;
+        public RuntimeAnimatorController animator;
+        
         //캐릭터 설명
         [Header("Character Description")]
         [TextArea] public string characterDescription;

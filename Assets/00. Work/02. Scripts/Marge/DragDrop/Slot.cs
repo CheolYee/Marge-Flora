@@ -1,10 +1,7 @@
 using _00._Work._02._Scripts.Buttons;
-using _00._Work._02._Scripts.Combat.Effect;
 using _00._Work._02._Scripts.Manager.SoundManager;
 using _00._Work._02._Scripts.Marge.SO;
-using _00._Work._08._Utility;
 using Coffee.UIExtensions;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
@@ -36,7 +33,6 @@ namespace _00._Work._02._Scripts.Marge.DragDrop
             if (draggingData == null || draggingCore == null || existingCore == null)
             {
                 EmptyEchoCore();
-                Debug.LogWarning("드래그/슬롯 아이템 중 EchoCore or EchoCoreSo 없음");
                 return;
             }
 
@@ -61,13 +57,11 @@ namespace _00._Work._02._Scripts.Marge.DragDrop
                 }
                 else
                 {
-                    Logging.Log("더 이상 성장할 수 없습니다.");
                     EmptyEchoCore(); // 그냥 돌려보냄
                 }
             }
             else
             {
-                Debug.Log("등급이 같지 않습니다.");
                 EmptyEchoCore(); // 등급이 다르면 그냥 복귀
             }
         }

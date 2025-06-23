@@ -18,6 +18,8 @@ MonoBehaviour:
   characterElementType: WIND
   element: {fileID: 9038185706911738306, guid: c5d2bdcf69da9fc4b9b32312471ba666, type: 3}
   characterProfile: {fileID: 7177783800161535231, guid: 914d81af7a28e374da7d5185bb9ccc46, type: 3}
+  animationSprite: {fileID: -7110291979119678759, guid: 8aea07a2d98ff654a9be55144cf16be7, type: 3}
+  animator: {fileID: 9100000, guid: ab178e868e68a7446887486e50a2d354, type: 2}
   characterDescription: "\uC5B4\uB518\uAC00 \uCC28\uAC11\uACE0 \uB3C4\uB3C4\uD55C
     \uD50C\uB85C\uB77C\uC774\uB2E4.\n\uB9C8\uBB3C\uC5D0\uAC8C\uC11C \uC704\uD611\uBC1B\uACE0
     \uC788\uB358 \uC911 \uD50C\uB808\uC774\uC5B4\uC5D0\uAC8C \uAD6C\uCD9C\uB418\uC5C8\uB2E4."

@@ -12,11 +12,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5048cf7ac05f44c9991eed2cbd8cb6c0, type: 3}
   m_Name: StartStory2
   m_EditorClassIdentifier: 
-  speakerName: "\uB8E8\uC5D4"
-  emotion: 2
-  speakerPosition: 1
-  audioSfxType: 0
+  speakerName: '{player}'
+  backgroundImgType: 0
+  bgmType: 0
+  emotion: 0
+  speakerPosition: 0
+  audioSfxType: 2
   enterEffectType: 0
-  dialogue: "\uC815\uB9D0\uB85C \uC544\uBB34\uB3C4 \uC5C6\uC73C\uC2E0\uAC00\uC694..?\uC815\uB9D0\uB85C
-    \uC544\uBB34\uB3C4 \uC5C6\uC73C\uC2E0\uAC00\uC694..?\uC815\uB9D0\uB85C \uC544\uBB34\uB3C4
-    \uC5C6\uC73C\uC2E0\uAC00\uC694..?\uC815\uB9D0\uB85C \uC544\uBB34\uB3C4 \uC5C6\uC73C\uC2E0\uAC00\uC694..?"
+  dialogue: "\uB9E4\uC77C \uB611\uAC19\uC740 \uC77C\uC0C1\uC758 \uBC18\uBCF5\uC774\uAD70.
+    \uBB54\uAC00 \uD765\uBBF8\uB85C\uC6B4 \uC77C\uC774\uB77C\uB3C4 \uC0DD\uAE30\uBA74
+    \uC88B\uC744 \uD150\uB370 \uB9D0\uC774\uC9C0.."
+  hasChoices: 0
+  choices: []

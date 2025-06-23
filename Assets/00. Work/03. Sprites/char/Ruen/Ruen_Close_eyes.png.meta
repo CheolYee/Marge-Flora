@@ -103,10 +103,10 @@ TextureImporter:
       name: Ruen_Close_eyes_0
       rect:
         serializedVersion: 2
-        x: 89
-        y: 34
-        width: 958
-        height: 1701
+        x: 0
+        y: 0
+        width: 1080
+        height: 1920
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -125,7 +125,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 1f53f4d0b46ee2e42813201520706a65
     internalID: 0
     vertices: []
     indices: 

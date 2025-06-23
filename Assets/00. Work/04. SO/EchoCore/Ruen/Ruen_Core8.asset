@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 945065a83a6be3748a901f18ce64df48, type: 3}
   m_Name: Ruen_Core8
   m_EditorClassIdentifier: 
-  echoSprite: {fileID: 10901, guid: 0000000000000000f000000000000000, type: 0}
+  echoSprite: {fileID: 95896553, guid: edbde5741ac95c34b8ec96c766f8f623, type: 3}
   coreName: "\uBE5B\uC758 \uB9C8\uC74C"
   growthCount: 8
   damage: 80

@@ -1,5 +1,4 @@
 
-using System.Collections;
 using _00._Work._02._Scripts.Agent;
 using _00._Work._02._Scripts.Manager.GameManager;
 using _00._Work._02._Scripts.Manager.SoundManager;
@@ -22,9 +21,11 @@ namespace _00._Work._02._Scripts.Combat.Skill.Skills
                 GameManager.Instance.selectedCharacterData.skillData.skillDamage,
                 GameManager.Instance.selectedCharacterData.characterElementType);
 
-            if (Target != null && CombatInitializer.Instance.spawnBoss.TryGetComponent(out AgentHealth agentHealth))
+            if (Target != null && //타겟이 널이 아니고
+                CombatInitializer.Instance.spawnBoss != null && //스폰 보스도 널이 아니고
+                CombatInitializer.Instance.spawnBoss.TryGetComponent(out AgentHealth agentHealth)) //agentHealth가 있으면
             {
-                agentHealth.TakeDamage(calculatedDamage);
+                agentHealth.TakeDamage(calculatedDamage); //데미지 주기
             }
 
             _currentHitCount++;

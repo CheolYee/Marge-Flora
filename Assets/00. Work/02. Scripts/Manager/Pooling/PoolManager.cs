@@ -42,7 +42,6 @@ namespace _00._Work._02._Scripts.Manager.Pooling
                 item.ResetItem(); //리셋해서 
                 return item;
             }
-            Debug.LogError($"Item {itemName} not found in pool.");
             return null;
         }
 
@@ -51,9 +50,7 @@ namespace _00._Work._02._Scripts.Manager.Pooling
             if (_pools.ContainsKey(returnItem.ItemName))
             {
                 _pools[returnItem.ItemName].Push(returnItem); //풀에 반납한다.
-                return;
             }
-            Debug.LogError($"Item {returnItem.ItemName} not found in pool.");
         }
     }
 }

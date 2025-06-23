@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 7874318516265283336}
   - component: {fileID: 8298957415399913178}
   - component: {fileID: 8900591915916709095}
+  - component: {fileID: 7626842126886848519}
   m_Layer: 5
   m_Name: EchoCore
   m_TagString: Untagged
@@ -67,7 +68,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
+  m_Sprite: {fileID: -1844205132, guid: 8b8661f7e6382634492e56daef749bac, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -105,3 +106,18 @@ MonoBehaviour:
   onDragParent: {fileID: 0}
   startParent: {fileID: 0}
   currentImage: {fileID: 0}
+--- !u!114 &7626842126886848519
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4505916758745583371}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cfabb0440166ab443bba8876756fdfa9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
+  m_EffectDistance: {x: 0, y: -3}
+  m_UseGraphicAlpha: 1

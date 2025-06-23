@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using System.IO;
 using _00._Work._02._Scripts.Save;
 using _00._Work._08._Utility;
+using DG.Tweening;
 using UnityEngine;
 
 namespace _00._Work._02._Scripts.Manager.SoundManager
@@ -34,13 +35,39 @@ namespace _00._Work._02._Scripts.Manager.SoundManager
 
         public void PlayBgm(string soundName)
         {
-            var clip = audioClips.Find(x => x.name == soundName);
-            if (clip != null)
+            if (audioSource.isPlaying)
             {
-                audioSource.clip = clip;
-                audioSource.loop = true;
-                audioSource.Play();
+                audioSource.DOFade(0, 0.5f).OnComplete(() =>
+                {
+                    audioSource.Stop();
+                    var clip = audioClips.Find(x => x.name == soundName);
+                    if (clip != null)
+                    {
+                        audioSource.clip = clip;
+                        audioSource.loop = true;
+                        audioSource.Play();
+
+                        audioSource.DOFade(_settings.bgmVolume, 1f);
+                    }
+                });
             }
+            else
+            {
+                var clip = audioClips.Find(x => x.name == soundName);
+                if (clip != null)
+                {
+                    audioSource.clip = clip;
+                    audioSource.loop = true;
+                    audioSource.Play();
+
+                    audioSource.DOFade(_settings.bgmVolume, 1f);
+                }
+            }
+        }
+
+        public void StopBgm()
+        {
+            audioSource.DOFade(0, 0.5f).OnComplete(audioSource.Stop);
         }
 
         public void PlaySfx(string soundName)
@@ -49,10 +76,6 @@ namespace _00._Work._02._Scripts.Manager.SoundManager
             if (clip != null)
             {
                 sfxSource.PlayOneShot(clip);
-            }
-            else
-            {
-                Logging.LogWarning($"클립 {soundName}이 존재하지 않습니다.");
             }
         }
 

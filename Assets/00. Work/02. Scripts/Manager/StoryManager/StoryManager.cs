@@ -19,6 +19,7 @@ namespace _00._Work._02._Scripts.Manager.StoryManager
         public StoryContainerSo currentStory;
         
         [Header("Dialogue")]
+        public Image backgroundImage;
         public TextMeshProUGUI dialogueText;
         public Button dialoguePanelButton;
         public float textSpeed = 0.05f; // 텍스트 나오는 속도
@@ -30,6 +31,7 @@ namespace _00._Work._02._Scripts.Manager.StoryManager
         
         [Header("Character")]
         public Image leftCharacterImage;
+        public List<Sprite> backgroundSprites;
         public Image rightCharacterImage;
         public Image centerCharacterImage;
         public CharacterSpriteDatabase characterSpriteDatabase;
@@ -39,6 +41,9 @@ namespace _00._Work._02._Scripts.Manager.StoryManager
         [Header("Choice UI")]
         public GameObject choicePanel;
         public List<Button> choiceButtons;
+
+        private string _playerName;
+        private bool _isFading;
 
         protected override void Awake()
         {
@@ -50,6 +55,7 @@ namespace _00._Work._02._Scripts.Manager.StoryManager
         {
             _currentIndex = 0;
             _choiceIndex = 0;
+            _playerName = SaveManager.SaveManager.LoadPlayerNameData().playerName;
             dialogueText.text = "";
             ShowNextDialogue();
         }
@@ -67,6 +73,41 @@ namespace _00._Work._02._Scripts.Manager.StoryManager
 
         public void HandleDialogueClick()
         {
+            if (_isFading) return;
+            
+            if (_isTyping)
+            {
+                _isTyping = false;
+                if (_typingCoroutine != null)
+                    StopCoroutine(_typingCoroutine);
+
+                StoryLineSo line = _isInChoiceReply ?
+                    currentStory.choiceLines[_choiceIndex] :
+                    currentStory.storyLines[_currentIndex];
+
+                dialogueText.text = ReplacePlayerName(line.dialogue);
+                return;
+            }
+
+            // 타이핑이 끝났고 선택지 상태일 때
+            if (_isInChoiceReply)
+            {
+                _isInChoiceReply = false;
+                _currentIndex++; // 선택지 대사 끝났으니 다음으로
+                ShowNextDialogue();
+                return;
+            }
+
+            // 메인 대사에 선택지가 있는 경우: 선택지 먼저 보여주고 대사 인덱스는 올리지 않음
+            var line2 = currentStory.storyLines[_currentIndex];
+            if (line2.hasChoices && line2.choices.Count > 0)
+            {
+                ShowChoices(line2.choices);
+                return;
+            }
+
+            // 일반적인 경우
+            _currentIndex++;
             ShowNextDialogue();
         }
 
@@ -78,7 +119,6 @@ namespace _00._Work._02._Scripts.Manager.StoryManager
             {
                 if (_choiceIndex >= currentStory.choiceLines.Count)
                 {
-                    Logging.LogWarning("잘못된 choiceReplyIndex!");
                     return;
                 }
 
@@ -96,11 +136,7 @@ namespace _00._Work._02._Scripts.Manager.StoryManager
                     return;
                 }
 
-                speakerName.text = line.speakerName;
-                ShowDialogue(line.dialogue);
-                ShowCharacter(line.speakerName, line.speakerPosition, line.emotion);
-                PlaySoundEffect(line.audioSfxType);
-                PlayEnterEffect(line.enterEffectType);
+                ShowBackground(line.backgroundImgType, line.fadeEffectType, line);
                 return;
             }
             
@@ -109,7 +145,6 @@ namespace _00._Work._02._Scripts.Manager.StoryManager
                 _isTyping = false; //타이핑을 종료시키고
                 StopCoroutine(_typingCoroutine); //타이핑을 종료시키고22
                 dialoguePanelButton.interactable = false;
-                Logging.Log("스토리 종료");
             
                 SaveManager.SaveManager.SaveStoryID(GameManager.GameManager.Instance.SaveStoryData, 
                     currentStory.storyId);
@@ -135,11 +170,49 @@ namespace _00._Work._02._Scripts.Manager.StoryManager
                 return; //다음 예외가 실행되면 안되니 종료시킨다.
             }
             
-            speakerName.text = line.speakerName;
-            ShowDialogue(line.dialogue);
+            ShowBackground(line.backgroundImgType, line.fadeEffectType, line);
+        }
+
+        private void ShowAllContents(StoryLineSo line)
+        {
+            speakerName.text = ReplacePlayerName(line.speakerName);
+            ShowDialogue(ReplacePlayerName(line.dialogue));
             ShowCharacter(line.speakerName, line.speakerPosition, line.emotion);
             PlaySoundEffect(line.audioSfxType);
+            PlayBgm(line.bgmType);
             PlayEnterEffect(line.enterEffectType);
+        }
+
+        private void PlayBgm(BgmType lineBGMType)
+        {
+            switch (lineBGMType)
+            {
+                case BgmType.None:
+                    break;
+                case BgmType.Stop:
+                    SoundManager.SoundManager.Instance.StopBgm();
+                    break;
+                case BgmType.Main:
+                    SoundManager.SoundManager.Instance.PlayBgm("Main");
+                    break;
+                case BgmType.Peaceful:
+                    SoundManager.SoundManager.Instance.PlayBgm("Peaceful");
+                    break;
+                case BgmType.End:
+                    SoundManager.SoundManager.Instance.PlayBgm("End");
+                    break;
+                case BgmType.Marge:
+                    SoundManager.SoundManager.Instance.PlayBgm("Marge");
+                    break;
+                case BgmType.Stupid:
+                    SoundManager.SoundManager.Instance.PlayBgm("Stupid");
+                    break;
+            }
+        }
+
+        string ReplacePlayerName(string input)
+        {
+            return input.Replace("{player}", _playerName);
         }
         
 
@@ -163,7 +236,6 @@ namespace _00._Work._02._Scripts.Manager.StoryManager
                     {
                         choicePanel.SetActive(false);
                         OnSelectChoice(nextLine);  // nextLine은 choiceLines 인덱스
-                        ShowNextDialogue();
                     });
                 }
                 else
@@ -176,11 +248,11 @@ namespace _00._Work._02._Scripts.Manager.StoryManager
         private void OnSelectChoice(int replyIndex)
         {
             _isInChoiceReply = true;
+            SoundManager.SoundManager.Instance.PlaySfx("ButtonClick");
             _choiceIndex = replyIndex;
             ShowNextDialogue(); // 선택한 대사 출력 시작
         }
         
-
         //대사 보여주는 함수
         private void ShowDialogue(string dialogue)
         {
@@ -200,7 +272,7 @@ namespace _00._Work._02._Scripts.Manager.StoryManager
         {
             _isTyping = true;
             dialogueText.text = "";
-            
+
             int totalLength = dialogue.Length;
 
             for (int i = 0; i < totalLength; i++)
@@ -208,27 +280,86 @@ namespace _00._Work._02._Scripts.Manager.StoryManager
                 dialogueText.text += dialogue[i];
                 yield return new WaitForSeconds(textSpeed);
             }
-            
+
             _isTyping = false;
-            var line = currentStory.storyLines[_currentIndex];
-            
-            if (line.hasChoices && line.choices.Count > 0)
+        }
+
+        private void ShowBackground(BackgroundImgType backgroundImgType, FadeEffectType fadeEffectType, StoryLineSo line)
+        {
+            switch (fadeEffectType)
             {
-                ShowChoices(currentStory.storyLines[_currentIndex].choices);
+                case FadeEffectType.None:
+                    ShowAllContents(line);
+                    ShowInBackground(backgroundImgType);
+                    break;
+
+                case FadeEffectType.FadeIn:
+                    _isFading = true;
+                    FadeManager.FadeManager.Instance.FadeIn(() =>
+                    {
+                        ShowAllContents(line);
+                        ShowInBackground(backgroundImgType);
+                        _isFading = false;
+                    });
+                    break;
+
+                case FadeEffectType.FadeOut:
+                    _isFading = true;
+                    FadeManager.FadeManager.Instance.FadeOut(() =>
+                    {
+                        ShowInBackground(backgroundImgType);
+                        ShowAllContents(line);
+                        _isFading = false;
+                    });
+                    break;
+
+                case FadeEffectType.FadeInOut:
+                    _isFading = true;
+                    FadeManager.FadeManager.Instance.FadeIn(() =>
+                    {
+                        ShowAllContents(line);
+                        ShowInBackground(backgroundImgType);
+                        FadeManager.FadeManager.Instance.FadeOut(() =>
+                        {
+                            _isFading = false;
+                        });
+                    });
+                    break;
             }
-            else
+        }
+
+        private void ShowInBackground(BackgroundImgType backgroundImgType)
+        {
+            switch (backgroundImgType)
             {
-                _currentIndex++;
+                case BackgroundImgType.None:
+                    break;
+                case BackgroundImgType.Grass:
+                    backgroundImage.sprite = backgroundSprites[0];
+                    break;
+                case BackgroundImgType.House:
+                    backgroundImage.sprite = backgroundSprites[1];
+                    break;
+                case BackgroundImgType.Forest:
+                    backgroundImage.sprite = backgroundSprites[2];
+                    break;
             }
         }
         
         //캐릭터를 보여주는 함수
         private void ShowCharacter(string characterName, SpeakerPosition position, Emotion emotion)
         {
+            if (characterName == SaveManager.SaveManager.LoadPlayerNameData().playerName) return;
+            if (characterName == "")
+            {
+                HideAllCharacters();
+                return;
+            }
+            if (position == SpeakerPosition.None || emotion == Emotion.None) return;
+            
             Sprite characterSprite = characterSpriteDatabase.GetSprite(characterName, emotion);
             if (characterSprite == null)
             {
-                Debug.LogWarning($"캐릭터 스프라이트가 없음: {characterName}, {emotion}");
                 return;
             }
             
@@ -236,8 +367,7 @@ namespace _00._Work._02._Scripts.Manager.StoryManager
             switch (position)
             {
                 case SpeakerPosition.Right:
-                    HideAllCharacters();
-                
+                    centerCharacterImage.gameObject.SetActive(false);
                     rightCharacterImage.sprite = characterSprite;
                     _targetImage = rightCharacterImage;
                     rightCharacterImage.gameObject.SetActive(true);
@@ -251,8 +381,7 @@ namespace _00._Work._02._Scripts.Manager.StoryManager
                     centerCharacterImage.gameObject.SetActive(true);
                     return;
                 case SpeakerPosition.Left:
-                    HideAllCharacters();
-                
+                    centerCharacterImage.gameObject.SetActive(false);
                     leftCharacterImage.sprite = characterSprite;
                     _targetImage = leftCharacterImage;
                     leftCharacterImage.gameObject.SetActive(true);
@@ -281,6 +410,15 @@ namespace _00._Work._02._Scripts.Manager.StoryManager
                 case AudioSfxType.Surprised:
                     SoundManager.SoundManager.Instance.PlaySfx("SurprisedEmotion");
                     break;
+                case AudioSfxType.Run:
+                    SoundManager.SoundManager.Instance.PlaySfx("Run");
+                    break;
+                case AudioSfxType.Blush:
+                    SoundManager.SoundManager.Instance.PlaySfx("Blush");
+                    break;
+                case AudioSfxType.Boom:
+                    SoundManager.SoundManager.Instance.PlaySfx("Boom");
+                    break;
             }
         }
 
@@ -306,9 +444,15 @@ namespace _00._Work._02._Scripts.Manager.StoryManager
                     rect.anchoredPosition = new Vector2(slideDistance, originalPos.y); // 오른쪽 밖에서 시작
                     rect.DOAnchorPosX(originalPos.x, 0.5f).SetEase(Ease.OutCubic);
                     break;
+                case EnterEffectType.Bounce:
+                    rect.anchoredPosition = new Vector2(originalPos.x, originalPos.y - 200f);
+                    DOTween.Sequence()
+                        .Append(rect.DOAnchorPosY(originalPos.y + 30f, 0.3f).SetEase(Ease.OutQuad))
+                        .Append(rect.DOAnchorPosY(originalPos.y, 0.2f).SetEase(Ease.InQuad))
+                        .Append(rect.DOAnchorPosY(originalPos.y + 10f, 0.15f).SetEase(Ease.OutQuad))
+                        .Append(rect.DOAnchorPosY(originalPos.y, 0.15f).SetEase(Ease.InQuad));
+                    break;
                 case EnterEffectType.None:
-                default:
-                    // 효과 없음
                     break;
             }
         }

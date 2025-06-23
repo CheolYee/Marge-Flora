@@ -16,6 +16,7 @@ namespace _00._Work._02._Scripts.Buttons
         [SerializeField] private TextMeshProUGUI dungeonName;
         [SerializeField] private TextMeshProUGUI dungeonDescription;
         [SerializeField] private GameObject dungeonLockPanel;
+        [SerializeField] private GameObject nullWeaponPanel;
         
         [SerializeField] private DungeonDataSo dungeonData;
 
@@ -38,7 +39,7 @@ namespace _00._Work._02._Scripts.Buttons
         {
             if (GameManager.Instance.selectedWeaponEchoData == null)
             {
-                Logging.Log("무기 데이터가 없습니다!");
+                nullWeaponPanel.SetActive(true);
                 return;
             }
             

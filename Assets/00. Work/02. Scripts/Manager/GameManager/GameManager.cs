@@ -50,7 +50,7 @@ namespace _00._Work._02._Scripts.Manager.GameManager
             SaveStoryData = SaveManager.SaveManager.LoadStoryData();
             if (SaveStoryData.isFirstStory)
             {
-                FadeManager.FadeManager.Instance.FadeToScene(3);
+                FadeManager.FadeManager.Instance.FadeToSceneDelay(3);
             }
         }
 

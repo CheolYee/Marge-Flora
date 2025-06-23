@@ -13,14 +13,42 @@ MonoBehaviour:
   m_Name: StartStory
   m_EditorClassIdentifier: 
   storyId: Start
-  storyNumber: "\uCCAB\uBC88\uC9F8 \uC774\uC57C\uAE30"
-  storyName: "\uD50C\uB85C\uB77C\uC640\uC758 \uCCAB \uB9CC\uB0A8"
+  storyName: Chapter 1
+  storyDesc: "\uB73B\uBC16\uC758 \uB3D9\uAC70\uC778"
   storyIcon: {fileID: 5483547199998639177, guid: d4466b6561b22474f8ce5680d1ffa203, type: 3}
   storyLines:
   - {fileID: 11400000, guid: 4e1fa7e3c58ca234b88cec7dfb69dc95, type: 2}
   - {fileID: 11400000, guid: 77e5b733ab78fe84f9efeeea69e1d138, type: 2}
   - {fileID: 11400000, guid: 7cada791b8d0d664fad19a95aebfd00d, type: 2}
-  - {fileID: 11400000, guid: 38d19c1636d1529488f1be4c8bc01541, type: 2}
-  choiceLines:
   - {fileID: 11400000, guid: f51f378a62b6693499e062890894fa36, type: 2}
   - {fileID: 11400000, guid: 6764a6e74d4b83a49bb2538841d9b74b, type: 2}
+  - {fileID: 11400000, guid: 38d19c1636d1529488f1be4c8bc01541, type: 2}
+  - {fileID: 11400000, guid: 174d9cebbaec4ce49af4089edeb9ffaf, type: 2}
+  - {fileID: 11400000, guid: 969f8d98f75453444b66664563ea0d33, type: 2}
+  - {fileID: 11400000, guid: a73d5ea010b9e0c4897369470291daac, type: 2}
+  - {fileID: 11400000, guid: 728bc21af7ae9274c84570277f09868a, type: 2}
+  - {fileID: 11400000, guid: 7f4112b0fda869246a62457411ce4029, type: 2}
+  - {fileID: 11400000, guid: c9a2270eb900119439a3077235b95b3f, type: 2}
+  - {fileID: 11400000, guid: 37a4f73374ba0f047880ee2efe025354, type: 2}
+  - {fileID: 11400000, guid: 4d0f4749396f31d4cb56a8112e8858a5, type: 2}
+  - {fileID: 11400000, guid: 96a7d903792b00848b2548f74bf5b5f2, type: 2}
+  - {fileID: 11400000, guid: 9c33760d9fc867747b154c8fd2a482cb, type: 2}
+  - {fileID: 11400000, guid: bbc5755a722c14f449642195461c48bf, type: 2}
+  - {fileID: 11400000, guid: 111783b100977f146b632989b8af35df, type: 2}
+  - {fileID: 11400000, guid: d96fe157e62f55c4e9fa25a1506b2f60, type: 2}
+  - {fileID: 11400000, guid: de5c20ffa6e2621438fe813e2b472753, type: 2}
+  - {fileID: 11400000, guid: 4547cd61fc0587e45bca646138e78881, type: 2}
+  - {fileID: 11400000, guid: 202ebb288a876a647a1176f01ce72e1e, type: 2}
+  - {fileID: 11400000, guid: 31f9dba63a32c134e9318d9b9a17c3e0, type: 2}
+  - {fileID: 11400000, guid: e8c73e3b40634f2479ea5622dd9c8b57, type: 2}
+  - {fileID: 11400000, guid: f3ad425bb0517b949b4f9e4712bfe402, type: 2}
+  - {fileID: 11400000, guid: 2ed4957965b70be418106c3e175643f3, type: 2}
+  - {fileID: 11400000, guid: 74fa7f3230a28974e869d19270857341, type: 2}
+  - {fileID: 11400000, guid: fefb9b3d1a4968241a0d6a7a48bc865a, type: 2}
+  - {fileID: 11400000, guid: 43db4644b001b6d4bb54aead5481a4f3, type: 2}
+  - {fileID: 11400000, guid: 54d0c462d30e73f40ad5a43829683995, type: 2}
+  choiceLines:
+  - {fileID: 11400000, guid: fb09d188a3fd13643827f826cc741d41, type: 2}
+  - {fileID: 11400000, guid: e7d559d987f6ef44795f8917eeb01ac5, type: 2}
+  - {fileID: 11400000, guid: b3cc2a2d5aa666c4c831ecaae9437c21, type: 2}
+  - {fileID: 11400000, guid: 25fbb444508245c468c667fc75639764, type: 2}

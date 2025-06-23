@@ -7,6 +7,9 @@ namespace _00._Work._02._Scripts.Story
         Sad,
         Angry,
         Surprised,
-        Curious
+        Curious,
+        Run,
+        Blush,
+        Boom
     }
 }

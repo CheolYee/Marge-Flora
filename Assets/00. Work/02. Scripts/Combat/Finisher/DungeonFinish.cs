@@ -52,6 +52,8 @@ namespace _00._Work._02._Scripts.Combat.Finisher
 
         public void OnSuccessReturnToMain()
         {
+            successPanel.SetActive(false);
+            
             MoneyManager.Instance.AddMoney(GameManager.Instance.selectedDungeonData.rewordGold);
             SaveManager.MarkDungeonCleared(GameManager.Instance.selectedDungeonData.nextDungeonId);
             
@@ -85,7 +87,9 @@ namespace _00._Work._02._Scripts.Combat.Finisher
         
         public void OnFailReturnToMain()
         {
-            FadeManager.Instance.FadeToScene(GameManager.Instance.selectedDungeonData.hasStory ? 3 : 1); // 만약 스토리가 없다면 다시 메인 씬으로
+            failPanel.SetActive(false);
+            
+            FadeManager.Instance.FadeToScene(1);
         }
     }
 }

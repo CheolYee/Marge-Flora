@@ -15,7 +15,8 @@ MonoBehaviour:
   dungeonName: "\uC9D9\uC740 \uC232"
   dungeonIcon: {fileID: 5483547199998639177, guid: d4466b6561b22474f8ce5680d1ffa203, type: 3}
   dungeonElementIcon: {fileID: 1508520214197748299, guid: 88d1536154fd443459412625806b566f, type: 3}
-  rewordGold: 2500
+  background: {fileID: 2789865014867756581, guid: b3164610cc6dd7d439ee3441c756b34e, type: 3}
+  rewordGold: 1600
   clearRecommendText: 5
   dungeonId: 3
   nextDungeonId: 4
@@ -23,7 +24,7 @@ MonoBehaviour:
   enemyPrefab: {fileID: 2183154504223713318, guid: 940c84ffb778e1541a5ebf3d60dc2ad1, type: 3}
   enemySpawnPos: {fileID: 3176027094303100542, guid: 940c84ffb778e1541a5ebf3d60dc2ad1, type: 3}
   timeLimit: 60
-  hasStory: 0
-  story: {fileID: 0}
+  hasStory: 1
+  story: {fileID: 11400000, guid: 3398b0f97e711274a9349e110416152d, type: 2}
   hasUnlock: 1
   unlockId: 2

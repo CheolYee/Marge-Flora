@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5048cf7ac05f44c9991eed2cbd8cb6c0, type: 3}
+  m_Name: Story3_Line 27
+  m_EditorClassIdentifier: 
+  speakerName: "\uB8E8\uC5D4"
+  backgroundImgType: 0
+  bgmType: 0
+  emotion: 2
+  speakerPosition: 1
+  audioSfxType: 1
+  enterEffectType: 4
+  fadeEffectType: 0
+  dialogue: "\uC640\uC544! \uADF8\uB7FC \uC774\uC81C \uC6B0\uB9AC \uAC19\uC774 \uC0AC\uB294
+    \uAC70\uC608\uC694? \uC798 \uBD80\uD0C1\uD574\uC694, \uB9AC\uB8E8\uC544 \uC5B8\uB2C8!"
+  hasChoices: 0
+  choices: []

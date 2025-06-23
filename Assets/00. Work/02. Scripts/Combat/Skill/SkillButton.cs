@@ -1,6 +1,5 @@
 using _00._Work._02._Scripts.Character.Skills;
 using _00._Work._02._Scripts.Manager.GameManager;
-using _00._Work._08._Utility;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -63,7 +62,6 @@ namespace _00._Work._02._Scripts.Combat.Skill
             {
                 skillComponent.Initialize(_bossTrm, _skillData.skillDamage, _skillData.skillSfxName);
             }
-            else Logging.LogWarning("스킬 프리팹에 스킬 이펙트 상속 스크립트가 없음");
             
             
             _skillCooldown = _skillData.skillCooldown;

@@ -10,6 +10,11 @@ namespace _00._Work._02._Scripts.Combat
 {
     public class PlayerCombatController : MonoBehaviour
     {
+        [Header("Player Visual Controller")]
+        [SerializeField] private SpriteRenderer playerVisual;
+        [SerializeField] private Animator playerVisualAnimator;
+        
+        [Header("Player Combat")]
         public Transform normalAttackTrm;
         public SkillDataSo skillData;
 
@@ -19,6 +24,8 @@ namespace _00._Work._02._Scripts.Combat
         private void OnEnable()
         {
             skillData = GameManager.Instance.selectedCharacterData.skillData;
+            playerVisual.sprite = GameManager.Instance.selectedCharacterData.animationSprite;
+            playerVisualAnimator.runtimeAnimatorController = GameManager.Instance.selectedCharacterData.animator;
             float normalAttackCool = skillData.normalAttackCooldown;
             _normalAttackCooldown = new WaitForSeconds(normalAttackCool);
             StartAutoAttack();

@@ -14,6 +14,7 @@ namespace _00._Work._02._Scripts.Combat
         public TextMeshProUGUI characterNameText;
         public Image skillIcon;
         public Image passiveIcon;
+        public SpriteRenderer background;
         
         [Header("Boss")]
         public GameObject bossPrefab;
@@ -27,6 +28,7 @@ namespace _00._Work._02._Scripts.Combat
 
             characterIcon.sprite = character.characterProfile;
             characterNameText.text = character.characterName;
+            background.sprite = GameManager.Instance.selectedDungeonData.background;
             
             skillIcon.sprite = character.skillData.skillIcon;
             passiveIcon.sprite = character.passiveData.passiveIcon;

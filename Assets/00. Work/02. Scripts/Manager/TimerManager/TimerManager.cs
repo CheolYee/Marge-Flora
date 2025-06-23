@@ -17,11 +17,7 @@ namespace _00._Work._02._Scripts.Manager.TimerManager
                 Destroy(this.gameObject);
                 return;
             }
-        
-            //인스턴스가 없을 때 이걸로 지정
             Instance = this;
-            //씬이 바뀌어도 사라지지 않게하기
-            DontDestroyOnLoad(this.gameObject);
         }
 
         public TextMeshProUGUI timerText; //시간을 표시할 TMP
@@ -50,6 +46,8 @@ namespace _00._Work._02._Scripts.Manager.TimerManager
 
         public void RestartTimer()
         {
+            if (Instance == null) return;
+            
             if (_isRunning) return;
             
             StartTimer(_remainingSeconds);
@@ -107,7 +105,6 @@ namespace _00._Work._02._Scripts.Manager.TimerManager
             StopTimer();
             
             OnTimerFinished?.Invoke(); //등록된 이벤트 함수가 있다면 종료 이벤트 실행
-            Logging.LogWarning("타이머 종료");
         }
     }
 }

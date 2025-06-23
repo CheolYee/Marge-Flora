@@ -23,6 +23,7 @@ namespace _00._Work._02._Scripts.Character
                 if (found != null)
                 {
                     GameManager.Instance.selectedCharacterData = found;
+                    
                     UIContainer.Instance.margeBoardScript.LoadWeaponData();
                     UIContainer.Instance.characterDisplayPanel.Display(found); // 캐릭터 디스플레이 창에 띄우기
                 }
