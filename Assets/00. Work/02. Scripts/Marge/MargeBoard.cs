@@ -95,81 +95,60 @@ namespace _00._Work._02._Scripts.Marge
             LoadBoardState(); //저장한 데이터 바로 불러오기
         }
 
-        public void LoadBoardState() // 보드의 저장 값을 바탕으로 보드의 모든 칸의 데이터를 불러온다
+        public void LoadBoardState()
         {
             if (parent.activeSelf == false) return;
-            
-            string characterID = GameManager.Instance.selectedCharacterData.characterID; // 캐릭터의 ID 값을 가져온다 (아이디 값으로 머지 데이터 현황을 가져올 것이기 때문)
-            MergeBoardSaveData saveData = SaveManager.Instance.LoadMergeDataForCharacter(characterID); //세이브 데이터를 캐릭터 ID를 통해 가져온다
 
-            if (saveData == null) // 만약 세이브 데이터가 없다면
+            string characterID = GameManager.Instance.selectedCharacterData.characterID;
+            MergeBoardSaveData saveData = SaveManager.Instance.LoadMergeDataForCharacter(characterID);
+
+            // 1. 항상 equip 슬롯 초기화 (기존 무기 제거)
+            if (equipEchoCore.transform.childCount > 0)
+                Destroy(equipEchoCore.transform.GetChild(0).gameObject);
+
+            // 2. 무기 데이터 무조건 초기화
+            GameManager.Instance.selectedWeaponEchoData = null;
+
+            // 3. 슬롯들 비우기
+            foreach (var slot in slotList)
             {
-                
-                //보드를 처음 상태로 만든다.
-                if (equipEchoCore.transform.childCount > 0)
-                    Destroy(equipEchoCore.transform.GetChild(0).gameObject);
-
-                foreach (var slot in slotList)
-                {
-                    if (slot.childCount > 0)
-                        Destroy(slot.GetChild(0).gameObject);
-                }
-
-                GameManager.Instance.selectedWeaponEchoData = null;
-
-                return; //종료시킨다
+                if (slot.childCount > 0)
+                    Destroy(slot.GetChild(0).gameObject);
             }
-            
+
+            // 4. 세이브 데이터가 없다면 여기서 종료
+            if (saveData == null) return;
+
+            // 5. 장착된 무기 데이터 로드
             if (saveData.equipmentCoreData != null && !string.IsNullOrEmpty(saveData.equipmentCoreData.itemName))
             {
-                if (equipEchoCore.transform.childCount > 0)
-                {
-                    Destroy(equipEchoCore.transform.GetChild(0).gameObject);
-                }
-                
                 var so = EchoCoreDatabase.Instance.GetEchoCoreSo(saveData.equipmentCoreData.itemName);
                 if (so != null)
                 {
                     var echoObj = Instantiate(echoPrefab, equipEchoCore.transform);
-
-                    EchoCore echo = echoObj.GetComponent<EchoCore>(); // 생성시킨 에코 코어를 원래 있었던 데이터로 덮어씌우기 위해 컴포넌트를 가져온다
-                    echo.SetEchoData(so); // 에코 데이터를 원래 있던 것으로 설정시킨다.
-                    if (so != null)
-                        GameManager.Instance.selectedWeaponEchoData = so;
-                    else
-                        GameManager.Instance.selectedWeaponEchoData = null;
+                    var echo = echoObj.GetComponent<EchoCore>();
+                    echo.SetEchoData(so);
+                    GameManager.Instance.selectedWeaponEchoData = so;
                 }
             }
 
-            foreach (var slotData in saveData.slotDataList) // 세이브 데이터의 슬롯 리스트를 하나씩 검사한다
+            // 6. 보드 슬롯 로드
+            foreach (var slotData in saveData.slotDataList)
             {
-                if (slotData.slotIndex < 0 || slotData.slotIndex >= slotList.Count) // 만약 이 슬롯 데이터의 인덱스값이 0보다 작거나,
-                                                                                    // 슬롯 데이터의 인덱스값이 총 들어있어야 하는 데이터의 수보다 많다면
-                {
-                    continue; // 계속한다 (나머지는 로드해야함)
-                }
-                
-                var slot = slotList[slotData.slotIndex]; // 슬롯리스트에 저장되어있는 각 슬롯의 위치를 현재 검사하는 슬롯의 인덱스번호로 찾아온다
-                //슬롯 리스트의 인덱스 순서와 저장되어있는 인덱스 순서는 무조건 같다 다르면 인생망한다.
+                if (slotData.slotIndex < 0 || slotData.slotIndex >= slotList.Count)
+                    continue;
 
-                if (slot.childCount > 0) //만약 검사한 슬롯 안에 에코 코어 오브젝트가 있다면
-                {
-                    Destroy(slot.GetChild(0).gameObject); // 그 에코 코어를 일단 없애 데이터를 불러오기 위한 준비를 한다 (나중에 풀메니저로 바꿀까)
-                }
+                var slot = slotList[slotData.slotIndex];
 
-                //저장된 아이템이 있다면 (저장이 된 아이템이 있다면 이름을 가지고 있을 것이기 때문)
                 if (!string.IsNullOrEmpty(slotData.itemName))
                 {
-                    EchoCoreSo coreData = EchoCoreDatabase.Instance.GetEchoCoreSo(slotData.itemName); // 저장된 슬롯 데이터의 자식의 에코 코어 이름과 같은 이름인 SO를 가져옴
-                    if (coreData == null) //만약 가져왔는데 널이라면
+                    var so = EchoCoreDatabase.Instance.GetEchoCoreSo(slotData.itemName);
+                    if (so != null)
                     {
-                        continue; //계속 진행시킨다 (나머지는 불러올 수 있도록)
+                        var echoObj = Instantiate(echoPrefab, slot);
+                        var echo = echoObj.GetComponent<EchoCore>();
+                        echo.SetEchoData(so);
                     }
-                    
-                    GameObject echoObj = Instantiate(echoPrefab, slot); // 아이템이 있었던 칸에 새 빈 에코 코어를 생성시킨다
-                    EchoCore echo = echoObj.GetComponent<EchoCore>(); // 생성시킨 에코 코어를 원래 있었던 데이터로 덮어씌우기 위해 컴포넌트를 가져온다
-                    
-                    echo.SetEchoData(coreData); // 에코 데이터를 원래 있던 것으로 설정시킨다.
                 }
             }
         }
