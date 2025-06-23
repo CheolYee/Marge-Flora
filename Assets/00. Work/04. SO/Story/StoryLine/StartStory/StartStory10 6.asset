@@ -1,26 +1,3 @@
-%YAML 1.1
-%TAG !u! tag:unity3d.com,2011:
---- !u!114 &11400000
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5048cf7ac05f44c9991eed2cbd8cb6c0, type: 3}
-  m_Name: StartStory10 6
-  m_EditorClassIdentifier: 
-  speakerName: 
-  backgroundImgType: 0
-  bgmType: 0
-  emotion: 0
-  speakerPosition: 0
-  audioSfxType: 0
-  enterEffectType: 0
-  fadeEffectType: 0
-  dialogue: "(\uC774\uD6C4 \uB9C8\uBB3C\uC740 \uD50C\uB85C\uB77C\uC758 \uACF5\uACA9\uC744
-    \uB9DE\uACE0 \uC644\uC804\uD788 \uC4F0\uB7EC\uC84C\uB2E4)"
-  hasChoices: 0
-  choices: []
+version https://git-lfs.github.com/spec/v1
+oid sha256:15c1edd6e2152c58bfd69c92ea1f1f25d359eb04cc8e770d2743852534c37391
+size 731

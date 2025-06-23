@@ -1,30 +1,3 @@
-%YAML 1.1
-%TAG !u! tag:unity3d.com,2011:
---- !u!114 &11400000
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5048cf7ac05f44c9991eed2cbd8cb6c0, type: 3}
-  m_Name: StartStory16
-  m_EditorClassIdentifier: 
-  speakerName: "\uB8E8\uC5D4"
-  backgroundImgType: 0
-  bgmType: 0
-  emotion: 2
-  speakerPosition: 3
-  audioSfxType: 2
-  enterEffectType: 0
-  fadeEffectType: 0
-  dialogue: "\uB9C9\uC0C1 \uB098\uC624\uB2C8 \uAC08 \uACF3\uB3C4 \uC5C6\uACE0.. \uB9C8\uBB3C\uC5D0\uAC8C
-    \uCAD2\uAE30\uACE0\uB9CC \uC788\uC5C8\uB124\uC694.. \uD5E4\uD5E4.."
-  hasChoices: 1
-  choices:
-  - choiceText: "\uADF8\uB7FC \uC9C0\uAE08 \uAC08 \uACF3\uC774 \uC5C6\uB294\uAC70\uC57C?"
-    choiceLineIndex: 3
-  - choiceText: "\uBA38\uBB3C \uACF3\uC774 \uC5C6\uB2E4\uB294 \uAC70\uC9C0?"
-    choiceLineIndex: 3
+version https://git-lfs.github.com/spec/v1
+oid sha256:d3acb78cf2eee9d4d016878a8a83d0dd4735c9dfa98f04dce1b32ad3a7e984cd
+size 977

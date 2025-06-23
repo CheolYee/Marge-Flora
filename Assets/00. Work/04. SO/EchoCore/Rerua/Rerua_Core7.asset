@@ -1,19 +1,3 @@
-%YAML 1.1
-%TAG !u! tag:unity3d.com,2011:
---- !u!114 &11400000
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 945065a83a6be3748a901f18ce64df48, type: 3}
-  m_Name: Rerua_Core7
-  m_EditorClassIdentifier: 
-  echoSprite: {fileID: -376104560, guid: 659fab3b65a63d7458dd435e293b1972, type: 3}
-  coreName: "\uBC14\uB78C\uC758 \uAE30\uC6B4"
-  growthCount: 7
-  damage: 70
-  nextEchoData: {fileID: 11400000, guid: e2319aae0b0425c49889d2c41e51c7b0, type: 2}
+version https://git-lfs.github.com/spec/v1
+oid sha256:92cb9dd753b271830b74a25f0e337c69edb22f7b71f2f27ec21a6c5157bcb262
+size 644

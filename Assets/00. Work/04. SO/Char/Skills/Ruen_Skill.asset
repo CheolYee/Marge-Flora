@@ -1,27 +1,3 @@
-%YAML 1.1
-%TAG !u! tag:unity3d.com,2011:
---- !u!114 &11400000
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 71e40a3cb8b84f7418d9073d2fa9d891, type: 3}
-  m_Name: Ruen_Skill
-  m_EditorClassIdentifier: 
-  skillName: "\uBE5B\uC758 \uD798\uC73C\uB85C"
-  skillDescription: "\uC801 \uC704\uCE58\uC5D0 \uAC15\uB825\uD55C \uBE5B\uC758 \uAD11\uC120\uC744
-    \uC18C\uD658\uD558\uC5EC \uC801\uC5D0\uAC8C 3\uD68C\uC758 \uD53C\uD574\uB97C
-    \uAC00\uD569\uB2C8\uB2E4. (\uCFE8\uD0C0\uC784 10\uCD08)"
-  skillIcon: {fileID: -6919108132176420782, guid: df4cb47aab1c9394eab52f31ffc2d50e, type: 3}
-  normalAttackPrefab: {fileID: 405950720624530866, guid: 435dd664990e91747bf4137cf701e1c9, type: 3}
-  normalAttackCooldown: 1
-  normalAttackDamage: 4
-  projectileSpeed: 3
-  skillPrefab: {fileID: 2217996614563910728, guid: 727bda36b32430847bd9d0544e3bc251, type: 3}
-  skillCooldown: 10
-  skillDamage: 20
-  skillSfxName: RuenSkill
+version https://git-lfs.github.com/spec/v1
+oid sha256:04240155a47bf527a278fc7337d7ea3a4fd9afbe9590dc27dbe2eb27d7b0b4e7
+size 1135

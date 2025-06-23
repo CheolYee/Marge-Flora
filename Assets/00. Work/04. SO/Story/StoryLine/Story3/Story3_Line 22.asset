@@ -1,27 +1,3 @@
-%YAML 1.1
-%TAG !u! tag:unity3d.com,2011:
---- !u!114 &11400000
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5048cf7ac05f44c9991eed2cbd8cb6c0, type: 3}
-  m_Name: Story3_Line 22
-  m_EditorClassIdentifier: 
-  speakerName: "\uB8E8\uC5D4"
-  backgroundImgType: 0
-  bgmType: 0
-  emotion: 1
-  speakerPosition: 1
-  audioSfxType: 1
-  enterEffectType: 4
-  fadeEffectType: 0
-  dialogue: "\uC544\uB2C8\uC5D0\uC694! \uC544\uBB34\uB3C4 \uD544\uC694 \uC5C6\uC9C0
-    \uC54A\uC544\uC694! \uC800\uB3C4 \uAC08 \uACF3\uC774 \uC5C6\uC5C8\uB294\uB370,
-    {player}\uB2D8\uC774 \uC800\uB97C \uBC1B\uC544\uC8FC\uC168\uC5B4\uC694!"
-  hasChoices: 0
-  choices: []
+version https://git-lfs.github.com/spec/v1
+oid sha256:5c7666644113450cb2578262c6cfcd0693010de922e9e321dff72a0a9658f420
+size 836

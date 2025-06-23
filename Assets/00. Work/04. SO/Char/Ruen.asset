@@ -1,29 +1,3 @@
-%YAML 1.1
-%TAG !u! tag:unity3d.com,2011:
---- !u!114 &11400000
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f6a322a12911b9345845629b2864e52e, type: 3}
-  m_Name: Ruen
-  m_EditorClassIdentifier: 
-  characterSprite: {fileID: 4463084189097983335, guid: e8d0fe8db22ea4343bd176672588bac5, type: 3}
-  characterID: 1
-  characterName: "\uB8E8\uC5D4"
-  characterElementType: LIGHT
-  element: {fileID: 1508520214197748299, guid: 88d1536154fd443459412625806b566f, type: 3}
-  characterProfile: {fileID: 3371345817362428704, guid: 48fa9aa3499719846995404d74ea73df, type: 3}
-  animationSprite: {fileID: -3673215238371872490, guid: b0dbd34115177854e8efd246b4142574, type: 3}
-  animator: {fileID: 9100000, guid: f5a7ff5605cdc2b4eb7704b83e3893bf, type: 2}
-  characterDescription: "\uD56D\uC0C1 \uBC1D\uACE0, \uBA85\uB7C9\uD558\uBA70 \uB9E4\uC0AC\uC5D0
-    \uAE0D\uC815\uC801\uC778 \uD50C\uB85C\uB77C\uB2E4.\n\uAC00\uB054 \uBA4D\uCCAD\uD558\uACE0,
-    \uC7A5\uB09C\uAE30 \uC788\uC9C0\uB9CC \uB204\uAD6C\uBCF4\uB2E4 \uC815\uC758\uB86D\uB2E4."
-  skillData: {fileID: 11400000, guid: bcee1486e5f542745a04872ba098a22b, type: 2}
-  passiveData: {fileID: 11400000, guid: a8f0bccc7bd2228499b90bc002885d4d, type: 2}
-  firstEchoData: {fileID: 11400000, guid: fa220c7420954424d830ad32e04520f0, type: 2}
-  buyMoney: 100
+version https://git-lfs.github.com/spec/v1
+oid sha256:f670ca0afdb9b0a2139bf36cded03fad0f2f7da07985ba11e9cd60c5b17cfc10
+size 1487

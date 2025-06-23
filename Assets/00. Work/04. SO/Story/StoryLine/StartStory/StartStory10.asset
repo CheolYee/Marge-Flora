@@ -1,32 +1,3 @@
-%YAML 1.1
-%TAG !u! tag:unity3d.com,2011:
---- !u!114 &11400000
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5048cf7ac05f44c9991eed2cbd8cb6c0, type: 3}
-  m_Name: StartStory10
-  m_EditorClassIdentifier: 
-  speakerName: '{player}'
-  backgroundImgType: 0
-  bgmType: 0
-  emotion: 0
-  speakerPosition: 0
-  audioSfxType: 0
-  enterEffectType: 0
-  fadeEffectType: 0
-  dialogue: "(\uC774\uAC78 \uC5B4\uB5BB\uAC8C \uD574\uC57C \uD558\uC9C0..? \uC774\uB7EC\uB2E4\uAC04
-    \uB458 \uB2E4 \uC704\uD5D8\uD574 \uC9C8\uC9C0\uB3C4 \uBAB0\uB77C..!)"
-  hasChoices: 1
-  choices:
-  - choiceText: "(\uC804\uC5D0 \uC804\uD22C\uD559\uC6D0\uC744 \uD588\uB358 \uAE30\uC5B5\uC744
-      \uB5A0\uC62C\uB9AC\uBA70 \uC9C0\uD718\uB97C \uD55C\uB2E4)"
-    choiceLineIndex: 2
-  - choiceText: "(\uC774 \uD50C\uB85C\uB77C\uAC00 \uD798\uC744 \uC4F8 \uC218 \uC788\uAC8C
-      \uB3C4\uC640\uC900\uB2E4.)"
-    choiceLineIndex: 2
+version https://git-lfs.github.com/spec/v1
+oid sha256:c9879d627fbccd9fb9f3a82cb7c7dc862f9ad8d3c5df7cfe1efe6607e47286a7
+size 1086

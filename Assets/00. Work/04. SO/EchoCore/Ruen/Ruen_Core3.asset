@@ -1,19 +1,3 @@
-%YAML 1.1
-%TAG !u! tag:unity3d.com,2011:
---- !u!114 &11400000
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 945065a83a6be3748a901f18ce64df48, type: 3}
-  m_Name: Ruen_Core3
-  m_EditorClassIdentifier: 
-  echoSprite: {fileID: -438588560, guid: 71ef3545f5a894949b901b298c0d741d, type: 3}
-  coreName: "\uC791\uC740 \uBE5B\uC758 \uB9C8\uC74C"
-  growthCount: 3
-  damage: 20
-  nextEchoData: {fileID: 11400000, guid: 53691bb06596e1c44ad004f37414c347, type: 2}
+version https://git-lfs.github.com/spec/v1
+oid sha256:9c561ceb1fcdd40c2635700f1c5ef62e108b6313f18f2f754c0a626344e61d84
+size 650
